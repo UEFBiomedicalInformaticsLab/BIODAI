@@ -5,7 +5,7 @@ accepted paper at 21st European Conference on Computational Biology (ECCB2022).
 
 The main program is in Python, we include also R scripts that were used to prepare the TCGA breast dataset.
 
-The R script load_tcga_brca.R script creates the mrna.csv and outcome.csv files that are needed for the tests.
+The R script load_tcga_brca.R creates the mrna.csv and outcome.csv files that are needed for the tests.
 In order to do that it requires an internet connection and the file pheno.csv that is already included in this
 repository.
 
