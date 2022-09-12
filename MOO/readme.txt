@@ -9,8 +9,8 @@ The R script load_tcga_brca.R creates the mrna.csv and outcome.csv files that ar
 In order to do that it requires an internet connection and the file pheno.csv that is already included in this
 repository.
 
-All the data files needed to run the tests are included in this repository, except the mrna data that
-is not included because it is too large for GitHub. All the results, including plots, are included in this repository,
+All the data files needed to run the tests are included in this repository, except for the mrna data because
+it is too large for GitHub. All the results, including plots, are included in this repository,
 but can also be generated again by a user launching the Python programs.
 
 The main Python programs get in input an INI file with the configuration of a test. All the INI file used to produce
