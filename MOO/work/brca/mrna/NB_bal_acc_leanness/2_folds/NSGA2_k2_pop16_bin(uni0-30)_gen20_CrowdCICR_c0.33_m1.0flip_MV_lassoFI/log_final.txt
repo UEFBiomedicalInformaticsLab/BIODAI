@@ -33,7 +33,7 @@ gen	evals	gen_feats	explored	min	avg     	max     	std          	min      	avg  
 17 	16   	122      	884     	0.2	0.580726	0.714229	0.140773     	0.025    	0.193252	1  	0.243339
 18 	16   	110      	908     	0.2	0.576784	0.714229	0.138129     	0.025    	0.200227	1  	0.240174
 19 	16   	133      	932     	0.2	0.58131 	0.714229	0.141312     	0.0232558	0.197708	1  	0.241737
-NSGA-II multi-view multi-objective optimizer (2-folds creator, pop 16, binomial(uniform(0, 30)), gen 20, sort CrowdCICR, crossover 0.33, mutation 1.0 flip) with multi-view lasso FI final optimization execution time = 00-00:01:14
+NSGA-II multi-view multi-objective optimizer (2-folds creator, pop 16, binomial(uniform(0, 30)), gen 20, sort CrowdCICR, crossover 0.33, mutation 1.0 flip) with multi-view lasso FI final optimization execution time = 00-00:00:54
 
 FEATURE SETS SELECTED ON WHOLE DATASET
 

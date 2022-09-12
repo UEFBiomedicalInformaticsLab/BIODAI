@@ -34,7 +34,7 @@ gen	evals	gen_feats	explored	min     	avg     	max     	std     	min      	avg  
 17 	16   	116      	661     	0.2     	0.567365	0.756177	0.180923	0.0322581	0.210142	1  	0.242671
 18 	16   	130      	686     	0.2     	0.567944	0.756177	0.180228	0.0333333	0.220626	1  	0.251113
 19 	16   	112      	707     	0.2     	0.60406 	0.7581  	0.164212	0.0322581	0.191739	1  	0.243817
-Optimization on fold finished in 00-00:00:53
+Optimization on fold finished in 00-00:00:41
 
 FEATURE SETS SELECTED
 

@@ -1,6 +1,6 @@
 
 RUNNING NSGA-II MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (2-FOLDS CREATOR, POP 16, BINOMIAL(UNIFORM(0, 30)), GEN 20, SORT CROWDCICR, CROSSOVER 0.33, MUTATION 1.0 FLIP) WITH MULTI-VIEW LASSO FI
-Date = 2022-08-17
+Date = 2022-09-12
 Machine = LCNRKD027921503
 CPUs detected in the system = 16
 Number of outer folds = 2
@@ -28,7 +28,7 @@ Feature importance for classification: multi-view feature importance lasso
 
 
 STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
-Computation on different folds finished in 00-00:00:57
+Computation on different folds finished in 00-00:00:44
 
 APPLYING EVALUATORS
 
