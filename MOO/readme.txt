@@ -40,7 +40,7 @@ Other two parameters are used to set the minimum and maximum number of features 
 - initial_features_min and initial_features_max. Two numbers to specify the minimum and maximum number of features in an
 initial solution.
 - sorting_strategy. The sorting strategy to use before selection and tournament. It can be "crowding_distance_full"
-for NSGA2 or "crowding_distance_clone_index" to use the clone index as primary sorting criteria.
+for NSGA2 implied sorting or "crowding_distance_clone_index" to use the clone index as primary sorting criteria.
 - use_clone_repurposing. A Boolean. If true clone repurposing is used.
 - logistic_max_iter. The maximum number of iterations used by the logistic regression inner model. Ignored when using
 another inner model.
