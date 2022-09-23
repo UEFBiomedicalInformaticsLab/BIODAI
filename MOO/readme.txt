@@ -63,3 +63,5 @@ directory "work". The scripts are
 - multi_front_plotter.py
 - multi_objective_pairs_plotter.py
 - subplots_runner.py
+
+This project is licensed under the terms of the MIT license.
