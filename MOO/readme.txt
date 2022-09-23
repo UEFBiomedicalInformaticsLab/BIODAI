@@ -1,7 +1,5 @@
 Publicly available source code and data related to
-Improved NSGA-II algorithms for multi-objective biomarker discovery
-by L. Cattelani and V. Fortino,
-accepted paper at 21st European Conference on Computational Biology (ECCB2022).
+Luca Cattelani, Vittorio Fortino, Improved NSGA-II algorithms for multi-objective biomarker discovery, Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26, https://doi.org/10.1093/bioinformatics/btac463
 
 The main program is in Python, we include also R scripts that were used to prepare the TCGA breast dataset.
 
