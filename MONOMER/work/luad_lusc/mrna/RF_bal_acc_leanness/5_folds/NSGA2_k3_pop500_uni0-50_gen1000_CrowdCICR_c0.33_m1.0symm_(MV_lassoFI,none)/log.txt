@@ -1,0 +1,188 @@
+
+RUNNING NSGA-II MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (3-FOLDS CREATOR, POP 500, UNIFORM(0, 50), GEN 1000, SORT CROWDCICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP) WITH (MULTI-VIEW LASSO FI, MULTI-VIEW NONE)
+Date = 2022-05-10
+Machine = c6322.mahti.csc.fi
+CPUs detected in the system = 256
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm_(MV_lassoFI,none)
+Inner optimizer:
+Name = NSGA-II multi-view multi-objective optimizer (3-folds creator, pop 500, uniform(0, 50), gen 1000, sort CrowdCICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm
+Population size = 500
+Number of features in initial individuals = uniform(0, 50)
+Number of generations = 1000
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA2 with crowding distance with Clone Index full elitist and clone repurposing
+Objectives = [expression_subtype random forest balanced accuracy, leanness]
+Hall of fame factories = [Pareto front factory, Best 50 by sum factory]
+Folds creator = 3-folds creator
+Multi-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance none
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-12:40:54
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME PARETO FRONT
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.1924422442524867, 0.234648028750875, 0.27241949738835464, 0.21688793866840989, 0.2302816951207489]
+Mean of folds = 0.22933588083617504
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.09442340942576188
+Stability of features by unions: 0.06905671940948588
+Stability of features by spearman: 0.08072376115722787
+Stability of features by top 50: 0.09000000000000008
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./luad_lusc/mrna/RF_bal_acc_leanness/5_folds/NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm_(MV_lassoFI,none)/hofs/Pareto/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./luad_lusc/mrna/RF_bal_acc_leanness/5_folds/NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm_(MV_lassoFI,none)/objective_pairs/
+Creating plots for expression_subtype random forest balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs expression_subtype random forest balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.3689630702942204
+Train hypervolume: 0.5142813587020575
+Test hypervolume: 0.30902656018890773
+External hypervolume: 0.3043324784955507
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.3755068470992189
+Train hypervolume: 0.5121951362267354
+Test hypervolume: 0.3507150257150257
+External hypervolume: 0.34938054229008075
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.3842092778490278
+Train hypervolume: 0.5138603965208001
+Test hypervolume: 0.31418447293447294
+External hypervolume: 0.3145258620126812
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.38175541942987556
+Train hypervolume: 0.5122848957252277
+Test hypervolume: 0.34776113436827727
+External hypervolume: 0.3560457788593909
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.3655063921588612
+Train hypervolume: 0.5115923011544707
+Test hypervolume: 0.3305336680612416
+External hypervolume: 0.33789696083989723
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.37518820136624076
+Train hypervolume: 0.5128428176658583
+Test hypervolume: 0.330444172253585
+External hypervolume: 0.33243632449952015
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.35112173036975397, 0.524294560502511, 0.5058436410668737, 0.4757352741973861, 0.5142316113506142]
+Mean of folds = 0.4742453634974278
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.0883865019871164
+Stability of features by unions: 0.04116881214024082
+Stability of features by spearman: 0.04041711712007703
+Stability of features by top 50: 0.07599999999999996
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./luad_lusc/mrna/RF_bal_acc_leanness/5_folds/NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm_(MV_lassoFI,none)/hofs/sum50/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./luad_lusc/mrna/RF_bal_acc_leanness/5_folds/NSGA2_k3_pop500_uni0-50_gen1000_CrowdCICR_c0.33_m1.0symm_(MV_lassoFI,none)/objective_pairs/
+Creating plots for expression_subtype random forest balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs expression_subtype random forest balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.2552758666202307
+Train hypervolume: 0.28209428701365136
+Test hypervolume: 0.23440519797662654
+External hypervolume: 0.23149230344630473
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.20313072764943285
+Train hypervolume: 0.21410763763210988
+Test hypervolume: 0.19530858395989972
+External hypervolume: 0.19439874195523119
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.2324036985891147
+Train hypervolume: 0.24905547478849055
+Test hypervolume: 0.2137286324786325
+External hypervolume: 0.21420335474441454
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.24394629568785953
+Train hypervolume: 0.26394773171001973
+Test hypervolume: 0.2253639364750476
+External hypervolume: 0.2250371536271626
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.20830587223476432
+Train hypervolume: 0.21980375430070564
+Test hypervolume: 0.19153214530288437
+External hypervolume: 0.18799926702433795
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.22861249215628043
+Train hypervolume: 0.24580177708899545
+Test hypervolume: 0.21206769923861818
+External hypervolume: 0.2106261641594902
+
+
+CREATING GENERATION PLOTS IF POSSIBLE
+
+CREATING PLOTS OF EXPLORED FEATURES IF POSSIBLE
+
+CREATING PLOTS OF STABILITY IF POSSIBLE
+
+CREATING PLOTS OF HALL OF FAME STABILITY IF POSSIBLE
+
+CREATING PLOTS OF MONOTONIC TEST FRONTS IF POSSIBLE

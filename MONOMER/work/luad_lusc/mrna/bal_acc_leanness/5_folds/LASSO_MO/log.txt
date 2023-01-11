@@ -1,0 +1,84 @@
+
+RUNNING LASSO MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER
+Date = 2022-05-04
+Machine = sampo2
+CPUs detected in the system = 80
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+LASSO multi-view multi-objective optimizer
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-00:29:45
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME LASSO HOF
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.3394041060377092, 0.33158531325602386, 0.33020889700884903, 0.33319243521498215, 0.3408263299165255]
+Mean of folds = 0.33504341628681794
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.3957940592453071
+Stability of features by unions: 0.38973961165102566
+Stability of features by spearman: 0.3789439985931181
+Stability of features by top 50: 0.48
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./luad_lusc/mrna/bal_acc_leanness/5_folds/LASSO_MO/hofs/LASSO/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./luad_lusc/mrna/bal_acc_leanness/5_folds/LASSO_MO/objective_pairs/
+Creating plots for balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Train hypervolume: 0.20048143243011035
+Test hypervolume: 0.19590340332570272
+
+Hypervolumes for fold 1
+Train hypervolume: 0.19618285757943094
+Test hypervolume: 0.19232185788553516
+
+Hypervolumes for fold 2
+Train hypervolume: 0.2037633220789325
+Test hypervolume: 0.1983655769402695
+
+Hypervolumes for fold 3
+Train hypervolume: 0.19952071453815523
+Test hypervolume: 0.2024394970008938
+
+Hypervolumes for fold 4
+Train hypervolume: 0.21076863748480826
+Test hypervolume: 0.2033602297475277
+
+Mean hypervolumes
+Train hypervolume: 0.20214339282228747
+Test hypervolume: 0.1984781129799858
+
+
+CREATING GENERATION PLOTS IF POSSIBLE
+
+CREATING PLOTS OF EXPLORED FEATURES IF POSSIBLE
+
+CREATING PLOTS OF STABILITY IF POSSIBLE
+
+CREATING PLOTS OF HALL OF FAME STABILITY IF POSSIBLE
+
+CREATING PLOTS OF MONOTONIC TEST FRONTS IF POSSIBLE

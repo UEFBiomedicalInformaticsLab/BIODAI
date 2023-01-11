@@ -1,0 +1,176 @@
+
+RUNNING RFE MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER WITH (MULTI-VIEW LASSO FI, MULTI-VIEW NONE)
+Date = 2022-05-10
+Machine = c6117.mahti.csc.fi
+CPUs detected in the system = 256
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = RFE_(MV_lassoFI,none)
+Inner optimizer:
+RFE multi-view multi-objective optimizerMulti-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance none
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-00:35:02
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME PARETO FRONT
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.28959765447590613, 0.24143609774215452, 0.2493942471695908, 0.2429560659020032, 0.27154148040175935]
+Mean of folds = 0.2589851091382828
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.7397888811928434
+Stability of features by unions: 0.5241482336484269
+Stability of features by spearman: 0.5599733176623196
+Stability of features by top 50: 0.958
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./tcga_kir/mrna/leanness_logit100_bal_acc/5_folds/RFE_(MV_lassoFI,none)/hofs/Pareto/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./tcga_kir/mrna/leanness_logit100_bal_acc/5_folds/RFE_(MV_lassoFI,none)/objective_pairs/
+Creating plots for PanKidney logistic classifier (max_iter=100) balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs PanKidney logistic classifier (max_iter=100) balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.3723216170427349
+Train hypervolume: 0.3814386853464244
+Test hypervolume: 0.3718968037969888
+External hypervolume: 0.37221527662290455
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.3762351091228972
+Train hypervolume: 0.3803932499580407
+Test hypervolume: 0.37859964070433566
+External hypervolume: 0.3756554351070433
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.37683005342706816
+Train hypervolume: 0.3852439270015475
+Test hypervolume: 0.3670889837283137
+External hypervolume: 0.36943527352498706
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.371797324173617
+Train hypervolume: 0.3818999241266751
+Test hypervolume: 0.37866035393672004
+External hypervolume: 0.3745523248561393
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.36861917781822895
+Train hypervolume: 0.3846767213641332
+Test hypervolume: 0.36786375289397955
+External hypervolume: 0.36741431892712073
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.37316065631690926
+Train hypervolume: 0.38273050155936417
+Test hypervolume: 0.3728219070120676
+External hypervolume: 0.371854525807639
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.8457015342258608, 0.6992855729815322, 0.5343759771697716, 0.8493899629393906, 0.7992265478907735]
+Mean of folds = 0.7455959190414657
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.7784553654870934
+Stability of features by unions: 0.6374424424286734
+Stability of features by spearman: 0.6575534056219877
+Stability of features by top 50: 0.712
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./tcga_kir/mrna/leanness_logit100_bal_acc/5_folds/RFE_(MV_lassoFI,none)/hofs/sum50/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./tcga_kir/mrna/leanness_logit100_bal_acc/5_folds/RFE_(MV_lassoFI,none)/objective_pairs/
+Creating plots for PanKidney logistic classifier (max_iter=100) balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs PanKidney logistic classifier (max_iter=100) balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.2514576475116268
+Train hypervolume: 0.25162689804772237
+Test hypervolume: 0.2513380527619729
+External hypervolume: 0.2513664665299949
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.36628042878863437
+Train hypervolume: 0.3681798236148402
+Test hypervolume: 0.3706143468767531
+External hypervolume: 0.3685813278214217
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.3165251365432509
+Train hypervolume: 0.32269681555528174
+Test hypervolume: 0.3094484128859372
+External hypervolume: 0.30790014840495894
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.2513692892321758
+Train hypervolume: 0.2515212981744422
+Test hypervolume: 0.25124488608586726
+External hypervolume: 0.25123182730262006
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.30420583730904555
+Train hypervolume: 0.3108808422033293
+Test hypervolume: 0.2984217561925642
+External hypervolume: 0.2994099483521283
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.2979676678769467
+Train hypervolume: 0.30098113551912314
+Test hypervolume: 0.29621349096061894
+External hypervolume: 0.2956979436822248
+
+
+CREATING GENERATION PLOTS IF POSSIBLE
+
+CREATING PLOTS OF EXPLORED FEATURES IF POSSIBLE
+
+CREATING PLOTS OF STABILITY IF POSSIBLE
+
+CREATING PLOTS OF HALL OF FAME STABILITY IF POSSIBLE
+
+CREATING PLOTS OF MONOTONIC TEST FRONTS IF POSSIBLE

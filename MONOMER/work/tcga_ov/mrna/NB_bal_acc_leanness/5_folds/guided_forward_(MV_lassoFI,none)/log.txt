@@ -1,0 +1,184 @@
+
+RUNNING GUIDED FORWARD WITH (MULTI-VIEW LASSO FI, MULTI-VIEW NONE)
+Date = 2022-06-06
+Machine = c2152.mahti.csc.fi
+CPUs detected in the system = 256
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = guided_forward_(MV_lassoFI,none)
+Inner optimizer:
+Guided ForwardMulti-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance none
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-00:01:16
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME PARETO FRONT
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.36164211433938476, 0.3175028975084433, 0.4040850071466626, 0.34950774561801634, 0.37574931336398737]
+Mean of folds = 0.3616974155952989
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.2391907377519814
+Stability of features by unions: 0.19887527640214642
+Stability of features by spearman: 0.2584264749734581
+Stability of features by top 50: 0.266
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/hofs/Pareto/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/hofs/Pareto/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.4314489617239645
+Train hypervolume: 0.4397342074891037
+Test hypervolume: 0.37697458791208793
+External hypervolume: 0.37995681284342947
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.43887019074724326
+Train hypervolume: 0.4519168172581813
+Test hypervolume: 0.3763306262190191
+External hypervolume: 0.38200809111895073
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.42084376090379644
+Train hypervolume: 0.4410709193098816
+Test hypervolume: 0.3669971742609462
+External hypervolume: 0.3738712608541377
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.42182711960396335
+Train hypervolume: 0.43532804730102737
+Test hypervolume: 0.39454897574317216
+External hypervolume: 0.39941477459456576
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.43372081069941953
+Train hypervolume: 0.448756812395418
+Test hypervolume: 0.4264376075313575
+External hypervolume: 0.42806544272665603
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.42934216873567743
+Train hypervolume: 0.4433613607507224
+Test hypervolume: 0.3882577943333166
+External hypervolume: 0.39266327642754795
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.5918968642465129, 0.7981574866822095, 0.7364206602031076, 0.5890010951487159, 0.8451085611581608]
+Mean of folds = 0.7121169334877413
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.21421911045512865
+Stability of features by unions: 0.20132270168855526
+Stability of features by spearman: 0.2529533544857137
+Stability of features by top 50: 0.24
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/hofs/sum50/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/hofs/sum50/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./tcga_ov/mrna/NB_bal_acc_leanness/5_folds/guided_forward_(MV_lassoFI,none)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plots for leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+
+APPLYING HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.37241848956653023
+Train hypervolume: 0.37845570079047275
+Test hypervolume: 0.29505225717734196
+External hypervolume: 0.31368921544232964
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.3648362401999026
+Train hypervolume: 0.3740071598324957
+Test hypervolume: 0.2988979315587325
+External hypervolume: 0.3171283520934558
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.37549365852104954
+Train hypervolume: 0.3807622182338173
+Test hypervolume: 0.3220964237689915
+External hypervolume: 0.3348803891220969
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.39507374590581046
+Train hypervolume: 0.4009372157306779
+Test hypervolume: 0.3622537283762478
+External hypervolume: 0.3697250717512258
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.25677197837486426
+Train hypervolume: 0.25720111738352747
+Test hypervolume: 0.2549316969682037
+External hypervolume: 0.25510182216688426
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.3529188225136314
+Train hypervolume: 0.35827268239419824
+Test hypervolume: 0.30664640756990347
+External hypervolume: 0.31810497011519845
+
+
+CREATING GENERATION PLOTS IF POSSIBLE
+
+CREATING PLOTS OF EXPLORED FEATURES IF POSSIBLE
+
+CREATING PLOTS OF STABILITY IF POSSIBLE
+
+CREATING PLOTS OF HALL OF FAME STABILITY IF POSSIBLE
+
+CREATING PLOTS OF MONOTONIC TEST FRONTS IF POSSIBLE
+
+CREATING PLOTS OF PERFORMANCE BY CLASS IF POSSIBLE
