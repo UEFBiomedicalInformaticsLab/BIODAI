@@ -1,16 +1,14 @@
 Publicly available source code and data related to
-Improved NSGA-II algorithms for multi-objective biomarker discovery
-by L. Cattelani and V. Fortino,
-accepted paper at 21st European Conference on Computational Biology (ECCB2022).
+Luca Cattelani, Vittorio Fortino, Improved NSGA-II algorithms for multi-objective biomarker discovery, Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26, https://doi.org/10.1093/bioinformatics/btac463
 
 The main program is in Python, we include also R scripts that were used to prepare the TCGA breast dataset.
 
-The R script load_tcga_brca.R script creates the mrna.csv and outcome.csv files that are needed for the tests.
+The R script load_tcga_brca.R creates the mrna.csv and outcome.csv files that are needed for the tests.
 In order to do that it requires an internet connection and the file pheno.csv that is already included in this
 repository.
 
-All the data files needed to run the tests are included in this repository, except the mrna data that
-is not included because it is too large for GitHub. All the results, including plots, are included in this repository,
+All the data files needed to run the tests are included in this repository, except for the mrna data because
+it is too large for GitHub. All the results, including plots, are included in this repository,
 but can also be generated again by a user launching the Python programs.
 
 The main Python programs get in input an INI file with the configuration of a test. All the INI file used to produce
@@ -40,7 +38,7 @@ Other two parameters are used to set the minimum and maximum number of features 
 - initial_features_min and initial_features_max. Two numbers to specify the minimum and maximum number of features in an
 initial solution.
 - sorting_strategy. The sorting strategy to use before selection and tournament. It can be "crowding_distance_full"
-for NSGA2 or "crowding_distance_clone_index" to use the clone index as primary sorting criteria.
+for NSGA2 implied sorting or "crowding_distance_clone_index" to use the clone index as primary sorting criteria.
 - use_clone_repurposing. A Boolean. If true clone repurposing is used.
 - logistic_max_iter. The maximum number of iterations used by the logistic regression inner model. Ignored when using
 another inner model.
@@ -65,3 +63,5 @@ directory "work". The scripts are
 - multi_front_plotter.py
 - multi_objective_pairs_plotter.py
 - subplots_runner.py
+
+This project is licensed under the terms of the MIT license.
