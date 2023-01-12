@@ -14,8 +14,8 @@ but can also be generated again by a user launching the Python programs.
 The main Python programs get in input an INI file with the configuration of a test. All the INI file used to produce
 the paper results are in the directory work/setups.
 A configuration file starts with [MVMOO_SETUP].
-The most important parameters are the following.
 
+The most important parameters are the following.
 - dataset. The name of the dataset to be used for internal-external cross-validation or as training for
 external validation. Valid options include "brca" (TCGA breast), "luad_lusc" (TCGA lung),
 "tcga_kir" (TCGA kidney with 4 classes), "tcga_kir3" (TCGA kidney with 3 classes), tcga_ov (TCGA ovary),
