@@ -1,0 +1,1414 @@
+
+OPTIMIZING ON FOLD NUMBER 0
+Number of workers = 80
+
+COMPUTING LOCAL ACTIVE FEATURES
+Existing features: 5937
+Applying union strategy for feature selection using composite feature selector with
+categorical: feature selector any na and anova
+survival: feature selector Cox
+
+Computing active features for outcome type
+Features selected for this outcome: 5786
+Features active in total: 5786
+Computing active features for outcome survival
+Features selected for this outcome: 2793
+Features active in total: 5861
+Computing feature importance
+Running optimizer
+
+CREATING FOLDS FOR LEARNING THE FITNESS ADJUSTMENT REGRESSION
+
+ASSIGNING STRATA FOR MULTI-OUTCOME DATA KIDNEY_IHC_DET_OS
+Assigning strata for outcome named type of type categorical
+Counts:
+ChRCC: 53
+PRCC T1: 106
+PRCC T2: 46
+ccRCC: 323
+Assigning strata for outcome named survival of type survival
+Counts:
+censored 0: 138
+censored 1: 254
+deceased 0: 68
+deceased 1: 68
+Strata from each outcome has been integrated.
+Counts:
+ChRCC censored 0: 6
+ChRCC censored 1: 37
+ChRCC deceased 0: 5
+ChRCC deceased 1: 5
+PRCC T1 censored 0: 53
+PRCC T1 censored 1: 43
+PRCC T1 deceased 0: 4
+PRCC T1 deceased 1: 6
+PRCC T2 censored 0: 19
+PRCC T2 censored 1: 17
+PRCC T2 deceased 0: 7
+PRCC T2 deceased 1: 3
+ccRCC censored 0: 60
+ccRCC censored 1: 157
+ccRCC deceased 0: 52
+ccRCC deceased 1: 54
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS FOR LEARNING THE FITNESS ADJUSTMENT REGRESSION
+Computation on different folds for learning the fitness adjustment regression finished in 00-03:54:57
+Extracting hall of fames for tuning.
+
+ASSIGNING WEIGHTS TO THE SOLUTIONS IN THE TUNING FRONT RESULTS.
+
+LEARNING FITNESS ADJUSTERS USING TUNING FRONT RESULTS, AND CREATING ADJUSTED OBJECTIVES.
+Learning adjustment for type naive Bayes balanced accuracy
+Training fitness adjuster regressor on 1025 samples.
+fitness adjuster with regressor
+Wrapper for SKLearn predictor Pipeline(steps=[('impute', SimpleImputer()),
+                ('tree',
+                 <model.regression.regressors_library.SKLearnTreeModelDecorator object at 0x7f44dedcec70>)])
+|--- feature_0 <= 0.81
+|   |--- feature_0 <= 0.81
+|   |   |--- feature_0 <= 0.81
+|   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |--- feature_2 <= 12.50
+|   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 30
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 5.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  5.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- value: [-0.06]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.72
+|   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.72
+|   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |--- feature_0 <= 0.75
+|   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |--- feature_0 >  0.75
+|   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |--- feature_2 >  12.50
+|   |   |   |   |   |--- value: [-0.10]
+|   |   |   |--- feature_0 >  0.80
+|   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |--- feature_2 <= 8.50
+|   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |--- feature_2 >  8.50
+|   |   |   |   |   |   |--- value: [0.03]
+|   |   |--- feature_0 >  0.81
+|   |   |   |--- feature_2 <= 9.50
+|   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |--- feature_2 <= 5.00
+|   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |   |   |--- feature_2 >  5.00
+|   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |--- feature_2 <= 5.50
+|   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |   |--- feature_2 >  5.50
+|   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |--- feature_2 >  9.50
+|   |   |   |   |--- value: [0.06]
+|   |--- feature_0 >  0.81
+|   |   |--- value: [0.07]
+|--- feature_0 >  0.81
+|   |--- feature_0 <= 0.93
+|   |   |--- feature_1 <= 0.02
+|   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |--- value: [0.15]
+|   |   |   |--- feature_2 >  4.50
+|   |   |   |   |--- feature_2 <= 17.50
+|   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |--- feature_2 >  17.50
+|   |   |   |   |   |--- feature_2 <= 18.50
+|   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |--- feature_2 >  18.50
+|   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |--- feature_2 <= 31.50
+|   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |--- feature_2 >  31.50
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 33.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  33.00
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |--- feature_2 <= 38.50
+|   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |--- feature_2 >  38.50
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.92
+|   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.92
+|   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |--- feature_1 >  0.02
+|   |   |   |--- feature_0 <= 0.83
+|   |   |   |   |--- value: [0.10]
+|   |   |   |--- feature_0 >  0.83
+|   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |--- feature_2 <= 19.50
+|   |   |   |   |   |   |   |   |--- feature_2 <= 5.50
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.90
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.90
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |--- feature_2 >  5.50
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.89
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.89
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.90
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 13
+|   |   |   |   |   |   |   |--- feature_2 >  19.50
+|   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |--- feature_2 <= 19.50
+|   |   |   |   |   |   |   |--- feature_0 <= 0.86
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 8
+|   |   |   |   |   |   |   |--- feature_0 >  0.86
+|   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |--- feature_2 >  19.50
+|   |   |   |   |   |   |   |--- feature_0 <= 0.89
+|   |   |   |   |   |   |   |   |--- feature_2 <= 24.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |   |   |   |   |--- feature_2 >  24.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |--- feature_0 >  0.89
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.90
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 24.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  24.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.90
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |--- feature_2 <= 14.50
+|   |   |   |   |   |   |--- feature_0 <= 0.85
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.83
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.83
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 10.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  10.00
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.83
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.83
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.84
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.84
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.84
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.84
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 5
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.84
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.84
+|   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |--- feature_0 >  0.85
+|   |   |   |   |   |   |   |--- feature_2 <= 3.50
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.86
+|   |   |   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.86
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.87
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.87
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |--- feature_2 >  3.50
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.86
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.86
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |--- feature_2 >  14.50
+|   |   |   |   |   |   |--- feature_2 <= 19.50
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_2 <= 16.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |--- feature_2 >  16.50
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.88
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 18.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  18.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.88
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.85
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.00]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.85
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |--- feature_2 >  19.50
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [-0.00]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_2 <= 20.50
+|   |   |   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |   |   |   |--- feature_2 >  20.50
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 23.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  23.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |--- feature_0 >  0.93
+|   |   |--- feature_1 <= 0.01
+|   |   |   |--- feature_0 <= 0.97
+|   |   |   |   |--- value: [0.17]
+|   |   |   |--- feature_0 >  0.97
+|   |   |   |   |--- value: [0.20]
+|   |   |--- feature_1 >  0.01
+|   |   |   |--- feature_2 <= 8.50
+|   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |--- feature_0 <= 0.96
+|   |   |   |   |   |   |--- feature_2 <= 5.50
+|   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |--- feature_2 >  5.50
+|   |   |   |   |   |   |   |--- feature_0 <= 0.96
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.96
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.95
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.95
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.95
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.96
+|   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |--- feature_0 >  0.96
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.96
+|   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.96
+|   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |--- feature_0 >  0.96
+|   |   |   |   |   |   |--- feature_2 <= 7.50
+|   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |--- feature_2 >  7.50
+|   |   |   |   |   |   |   |--- feature_0 <= 0.97
+|   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |--- feature_0 >  0.97
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.01
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.01
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.94
+|   |   |   |   |   |   |   |   |   |--- value: [0.24]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.94
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.94
+|   |   |   |   |   |   |   |   |   |--- value: [0.22]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.94
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.95
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.95
+|   |   |   |   |   |   |   |   |   |--- value: [0.21]
+|   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |--- feature_2 <= 5.50
+|   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |--- feature_2 >  5.50
+|   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |--- feature_2 >  8.50
+|   |   |   |   |--- feature_0 <= 0.97
+|   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |--- feature_0 >  0.97
+|   |   |   |   |   |--- value: [0.11]
+
+
+feature importances = [0.80641156 0.12698112 0.06660731]
+
+
+Learning adjustment for root leanness
+Training fitness adjuster regressor on 1025 samples.
+fitness adjuster with regressor
+Wrapper for SKLearn predictor Pipeline(steps=[('impute', SimpleImputer()),
+                ('tree',
+                 <model.regression.regressors_library.SKLearnTreeModelDecorator object at 0x7f44dedceaf0>)])
+|--- value: [0.00]
+
+
+feature importances = [0. 0. 0.]
+
+
+Learning adjustment for survival SKSurv Cox model concordance index
+Training fitness adjuster regressor on 1025 samples.
+fitness adjuster with regressor
+Wrapper for SKLearn predictor Pipeline(steps=[('impute', SimpleImputer()),
+                ('tree',
+                 <model.regression.regressors_library.SKLearnTreeModelDecorator object at 0x7f451a66fac0>)])
+|--- feature_0 <= 0.80
+|   |--- feature_0 <= 0.62
+|   |   |--- feature_1 <= 0.03
+|   |   |   |--- feature_0 <= 0.61
+|   |   |   |   |--- feature_2 <= 3.00
+|   |   |   |   |   |--- feature_0 <= 0.58
+|   |   |   |   |   |   |--- feature_0 <= 0.56
+|   |   |   |   |   |   |   |--- feature_0 <= 0.52
+|   |   |   |   |   |   |   |   |--- value: [0.00]
+|   |   |   |   |   |   |   |--- feature_0 >  0.52
+|   |   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |   |   |--- feature_0 >  0.56
+|   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |--- feature_0 >  0.58
+|   |   |   |   |   |   |--- feature_0 <= 0.59
+|   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |   |   |--- feature_0 >  0.59
+|   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |--- feature_2 >  3.00
+|   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |--- feature_0 <= 0.58
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- value: [-0.07]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- value: [-0.05]
+|   |   |   |   |   |   |--- feature_0 >  0.58
+|   |   |   |   |   |   |   |--- value: [-0.07]
+|   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |--- feature_0 >  0.61
+|   |   |   |   |--- value: [-0.04]
+|   |   |--- feature_1 >  0.03
+|   |   |   |--- feature_0 <= 0.62
+|   |   |   |   |--- feature_0 <= 0.58
+|   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |--- feature_0 >  0.58
+|   |   |   |   |   |--- feature_0 <= 0.59
+|   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |--- feature_0 >  0.59
+|   |   |   |   |   |   |--- feature_0 <= 0.62
+|   |   |   |   |   |   |   |--- feature_0 <= 0.61
+|   |   |   |   |   |   |   |   |--- feature_2 <= 2.00
+|   |   |   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |   |   |   |--- feature_2 >  2.00
+|   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |--- feature_0 >  0.61
+|   |   |   |   |   |   |   |   |--- value: [-0.05]
+|   |   |   |   |   |   |--- feature_0 >  0.62
+|   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |--- feature_0 >  0.62
+|   |   |   |   |--- value: [0.00]
+|   |--- feature_0 >  0.62
+|   |   |--- feature_0 <= 0.72
+|   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |--- feature_0 <= 0.68
+|   |   |   |   |   |--- feature_0 <= 0.68
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.64
+|   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |--- feature_0 >  0.64
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.66
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.65
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.03]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.65
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.00]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.66
+|   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.62
+|   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |--- feature_0 >  0.62
+|   |   |   |   |   |   |   |   |--- feature_2 <= 5.00
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.01]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  3.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |--- feature_2 >  5.00
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.04]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [-0.02]
+|   |   |   |   |   |--- feature_0 >  0.68
+|   |   |   |   |   |   |--- feature_0 <= 0.68
+|   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |--- feature_0 >  0.68
+|   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |--- feature_0 >  0.68
+|   |   |   |   |   |--- value: [0.01]
+|   |   |   |--- feature_1 >  0.03
+|   |   |   |   |--- value: [0.08]
+|   |   |--- feature_0 >  0.72
+|   |   |   |--- feature_0 <= 0.75
+|   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |--- feature_0 <= 0.72
+|   |   |   |   |   |   |   |--- value: [0.02]
+|   |   |   |   |   |   |--- feature_0 >  0.72
+|   |   |   |   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 7.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  7.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- value: [-0.01]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.04
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.04
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 6
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.04
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 3.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  3.00
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.04
+|   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |--- feature_2 <= 2.50
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.75
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |--- feature_0 >  0.75
+|   |   |   |   |   |   |   |   |--- value: [0.03]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |--- feature_2 >  2.50
+|   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.74
+|   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.74
+|   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |--- feature_2 <= 5.50
+|   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |--- feature_2 >  5.50
+|   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |--- feature_0 >  0.75
+|   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |--- feature_0 <= 0.78
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_2 <= 17.00
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.77
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.76
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.76
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.77
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.77
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.77
+|   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |--- feature_2 >  17.00
+|   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |--- feature_0 >  0.78
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |   |--- feature_2 <= 18.50
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- feature_2 >  18.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |   |   |   |--- feature_2 <= 3.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |   |   |   |   |--- feature_2 >  3.50
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.78
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |   |   |   |--- value: [0.04]
+|   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |--- feature_1 <= 0.04
+|   |   |   |   |   |   |--- feature_0 <= 0.79
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.07]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.75
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.75
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.77
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 2.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  2.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.77
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.78
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 4
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.78
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |--- feature_0 >  0.79
+|   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.79
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- feature_2 <= 4.50
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |--- feature_2 >  4.50
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 7
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  10.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |--- feature_1 >  0.04
+|   |   |   |   |   |   |--- feature_1 <= 0.04
+|   |   |   |   |   |   |   |--- value: [0.06]
+|   |   |   |   |   |   |--- feature_1 >  0.04
+|   |   |   |   |   |   |   |--- feature_1 <= 0.04
+|   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |--- feature_1 >  0.04
+|   |   |   |   |   |   |   |   |--- value: [0.09]
+|--- feature_0 >  0.80
+|   |--- feature_2 <= 24.50
+|   |   |--- feature_1 <= 0.02
+|   |   |   |--- feature_0 <= 0.86
+|   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |--- feature_0 <= 0.84
+|   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |--- feature_0 >  0.84
+|   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.85
+|   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.85
+|   |   |   |   |   |   |   |   |   |--- value: [0.18]
+|   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |--- value: [0.14]
+|   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |--- feature_2 <= 12.50
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.84
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.02
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 <= 11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_2 >  11.50
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.02
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.19]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.84
+|   |   |   |   |   |   |   |   |   |--- value: [0.23]
+|   |   |   |   |   |   |   |--- feature_2 >  12.50
+|   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |--- feature_0 >  0.86
+|   |   |   |   |--- feature_0 <= 0.86
+|   |   |   |   |   |--- value: [0.20]
+|   |   |   |   |--- feature_0 >  0.86
+|   |   |   |   |   |--- value: [0.20]
+|   |   |--- feature_1 >  0.02
+|   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |   |   |--- value: [0.05]
+|   |   |   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |   |   |--- feature_0 <= 0.80
+|   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |--- feature_0 >  0.80
+|   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |--- feature_2 <= 6.50
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.15]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- value: [0.16]
+|   |   |   |   |   |   |   |--- feature_2 >  6.50
+|   |   |   |   |   |   |   |   |--- feature_2 <= 7.50
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 2
+|   |   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |   |   |   |--- truncated branch of depth 3
+|   |   |   |   |   |   |   |   |--- feature_2 >  7.50
+|   |   |   |   |   |   |   |   |   |--- value: [0.11]
+|   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |   |--- value: [0.10]
+|   |   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |   |--- value: [0.12]
+|   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.08]
+|   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |--- feature_1 <= 0.03
+|   |   |   |   |   |   |   |   |   |   |--- value: [0.13]
+|   |   |   |   |   |   |   |   |   |--- feature_1 >  0.03
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 <= 0.81
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |   |   |   |   |   |   |   |--- feature_0 >  0.81
+|   |   |   |   |   |   |   |   |   |   |   |--- value: [0.09]
+|   |   |   |--- feature_0 >  0.81
+|   |   |   |   |--- value: [0.13]
+|   |--- feature_2 >  24.50
+|   |   |--- feature_0 <= 0.87
+|   |   |   |--- value: [0.21]
+|   |   |--- feature_0 >  0.87
+|   |   |   |--- feature_2 <= 37.00
+|   |   |   |   |--- value: [0.29]
+|   |   |   |--- feature_2 >  37.00
+|   |   |   |   |--- value: [0.27]
+
+
+feature importances = [0.67478274 0.15301889 0.17219836]
+
+
+
+RUNNING THE MAIN OPTIMIZER WITH THE ADJUSTED OBJECTIVES.
+
+CREATING INNER FOLDS
+
+ASSIGNING STRATA FOR MULTI-OUTCOME DATA KIDNEY_IHC_DET_OS
+Assigning strata for outcome named type of type categorical
+Counts:
+ChRCC: 53
+PRCC T1: 106
+PRCC T2: 46
+ccRCC: 323
+Assigning strata for outcome named survival of type survival
+Counts:
+censored 0: 138
+censored 1: 254
+deceased 0: 68
+deceased 1: 68
+Strata from each outcome has been integrated.
+Counts:
+ChRCC censored 0: 6
+ChRCC censored 1: 37
+ChRCC deceased 0: 5
+ChRCC deceased 1: 5
+PRCC T1 censored 0: 53
+PRCC T1 censored 1: 43
+PRCC T1 deceased 0: 4
+PRCC T1 deceased 1: 6
+PRCC T2 censored 0: 19
+PRCC T2 censored 1: 17
+PRCC T2 deceased 0: 7
+PRCC T2 deceased 1: 3
+ccRCC censored 0: 60
+ccRCC censored 1: 157
+ccRCC deceased 0: 52
+ccRCC deceased 1: 54
+
+RUNNING GENETIC ALGORITHM
+Generations completed = 96
+Generations completed = 203
+Generations completed = 307
+Generations completed = 413
+   	     	         	        	      type naive Bayes adjusted balanced accuracy       	             adjusted root leanness             	   survival SKSurv Cox model adjusted concordance index  
+   	     	         	        	--------------------------------------------------------	------------------------------------------------	---------------------------------------------------------
+gen	evals	gen_feats	explored	min     	avg     	max     	std             	min     	avg     	max	std     	min     	avg     	max     	std                      
+0  	500  	473      	473     	0.25    	0.752214	0.900123	0.129214        	0.140028	0.259968	1  	0.167252	0.456762	0.658147	0.709661	0.051171                 
+1  	514  	667      	673     	0.249226	0.74364 	0.900252	0.127001        	0.140028	0.295543	1  	0.12346 	0.456762	0.666197	0.741811	0.050671                 
+2  	500  	740      	905     	0.249226	0.737173	0.900252	0.141607        	0.142857	0.326328	1  	0.133148	0.476702	0.665896	0.749983	0.0515247                
+3  	500  	794      	1142    	0.243034	0.745136	0.900457	0.133651        	0.147442	0.332868	1  	0.132041	0.48482 	0.670182	0.749983	0.0495164                
+4  	500  	799      	1350    	0.243034	0.740574	0.900457	0.142249        	0.147442	0.344813	1  	0.138564	0.488606	0.6703  	0.749983	0.0498585                
+5  	500  	804      	1534    	0.243034	0.741412	0.900457	0.141291        	0.147442	0.350452	1  	0.139065	0.46614 	0.671747	0.749983	0.0493262                
+6  	500  	807      	1737    	0.243034	0.745247	0.900457	0.142892        	0.147442	0.349104	1  	0.140574	0.472721	0.676021	0.749983	0.0451438                
+7  	500  	827      	1916    	0.24613 	0.742097	0.900457	0.14159         	0.147442	0.356524	1  	0.142337	0.472721	0.676781	0.749983	0.045112                 
+8  	500  	834      	2097    	0.24613 	0.744159	0.900457	0.139858        	0.147442	0.361681	1  	0.143359	0.472721	0.676017	0.749983	0.0455651                
+9  	500  	817      	2245    	0.24613 	0.734221	0.900457	0.144445        	0.147442	0.375393	1  	0.147315	0.472721	0.674128	0.749983	0.0470491                
+10 	500  	818      	2388    	0.24613 	0.745426	0.900457	0.13529         	0.147442	0.367752	1  	0.144075	0.472721	0.677735	0.749983	0.0451978                
+11 	500  	827      	2515    	0.24613 	0.753345	0.900457	0.130363        	0.147442	0.362749	1  	0.142687	0.472721	0.679776	0.749983	0.0447163                
+12 	500  	860      	2656    	0.24613 	0.754002	0.900457	0.130247        	0.141421	0.363615	1  	0.143098	0.472721	0.680321	0.749983	0.0466242                
+13 	500  	848      	2777    	0.24613 	0.756553	0.900457	0.123249        	0.141421	0.361937	1  	0.138177	0.472721	0.683381	0.749983	0.0428785                
+14 	500  	848      	2908    	0.24613 	0.757964	0.900457	0.119858        	0.141421	0.3631  	1  	0.133756	0.472721	0.683501	0.749983	0.041964                 
+15 	500  	863      	3034    	0.24613 	0.748653	0.900457	0.123665        	0.160128	0.37783 	1  	0.132584	0.472721	0.681431	0.749983	0.0439214                
+16 	500  	845      	3133    	0.24613 	0.752399	0.900457	0.120781        	0.160128	0.374836	1  	0.130918	0.472721	0.682394	0.749983	0.0442907                
+17 	500  	873      	3267    	0.24613 	0.749921	0.900457	0.123108        	0.160128	0.377986	1  	0.133597	0.472721	0.683684	0.749983	0.0437349                
+18 	500  	838      	3369    	0.24613 	0.745623	0.900457	0.121796        	0.149071	0.383369	1  	0.13409 	0.472721	0.685107	0.749983	0.0414884                
+19 	500  	846      	3460    	0.24613 	0.743275	0.900457	0.121789        	0.149071	0.387471	1  	0.134747	0.472721	0.684508	0.749983	0.0420278                
+20 	500  	866      	3560    	0.24613 	0.742821	0.900457	0.121822        	0.149071	0.386664	1  	0.135381	0.472721	0.686577	0.749983	0.0413044                
+21 	500  	877      	3664    	0.24613 	0.740055	0.900457	0.121087        	0.149071	0.389563	1  	0.135259	0.472721	0.68691 	0.749983	0.041104                 
+22 	500  	852      	3753    	0.24613 	0.740208	0.900457	0.118913        	0.149071	0.390996	1  	0.135658	0.472721	0.686664	0.749983	0.0416754                
+23 	500  	847      	3842    	0.24613 	0.740459	0.900584	0.118269        	0.149071	0.389457	1  	0.136225	0.472721	0.687926	0.749983	0.0416166                
+24 	500  	869      	3927    	0.24613 	0.741891	0.900584	0.119208        	0.149071	0.387715	1  	0.138883	0.472721	0.688267	0.749983	0.0423787                
+25 	500  	867      	4006    	0.24613 	0.745649	0.900584	0.118979        	0.149071	0.385796	1  	0.139076	0.472721	0.688301	0.749983	0.0427436                
+26 	500  	866      	4092    	0.24613 	0.746821	0.900584	0.119234        	0.149071	0.385935	1  	0.13931 	0.472721	0.688795	0.749983	0.0422605                
+27 	500  	886      	4162    	0.24613 	0.745896	0.900584	0.121111        	0.149071	0.38786 	1  	0.14034 	0.472721	0.688741	0.749983	0.0422705                
+28 	500  	865      	4242    	0.24613 	0.749346	0.900584	0.118898        	0.149071	0.385167	1  	0.138823	0.5     	0.689824	0.749983	0.0415973                
+29 	500  	847      	4303    	0.24613 	0.753909	0.900584	0.119051        	0.149071	0.38031 	1  	0.138672	0.5     	0.690292	0.749983	0.0415777                
+30 	500  	868      	4363    	0.24613 	0.752841	0.900584	0.119236        	0.149071	0.380343	1  	0.139765	0.5     	0.690827	0.749983	0.041965                 
+31 	500  	889      	4421    	0.24613 	0.749235	0.900584	0.118501        	0.149071	0.383118	1  	0.139259	0.5     	0.69196 	0.749983	0.042005                 
+32 	500  	890      	4488    	0.24613 	0.74936 	0.900584	0.119429        	0.149071	0.383615	1  	0.140201	0.5     	0.692136	0.749983	0.0420137                
+33 	500  	895      	4553    	0.238758	0.755774	0.900584	0.110895        	0.149071	0.378272	1  	0.13412 	0.5     	0.694036	0.749983	0.0393744                
+34 	500  	873      	4601    	0.25    	0.756018	0.900584	0.107296        	0.149071	0.37907 	1  	0.134074	0.5     	0.693913	0.749983	0.0400491                
+35 	500  	873      	4657    	0.25    	0.755174	0.900584	0.106078        	0.149071	0.379386	1  	0.133172	0.5     	0.69463 	0.749983	0.0392494                
+36 	500  	905      	4710    	0.25    	0.754133	0.900584	0.10585         	0.145865	0.380792	1  	0.132192	0.5     	0.695604	0.749983	0.039002                 
+37 	500  	882      	4766    	0.25    	0.75394 	0.900584	0.106105        	0.145865	0.380679	1  	0.132146	0.5     	0.696114	0.749983	0.0389773                
+38 	500  	872      	4804    	0.25    	0.755036	0.900584	0.10618         	0.145865	0.379259	1  	0.132774	0.5     	0.696495	0.749983	0.039032                 
+39 	500  	899      	4863    	0.25    	0.757613	0.900584	0.104967        	0.145865	0.377567	1  	0.132261	0.5     	0.696577	0.749983	0.0394663                
+40 	500  	905      	4908    	0.25    	0.758306	0.900584	0.104864        	0.145865	0.378577	1  	0.132286	0.5     	0.696617	0.749983	0.0395367                
+41 	500  	881      	4939    	0.25    	0.758335	0.900584	0.106593        	0.144338	0.380134	1  	0.134195	0.5     	0.696052	0.749983	0.0403791                
+42 	500  	887      	4971    	0.25    	0.7579  	0.900584	0.106429        	0.144338	0.380761	1  	0.13324 	0.5     	0.69622 	0.749983	0.0403901                
+43 	500  	868      	5005    	0.25    	0.761456	0.900584	0.106792        	0.144338	0.378177	1  	0.133832	0.5     	0.696702	0.749983	0.0405242                
+44 	500  	916      	5041    	0.25    	0.759127	0.900584	0.112663        	0.144338	0.37809 	1  	0.137293	0.5     	0.6982  	0.749983	0.039384                 
+45 	500  	921      	5083    	0.25    	0.760398	0.900584	0.113482        	0.144338	0.37742 	1  	0.138327	0.5     	0.69782 	0.749983	0.0401577                
+46 	500  	885      	5107    	0.25    	0.76008 	0.900584	0.113231        	0.144338	0.37776 	1  	0.138652	0.5     	0.69803 	0.749983	0.0402803                
+47 	500  	919      	5144    	0.25    	0.759968	0.900584	0.113335        	0.144338	0.378319	1  	0.138325	0.5     	0.697686	0.749983	0.0404361                
+48 	500  	899      	5167    	0.25    	0.761295	0.900584	0.113486        	0.144338	0.377456	1  	0.138586	0.5     	0.697937	0.749983	0.0405796                
+49 	500  	889      	5196    	0.25    	0.762037	0.900584	0.113655        	0.144338	0.377585	1  	0.138886	0.5     	0.697804	0.749983	0.0406786                
+50 	500  	880      	5224    	0.25    	0.765532	0.900584	0.110339        	0.144338	0.374198	1  	0.137496	0.5     	0.69864 	0.749983	0.0401117                
+51 	500  	932      	5250    	0.25    	0.766422	0.900584	0.109945        	0.144338	0.373796	1  	0.137707	0.5     	0.698935	0.749983	0.0401965                
+52 	500  	900      	5279    	0.25    	0.766079	0.900584	0.109745        	0.144338	0.37378 	1  	0.136985	0.5     	0.699394	0.749983	0.0397568                
+53 	500  	885      	5305    	0.25    	0.764551	0.900584	0.109801        	0.144338	0.375637	1  	0.136928	0.5     	0.699374	0.749983	0.0399551                
+54 	500  	903      	5336    	0.25    	0.76609 	0.900584	0.108982        	0.144338	0.374929	1  	0.136443	0.5     	0.699463	0.749983	0.0399379                
+55 	500  	937      	5359    	0.25    	0.766015	0.900584	0.108727        	0.144338	0.374236	1  	0.136289	0.5     	0.699834	0.749983	0.0400848                
+56 	500  	878      	5366    	0.25    	0.766336	0.900584	0.109059        	0.144338	0.373933	1  	0.13672 	0.5     	0.7004  	0.749983	0.039802                 
+57 	500  	907      	5380    	0.25    	0.766659	0.900584	0.109324        	0.144338	0.375576	1  	0.137012	0.5     	0.699879	0.749983	0.0400354                
+58 	500  	885      	5397    	0.25    	0.764548	0.900584	0.109537        	0.145865	0.378547	1  	0.135829	0.5     	0.698706	0.749983	0.040438                 
+59 	500  	922      	5414    	0.25    	0.76168 	0.900584	0.111403        	0.145865	0.381729	1  	0.137543	0.5     	0.698379	0.749983	0.0415295                
+60 	500  	914      	5427    	0.25    	0.760924	0.900584	0.112108        	0.145865	0.381966	1  	0.137335	0.5     	0.698041	0.749983	0.0415569                
+61 	500  	894      	5449    	0.25    	0.761898	0.900584	0.110565        	0.145865	0.381193	1  	0.136561	0.5     	0.698261	0.749983	0.0409233                
+62 	500  	875      	5462    	0.25    	0.763676	0.900584	0.108108        	0.144338	0.377385	1  	0.134156	0.5     	0.7002  	0.749983	0.0384406                
+63 	500  	913      	5477    	0.25    	0.763798	0.900584	0.108193        	0.144338	0.377844	1  	0.134156	0.5     	0.700336	0.749983	0.0385339                
+64 	500  	932      	5498    	0.25    	0.76416 	0.900584	0.108164        	0.144338	0.376745	1  	0.133639	0.5     	0.700739	0.749983	0.0380474                
+65 	500  	888      	5506    	0.25    	0.765334	0.900584	0.108815        	0.144338	0.375131	1  	0.133881	0.5     	0.700729	0.749983	0.0382432                
+66 	500  	938      	5521    	0.25    	0.765977	0.900584	0.109348        	0.144338	0.374534	1  	0.133762	0.5     	0.700991	0.749983	0.0382029                
+67 	500  	903      	5532    	0.25    	0.764361	0.900584	0.111332        	0.144338	0.375848	1  	0.135171	0.5     	0.701367	0.749983	0.0384193                
+68 	500  	869      	5542    	0.25    	0.763587	0.900584	0.111227        	0.144338	0.376258	1  	0.134988	0.5     	0.701687	0.749983	0.0384974                
+69 	500  	894      	5555    	0.25    	0.762905	0.900606	0.111757        	0.144338	0.378094	1  	0.136389	0.5     	0.70134 	0.749983	0.0390221                
+70 	500  	882      	5568    	0.25    	0.762009	0.900606	0.111975        	0.144338	0.380509	1  	0.136658	0.5     	0.700901	0.749983	0.0396405                
+71 	500  	899      	5581    	0.25    	0.761926	0.900606	0.113989        	0.144338	0.380544	1  	0.137679	0.5     	0.700836	0.749983	0.0401886                
+72 	500  	915      	5596    	0.25    	0.7623  	0.900606	0.114316        	0.144338	0.380762	1  	0.138321	0.5     	0.700894	0.749983	0.0402881                
+73 	500  	865      	5612    	0.25    	0.76095 	0.900606	0.114182        	0.144338	0.382627	1  	0.138118	0.5     	0.700754	0.749983	0.04037                  
+74 	500  	887      	5624    	0.25    	0.759009	0.900606	0.114568        	0.144338	0.38442 	1  	0.138346	0.5     	0.700507	0.750156	0.0404594                
+75 	500  	920      	5630    	0.25    	0.760471	0.900606	0.114583        	0.144338	0.38423 	1  	0.139361	0.5     	0.700605	0.750156	0.0405646                
+76 	500  	907      	5639    	0.25    	0.762669	0.900606	0.113671        	0.144338	0.382154	1  	0.139024	0.5     	0.700879	0.750156	0.0407212                
+77 	500  	883      	5645    	0.25    	0.763754	0.900606	0.113806        	0.144338	0.38094 	1  	0.138694	0.5     	0.701158	0.750156	0.0407949                
+78 	500  	887      	5657    	0.25    	0.763875	0.900606	0.112099        	0.144338	0.381521	1  	0.138019	0.5     	0.701339	0.750156	0.0407636                
+79 	500  	889      	5662    	0.25    	0.764828	0.900606	0.111132        	0.144338	0.380185	1  	0.137629	0.5     	0.701625	0.750156	0.0414178                
+80 	500  	900      	5671    	0.25    	0.765483	0.900606	0.110858        	0.144338	0.378744	1  	0.13835 	0.5     	0.701764	0.750156	0.0418285                
+81 	500  	925      	5677    	0.25    	0.76567 	0.900606	0.111133        	0.144338	0.377531	1  	0.138112	0.5     	0.702161	0.750156	0.0417711                
+82 	500  	914      	5684    	0.25    	0.766699	0.900606	0.108808        	0.144338	0.376214	1  	0.137575	0.5     	0.702386	0.750156	0.0420753                
+83 	500  	901      	5690    	0.25    	0.769155	0.900606	0.10919         	0.144338	0.373028	1  	0.13905 	0.5     	0.702978	0.750156	0.0417905                
+84 	500  	916      	5699    	0.25    	0.769632	0.900606	0.109559        	0.144338	0.372957	1  	0.139884	0.5     	0.702957	0.750156	0.0420345                
+85 	500  	925      	5707    	0.25    	0.769751	0.900606	0.109857        	0.144338	0.372525	1  	0.139856	0.5     	0.702995	0.750156	0.0419459                
+86 	500  	869      	5712    	0.25    	0.771596	0.900606	0.108334        	0.145865	0.372744	1  	0.136871	0.5     	0.70314 	0.750156	0.0413331                
+87 	500  	910      	5719    	0.25    	0.771861	0.900606	0.108802        	0.145865	0.372058	1  	0.13682 	0.5     	0.703209	0.750156	0.0413462                
+88 	500  	915      	5722    	0.25    	0.769838	0.900606	0.108458        	0.145865	0.372969	1  	0.136537	0.5     	0.703945	0.750156	0.0413655                
+89 	500  	915      	5728    	0.25    	0.767573	0.900606	0.107338        	0.145865	0.374742	1  	0.136162	0.5     	0.70374 	0.750156	0.0415325                
+90 	500  	922      	5740    	0.25    	0.767764	0.900606	0.108203        	0.145865	0.374608	1  	0.137283	0.5     	0.704124	0.750156	0.0411507                
+91 	500  	945      	5743    	0.25    	0.769165	0.900606	0.108182        	0.145865	0.373473	1  	0.137495	0.5     	0.70422 	0.750156	0.0411764                
+92 	500  	898      	5746    	0.25    	0.767617	0.900606	0.108622        	0.145865	0.37477 	1  	0.137683	0.5     	0.703653	0.750156	0.0420896                
+93 	500  	919      	5750    	0.25    	0.767473	0.900606	0.108712        	0.145865	0.374631	1  	0.137662	0.5     	0.703947	0.750156	0.0420658                
+94 	500  	921      	5751    	0.25    	0.76833 	0.900606	0.109424        	0.145865	0.374553	1  	0.137986	0.5     	0.703591	0.750156	0.0428045                
+95 	500  	934      	5754    	0.25    	0.767801	0.900606	0.109372        	0.145865	0.374811	1  	0.137959	0.5     	0.703907	0.750156	0.0429453                
+96 	500  	915      	5759    	0.25    	0.76808 	0.900606	0.109602        	0.145865	0.376895	1  	0.137904	0.5     	0.703018	0.750156	0.0432241                
+97 	500  	924      	5765    	0.25    	0.769729	0.900606	0.109071        	0.145865	0.375732	1  	0.137647	0.5     	0.703348	0.750156	0.0432885                
+98 	500  	920      	5770    	0.25    	0.770068	0.900606	0.108458        	0.145865	0.375585	1  	0.137153	0.5     	0.703361	0.750156	0.0433656                
+99 	500  	919      	5771    	0.25    	0.772066	0.900606	0.108068        	0.145865	0.372906	1  	0.137169	0.5     	0.70382 	0.750156	0.0432231                
+100	500  	929      	5773    	0.25    	0.772169	0.900606	0.108456        	0.145865	0.37166 	1  	0.137071	0.5     	0.704143	0.750156	0.0432071                
+101	500  	903      	5777    	0.25    	0.771506	0.900606	0.108604        	0.145865	0.372749	1  	0.137381	0.5     	0.704103	0.750156	0.0432562                
+102	500  	935      	5781    	0.25    	0.768327	0.900636	0.107438        	0.145865	0.37655 	1  	0.138063	0.5     	0.70364 	0.750156	0.0442128                
+103	500  	919      	5783    	0.25    	0.769109	0.900636	0.107236        	0.145865	0.375565	1  	0.137792	0.5     	0.704209	0.750156	0.0440468                
+104	500  	931      	5784    	0.25    	0.769517	0.900636	0.107152        	0.145865	0.376036	1  	0.137704	0.5     	0.703923	0.750156	0.0439626                
+105	500  	886      	5787    	0.25    	0.769621	0.900636	0.107393        	0.145865	0.376298	1  	0.137856	0.5     	0.703853	0.750156	0.043907                 
+106	500  	889      	5787    	0.249226	0.770505	0.900636	0.108061        	0.145865	0.373647	1  	0.137225	0.5     	0.704541	0.750156	0.0433359                
+107	500  	934      	5790    	0.249226	0.769465	0.900636	0.108949        	0.145865	0.374805	1  	0.137397	0.5     	0.70421 	0.750156	0.0435719                
+108	500  	903      	5792    	0.249226	0.771004	0.900636	0.108236        	0.145865	0.374019	1  	0.137016	0.5     	0.704259	0.750156	0.0435942                
+109	500  	896      	5797    	0.249226	0.772094	0.900636	0.107268        	0.145865	0.373973	1  	0.136764	0.5     	0.704087	0.750156	0.0437204                
+110	500  	946      	5798    	0.249226	0.772732	0.900636	0.106749        	0.145865	0.373119	1  	0.136559	0.5     	0.704259	0.750156	0.0437823                
+111	500  	910      	5800    	0.249226	0.7744  	0.900636	0.103583        	0.145865	0.371646	1  	0.135003	0.5     	0.704487	0.750156	0.0437855                
+112	500  	917      	5802    	0.249226	0.771618	0.900636	0.108496        	0.145865	0.373406	1  	0.13604 	0.5     	0.705075	0.750156	0.0426225                
+113	500  	923      	5803    	0.249226	0.772154	0.900636	0.110376        	0.145865	0.371521	1  	0.136624	0.5     	0.705652	0.750156	0.0421749                
+114	500  	948      	5804    	0.249226	0.772596	0.900636	0.107372        	0.145865	0.371056	1  	0.134676	0.5     	0.705799	0.750156	0.0423754                
+115	500  	915      	5807    	0.249226	0.773357	0.900636	0.107779        	0.145865	0.369876	1  	0.134455	0.5     	0.706124	0.750156	0.0419298                
+116	500  	890      	5808    	0.249226	0.772987	0.900636	0.107814        	0.145865	0.369366	1  	0.134495	0.5     	0.706438	0.750156	0.0415216                
+117	500  	910      	5810    	0.249226	0.768539	0.900636	0.109884        	0.145865	0.373562	1  	0.136333	0.5     	0.705493	0.750156	0.0424457                
+118	500  	901      	5810    	0.249226	0.769774	0.900636	0.105195        	0.145865	0.373964	1  	0.135072	0.5     	0.70516 	0.750156	0.0425325                
+119	500  	922      	5814    	0.249226	0.769612	0.900636	0.104846        	0.144338	0.374657	1  	0.135673	0.5     	0.705031	0.750156	0.0425205                
+120	500  	930      	5817    	0.249226	0.767061	0.900636	0.105693        	0.145865	0.378826	1  	0.136646	0.5     	0.703741	0.750156	0.0431938                
+121	500  	901      	5819    	0.249226	0.768581	0.900636	0.104492        	0.145865	0.37728 	1  	0.135297	0.5     	0.70434 	0.750156	0.04261                  
+122	500  	944      	5823    	0.249226	0.768058	0.900636	0.105534        	0.145865	0.379245	1  	0.136292	0.5     	0.70305 	0.750156	0.0426164                
+123	500  	920      	5824    	0.249226	0.765935	0.900636	0.1084          	0.145865	0.38086 	1  	0.137597	0.5     	0.703124	0.750156	0.0427374                
+124	500  	899      	5826    	0.249226	0.766628	0.900636	0.108564        	0.145865	0.381213	1  	0.137884	0.5     	0.702743	0.750156	0.0434941                
+125	500  	930      	5826    	0.249226	0.766739	0.900636	0.109728        	0.145865	0.381903	1  	0.138989	0.5     	0.702441	0.750156	0.0436054                
+126	500  	922      	5828    	0.249226	0.767067	0.900636	0.109372        	0.145865	0.381437	1  	0.138897	0.5     	0.702878	0.750156	0.0429228                
+127	500  	869      	5829    	0.249226	0.763288	0.900636	0.109681        	0.145865	0.384713	1  	0.139098	0.5     	0.702293	0.750156	0.0433412                
+128	500  	900      	5830    	0.249226	0.761681	0.900636	0.109249        	0.145865	0.386344	1  	0.139207	0.5     	0.701975	0.750156	0.044035                 
+129	500  	904      	5830    	0.249226	0.762772	0.900636	0.10944         	0.145865	0.38409 	1  	0.139436	0.5     	0.702283	0.750156	0.0440944                
+130	500  	924      	5831    	0.249226	0.761373	0.900636	0.109066        	0.145865	0.386003	1  	0.139576	0.5     	0.702526	0.750156	0.044375                 
+131	500  	915      	5834    	0.249226	0.761522	0.900636	0.109523        	0.145865	0.385811	1  	0.139689	0.5     	0.702431	0.750156	0.0443315                
+132	500  	881      	5836    	0.249226	0.76079 	0.900636	0.109663        	0.145865	0.386744	1  	0.139936	0.5     	0.702059	0.750156	0.0448977                
+133	500  	899      	5836    	0.249226	0.761288	0.900636	0.110196        	0.145865	0.385804	1  	0.139999	0.5     	0.702909	0.750156	0.0438644                
+134	500  	899      	5836    	0.249226	0.76065 	0.900636	0.111042        	0.145865	0.386181	1  	0.140391	0.5     	0.702984	0.750156	0.0438825                
+135	500  	904      	5837    	0.249226	0.759435	0.900636	0.111418        	0.145865	0.389737	1  	0.139169	0.5     	0.701676	0.750156	0.043884                 
+136	500  	927      	5837    	0.249226	0.759401	0.900636	0.11164         	0.145865	0.390371	1  	0.138992	0.5     	0.701681	0.750156	0.0440128                
+137	500  	892      	5839    	0.249226	0.759165	0.900636	0.110823        	0.145865	0.390146	1  	0.138605	0.5     	0.701872	0.750156	0.044149                 
+138	500  	901      	5843    	0.249226	0.759662	0.900636	0.111103        	0.145865	0.389513	1  	0.139009	0.5     	0.702416	0.750156	0.0440806                
+139	500  	937      	5844    	0.249226	0.760349	0.900636	0.111423        	0.145865	0.389128	1  	0.139105	0.5     	0.702282	0.750156	0.0444823                
+140	500  	927      	5844    	0.249226	0.761081	0.900636	0.111117        	0.145865	0.388018	1  	0.138503	0.5     	0.702203	0.750156	0.0448743                
+141	500  	917      	5846    	0.249226	0.760525	0.900636	0.11109         	0.145865	0.388616	1  	0.138589	0.5     	0.702191	0.750156	0.0450143                
+142	500  	910      	5846    	0.249226	0.760699	0.900636	0.111645        	0.145865	0.388483	1  	0.138906	0.5     	0.702425	0.750156	0.0448331                
+143	500  	888      	5846    	0.249226	0.7611  	0.900636	0.111315        	0.145865	0.388471	1  	0.138721	0.5     	0.702325	0.750156	0.0448017                
+144	500  	900      	5848    	0.249226	0.760756	0.900636	0.111482        	0.145865	0.38899 	1  	0.13916 	0.5     	0.702371	0.750156	0.0450792                
+145	500  	938      	5848    	0.249226	0.761562	0.900636	0.111206        	0.145865	0.387112	1  	0.138409	0.5     	0.703007	0.750156	0.0451831                
+146	500  	935      	5848    	0.249226	0.761513	0.900636	0.111907        	0.145865	0.38677 	1  	0.13894 	0.5     	0.703745	0.750156	0.044911                 
+147	500  	926      	5848    	0.249226	0.761189	0.900636	0.111075        	0.145865	0.386675	1  	0.138436	0.5     	0.704215	0.750156	0.0443465                
+148	500  	921      	5849    	0.249226	0.761804	0.900636	0.11049         	0.145865	0.386613	1  	0.137718	0.5     	0.704373	0.750156	0.0441139                
+149	500  	900      	5850    	0.249226	0.762483	0.900636	0.110282        	0.145865	0.386231	1  	0.137739	0.5     	0.70425 	0.750156	0.0442363                
+150	500  	924      	5850    	0.249226	0.763457	0.900636	0.110446        	0.145865	0.385447	1  	0.137963	0.5     	0.704242	0.750156	0.044128                 
+151	500  	912      	5850    	0.249226	0.762279	0.900636	0.11074         	0.145865	0.386416	1  	0.138052	0.5     	0.704329	0.750156	0.0442975                
+152	500  	939      	5850    	0.249226	0.762899	0.900636	0.111225        	0.145865	0.386099	1  	0.138524	0.5     	0.704241	0.750156	0.0443406                
+153	500  	939      	5850    	0.249226	0.763339	0.900636	0.110701        	0.145865	0.385705	1  	0.138256	0.5     	0.704342	0.750156	0.0441845                
+154	500  	900      	5850    	0.249226	0.764605	0.900636	0.108999        	0.145865	0.384303	1  	0.136218	0.5     	0.704883	0.750156	0.0431866                
+155	500  	954      	5851    	0.249226	0.764204	0.900636	0.110293        	0.145865	0.384269	1  	0.136902	0.5     	0.704834	0.750156	0.0436109                
+156	500  	910      	5852    	0.249226	0.763604	0.900636	0.110324        	0.145865	0.384069	1  	0.135726	0.5     	0.705691	0.750156	0.042654                 
+157	500  	889      	5852    	0.249226	0.761546	0.900636	0.111343        	0.145865	0.388672	1  	0.134776	0.5     	0.704399	0.750156	0.0432654                
+158	500  	875      	5852    	0.249226	0.760107	0.900636	0.112134        	0.145865	0.391158	1  	0.135636	0.5     	0.703516	0.750156	0.0439323                
+159	500  	927      	5853    	0.249226	0.761534	0.900636	0.110637        	0.145865	0.39115 	1  	0.135187	0.5     	0.703131	0.750156	0.0440434                
+160	500  	890      	5853    	0.249226	0.762319	0.900636	0.11016         	0.145865	0.390423	1  	0.135165	0.5     	0.702854	0.750156	0.0443069                
+161	500  	926      	5853    	0.249226	0.762473	0.900636	0.109748        	0.145865	0.390216	1  	0.13526 	0.5     	0.703396	0.750156	0.0436827                
+162	500  	940      	5853    	0.249226	0.763194	0.900636	0.109543        	0.145865	0.389317	1  	0.135042	0.5     	0.703859	0.750156	0.0429757                
+163	500  	933      	5853    	0.249226	0.76255 	0.900636	0.110032        	0.145865	0.389941	1  	0.135139	0.5     	0.703836	0.750156	0.0429639                
+164	500  	917      	5853    	0.249226	0.760756	0.900636	0.11223         	0.145865	0.391646	1  	0.136481	0.5     	0.703629	0.750156	0.0429292                
+165	500  	942      	5853    	0.249226	0.761651	0.900636	0.111796        	0.145865	0.389942	1  	0.135445	0.5     	0.704217	0.750156	0.0428489                
+166	500  	924      	5853    	0.249226	0.7618  	0.900636	0.112152        	0.145865	0.390017	1  	0.136537	0.5     	0.704036	0.750156	0.0437047                
+167	500  	964      	5853    	0.249226	0.763753	0.900636	0.111659        	0.145865	0.388562	1  	0.135832	0.5     	0.703988	0.750156	0.0436432                
+168	500  	928      	5853    	0.249226	0.765684	0.900636	0.110171        	0.145865	0.386495	1  	0.13419 	0.5     	0.704663	0.750156	0.0427476                
+169	500  	917      	5853    	0.249226	0.764513	0.900636	0.112038        	0.145865	0.387521	1  	0.135356	0.5     	0.704719	0.750156	0.0428997                
+170	500  	926      	5853    	0.249226	0.765113	0.900636	0.112117        	0.145865	0.38656 	1  	0.134678	0.5     	0.704957	0.750156	0.0428253                
+171	500  	935      	5853    	0.249226	0.766024	0.900636	0.110766        	0.145865	0.385994	1  	0.134516	0.5     	0.70503 	0.750156	0.042826                 
+172	500  	956      	5853    	0.249226	0.765979	0.900636	0.111533        	0.147442	0.385639	1  	0.133996	0.5     	0.704958	0.750156	0.0428307                
+173	500  	928      	5854    	0.249226	0.766425	0.900636	0.11133         	0.147442	0.385678	1  	0.134346	0.5     	0.704526	0.750156	0.0434045                
+174	500  	959      	5854    	0.249226	0.767275	0.900636	0.110806        	0.147442	0.385029	1  	0.133637	0.5     	0.704704	0.750156	0.04294                  
+175	500  	934      	5855    	0.249226	0.766431	0.900636	0.111961        	0.147442	0.385414	1  	0.134035	0.5     	0.704994	0.750156	0.0427421                
+176	500  	937      	5855    	0.249226	0.767225	0.900636	0.109983        	0.147442	0.384333	1  	0.132674	0.5     	0.70565 	0.750156	0.0420827                
+177	500  	939      	5855    	0.249226	0.767782	0.900636	0.109185        	0.147442	0.383468	1  	0.132434	0.5     	0.706099	0.750156	0.041497                 
+178	500  	933      	5855    	0.249226	0.76879 	0.900636	0.10922         	0.147442	0.382073	1  	0.13228 	0.5     	0.706291	0.750156	0.041286                 
+179	500  	934      	5856    	0.249226	0.76858 	0.900636	0.108374        	0.147442	0.382575	1  	0.131895	0.5     	0.706441	0.750156	0.0409351                
+180	500  	921      	5857    	0.249226	0.766539	0.900636	0.110183        	0.147442	0.384827	1  	0.133686	0.5     	0.705504	0.750156	0.0428494                
+181	500  	915      	5858    	0.249226	0.764098	0.900636	0.109972        	0.147442	0.387823	1  	0.133697	0.5     	0.704586	0.750156	0.0437301                
+182	500  	933      	5858    	0.249226	0.763791	0.900672	0.110054        	0.147442	0.388957	1  	0.134817	0.5     	0.704196	0.750156	0.0450353                
+183	500  	944      	5858    	0.249226	0.763792	0.900672	0.111742        	0.147442	0.38886 	1  	0.134615	0.5     	0.704421	0.750156	0.0441861                
+184	500  	910      	5858    	0.249226	0.762948	0.900672	0.111759        	0.147442	0.388804	1  	0.13439 	0.5     	0.70475 	0.750156	0.0439693                
+185	500  	937      	5858    	0.249226	0.76216 	0.900672	0.113671        	0.147442	0.389098	1  	0.134902	0.5     	0.70487 	0.750156	0.0439681                
+186	500  	928      	5858    	0.249226	0.761966	0.900672	0.11493         	0.147442	0.388712	1  	0.135556	0.5     	0.705115	0.750156	0.043664                 
+187	500  	947      	5858    	0.249226	0.761544	0.900672	0.113859        	0.147442	0.389892	1  	0.135666	0.5     	0.705192	0.750156	0.0437698                
+188	500  	1007     	5858    	0.249226	0.761481	0.900672	0.11327         	0.147442	0.389468	1  	0.134728	0.5     	0.705259	0.750156	0.0436636                
+189	500  	907      	5858    	0.249226	0.760864	0.900672	0.113425        	0.147442	0.390606	1  	0.134799	0.5     	0.705258	0.750156	0.0437062                
+190	500  	914      	5858    	0.249226	0.761149	0.900672	0.112354        	0.147442	0.390482	1  	0.133992	0.5     	0.705326	0.750156	0.0436424                
+191	500  	912      	5859    	0.249226	0.762303	0.900672	0.112253        	0.147442	0.389299	1  	0.133437	0.5     	0.705563	0.750156	0.0435899                
+192	500  	906      	5859    	0.249226	0.762717	0.900672	0.11433         	0.147442	0.389279	1  	0.134039	0.5     	0.70531 	0.750156	0.0442464                
+193	500  	913      	5859    	0.249226	0.763457	0.900672	0.113307        	0.147442	0.388208	1  	0.133568	0.5     	0.705523	0.750156	0.044326                 
+194	500  	941      	5859    	0.249226	0.762157	0.900672	0.114196        	0.147442	0.389649	1  	0.134559	0.5     	0.705059	0.750156	0.0454521                
+195	500  	917      	5859    	0.249226	0.763428	0.900672	0.11252         	0.147442	0.388181	1  	0.133576	0.5     	0.705287	0.750156	0.0453495                
+196	500  	933      	5859    	0.249226	0.762489	0.900672	0.114094        	0.147442	0.389916	1  	0.136859	0.5     	0.70508 	0.750156	0.0453419                
+197	500  	920      	5860    	0.249226	0.764972	0.900672	0.113136        	0.147442	0.387122	1  	0.135074	0.5     	0.705867	0.750156	0.0443633                
+198	500  	911      	5860    	0.249226	0.765183	0.900672	0.112038        	0.147442	0.387072	1  	0.134255	0.5     	0.70582 	0.750156	0.0444209                
+199	500  	901      	5860    	0.249226	0.765997	0.900672	0.111335        	0.147442	0.38635 	1  	0.134143	0.5     	0.706115	0.750165	0.0442694                
+200	500  	909      	5860    	0.249226	0.764103	0.900672	0.114476        	0.147442	0.387069	1  	0.136123	0.5     	0.705492	0.750165	0.045918                 
+201	500  	912      	5860    	0.249226	0.764243	0.900672	0.114621        	0.147442	0.387367	1  	0.136249	0.5     	0.704956	0.750165	0.0464675                
+202	500  	931      	5861    	0.249226	0.764454	0.900672	0.11446         	0.147442	0.387029	1  	0.135986	0.5     	0.705207	0.750165	0.0459411                
+203	500  	931      	5861    	0.249226	0.76399 	0.900672	0.113735        	0.147442	0.387542	1  	0.13636 	0.5     	0.705975	0.750165	0.0448452                
+204	500  	954      	5861    	0.249226	0.766636	0.900672	0.110817        	0.147442	0.385865	1  	0.135653	0.465362	0.704951	0.750165	0.0471129                
+205	500  	935      	5861    	0.249226	0.76742 	0.900672	0.111033        	0.147442	0.385075	1  	0.134669	0.5     	0.705165	0.750165	0.0462763                
+206	500  	934      	5861    	0.24613 	0.764467	0.900672	0.115286        	0.147442	0.389669	1  	0.136477	0.5     	0.703425	0.750165	0.0468758                
+207	500  	969      	5861    	0.249226	0.766036	0.900672	0.113851        	0.147442	0.387807	1  	0.135682	0.5     	0.704577	0.750165	0.0455289                
+208	500  	972      	5861    	0.249226	0.766892	0.900672	0.112636        	0.147442	0.387249	1  	0.135328	0.5     	0.705125	0.750165	0.0450095                
+209	500  	959      	5861    	0.249226	0.766458	0.900672	0.114266        	0.147442	0.38699 	1  	0.135987	0.5     	0.705195	0.750165	0.0452013                
+210	500  	978      	5861    	0.249226	0.766923	0.900672	0.112909        	0.147442	0.386732	1  	0.135898	0.5     	0.705527	0.750165	0.0450909                
+211	500  	922      	5861    	0.249226	0.766918	0.900672	0.114092        	0.147442	0.385185	1  	0.13504 	0.5     	0.706651	0.750165	0.0438385                
+212	500  	914      	5861    	0.249226	0.768065	0.900672	0.111976        	0.147442	0.382756	1  	0.13327 	0.5     	0.707602	0.750165	0.0429903                
+213	500  	937      	5861    	0.249226	0.767691	0.900672	0.11272         	0.147442	0.383882	1  	0.134103	0.5     	0.70756 	0.750165	0.0431531                
+214	500  	929      	5861    	0.249226	0.76649 	0.900672	0.115062        	0.147442	0.385884	1  	0.136045	0.5     	0.706863	0.750165	0.0440564                
+215	500  	897      	5861    	0.249226	0.768109	0.900672	0.112864        	0.147442	0.384017	1  	0.134711	0.5     	0.707599	0.750165	0.0427681                
+216	500  	957      	5861    	0.249226	0.767808	0.900672	0.113316        	0.147442	0.384779	1  	0.134978	0.5     	0.707651	0.750165	0.0425944                
+217	500  	947      	5861    	0.249226	0.768793	0.900672	0.112512        	0.147442	0.383261	1  	0.134594	0.5     	0.707797	0.750165	0.0432482                
+218	500  	945      	5861    	0.249226	0.766585	0.900672	0.113872        	0.147442	0.386143	1  	0.135925	0.5     	0.707133	0.750165	0.0442101                
+219	500  	907      	5861    	0.249226	0.768319	0.900672	0.112604        	0.147442	0.384414	1  	0.134745	0.5     	0.707678	0.750165	0.0434623                
+220	500  	966      	5861    	0.249226	0.769566	0.900672	0.111834        	0.147442	0.382625	1  	0.133929	0.5     	0.708417	0.750165	0.042764                 
+221	500  	935      	5861    	0.249226	0.769408	0.900672	0.112335        	0.147442	0.382746	1  	0.1344  	0.5     	0.708285	0.750165	0.0430174                
+222	500  	931      	5861    	0.249226	0.770361	0.900672	0.112132        	0.147442	0.381884	1  	0.134342	0.5     	0.708381	0.750165	0.0435398                
+223	500  	946      	5861    	0.249226	0.771133	0.900672	0.111148        	0.147442	0.381289	1  	0.133517	0.5     	0.708641	0.750165	0.0433199                
+224	500  	942      	5861    	0.249226	0.771133	0.900672	0.111148        	0.147442	0.381289	1  	0.133517	0.5     	0.708641	0.750165	0.0433199                
+225	500  	942      	5861    	0.249226	0.768181	0.900672	0.114784        	0.176777	0.386125	1  	0.133668	0.5     	0.707897	0.750165	0.0431026                
+226	500  	959      	5861    	0.249226	0.767518	0.900672	0.114211        	0.176777	0.387277	1  	0.134565	0.5     	0.707478	0.750165	0.0447906                
+227	500  	926      	5861    	0.249226	0.766065	0.900672	0.116176        	0.176777	0.389621	1  	0.136006	0.5     	0.706902	0.750165	0.0445948                
+228	500  	926      	5861    	0.249226	0.767759	0.900672	0.114423        	0.176777	0.388271	1  	0.134926	0.5     	0.707331	0.750165	0.0438544                
+229	500  	932      	5861    	0.249226	0.766657	0.900672	0.11858         	0.176777	0.38858 	1  	0.134896	0.5     	0.707825	0.750165	0.0428047                
+230	500  	930      	5861    	0.249226	0.764497	0.900672	0.12168         	0.176777	0.392528	1  	0.137455	0.5     	0.70623 	0.750165	0.0435797                
+231	500  	932      	5861    	0.249226	0.766419	0.900672	0.118894        	0.176777	0.390929	1  	0.135462	0.5     	0.706843	0.750165	0.0430974                
+232	500  	973      	5861    	0.249226	0.768205	0.900672	0.117086        	0.176777	0.388741	1  	0.135359	0.5     	0.706989	0.750165	0.0437799                
+233	500  	951      	5861    	0.249226	0.766784	0.900672	0.119683        	0.176777	0.390123	1  	0.136183	0.5     	0.707058	0.750165	0.0426924                
+234	500  	948      	5861    	0.249226	0.769579	0.900672	0.115138        	0.176777	0.38802 	1  	0.134504	0.5     	0.707157	0.750165	0.0430572                
+235	500  	949      	5861    	0.249226	0.768824	0.900672	0.11513         	0.176777	0.388435	1  	0.134295	0.5     	0.707312	0.750165	0.0430147                
+236	500  	928      	5861    	0.249226	0.769955	0.900672	0.114782        	0.176777	0.386699	1  	0.133336	0.5     	0.70775 	0.750165	0.0423759                
+237	500  	957      	5861    	0.249226	0.770085	0.900672	0.114317        	0.176777	0.38657 	1  	0.133229	0.5     	0.707841	0.750165	0.0424317                
+238	500  	937      	5861    	0.249226	0.76639 	0.900672	0.118908        	0.176777	0.391655	1  	0.135826	0.5     	0.70642 	0.750165	0.0429381                
+239	500  	916      	5861    	0.249226	0.764413	0.900672	0.120208        	0.176777	0.39254 	1  	0.136111	0.5     	0.706669	0.750165	0.043119                 
+240	500  	947      	5861    	0.249226	0.76661 	0.900672	0.116957        	0.176777	0.391317	1  	0.13519 	0.5     	0.706831	0.750165	0.0427695                
+241	500  	952      	5861    	0.249226	0.766989	0.900672	0.116696        	0.176777	0.389594	1  	0.134651	0.5     	0.707894	0.750165	0.0417223                
+242	500  	938      	5861    	0.249226	0.765914	0.900672	0.116564        	0.176777	0.391868	1  	0.135018	0.5     	0.706997	0.750165	0.043478                 
+243	500  	948      	5861    	0.249226	0.766417	0.900672	0.116501        	0.176777	0.391594	1  	0.135333	0.5     	0.706859	0.750165	0.0437137                
+244	500  	925      	5861    	0.249226	0.766191	0.900672	0.116428        	0.176777	0.3917  	1  	0.135259	0.5     	0.70706 	0.750165	0.0437835                
+245	500  	943      	5861    	0.249226	0.766503	0.900672	0.118283        	0.176777	0.390724	1  	0.135746	0.5     	0.706808	0.750165	0.0443772                
+246	500  	938      	5861    	0.249226	0.7687  	0.900672	0.117201        	0.176777	0.387687	1  	0.1343  	0.5     	0.707626	0.750165	0.0431635                
+247	500  	925      	5861    	0.249226	0.767326	0.900672	0.117705        	0.176777	0.388927	1  	0.133956	0.5     	0.707821	0.750165	0.0426932                
+248	500  	953      	5861    	0.249226	0.769817	0.900672	0.114461        	0.176777	0.38734 	1  	0.133215	0.5     	0.707997	0.750165	0.0427739                
+249	500  	975      	5861    	0.249226	0.769004	0.900672	0.115519        	0.176777	0.387985	1  	0.133778	0.5     	0.708072	0.750165	0.0425899                
+250	500  	940      	5861    	0.249226	0.769133	0.900672	0.115523        	0.176777	0.387671	1  	0.133751	0.5     	0.708173	0.750165	0.0426118                
+251	500  	955      	5861    	0.249226	0.768226	0.900672	0.116657        	0.176777	0.388277	1  	0.133885	0.5     	0.708117	0.750165	0.0425888                
+252	500  	937      	5861    	0.249226	0.767721	0.900672	0.11664         	0.176777	0.388761	1  	0.133851	0.5     	0.708039	0.750165	0.0425542                
+253	500  	952      	5861    	0.249226	0.76756 	0.900672	0.116525        	0.176777	0.388826	1  	0.133786	0.5     	0.707973	0.750165	0.0425161                
+254	500  	936      	5861    	0.249226	0.764842	0.900672	0.116601        	0.176777	0.392351	1  	0.133885	0.5     	0.706903	0.750165	0.0439241                
+255	500  	942      	5861    	0.249226	0.764754	0.900672	0.118048        	0.176777	0.39095 	1  	0.134357	0.5     	0.708009	0.750165	0.042764                 
+256	500  	932      	5861    	0.249226	0.765595	0.900672	0.116113        	0.176777	0.390535	1  	0.13395 	0.5     	0.707963	0.750165	0.0431556                
+257	500  	937      	5861    	0.249226	0.766459	0.900672	0.115895        	0.176777	0.389424	1  	0.133272	0.5     	0.708259	0.750165	0.0426978                
+258	500  	943      	5861    	0.249226	0.767353	0.900672	0.11534         	0.176777	0.389381	1  	0.133346	0.5     	0.70814 	0.750165	0.0426929                
+259	500  	946      	5861    	0.249226	0.767721	0.900672	0.115485        	0.176777	0.389003	1  	0.133449	0.5     	0.708071	0.750165	0.0427499                
+260	500  	938      	5861    	0.249226	0.768289	0.900672	0.115384        	0.176777	0.388688	1  	0.133518	0.5     	0.708059	0.750165	0.0427527                
+261	500  	951      	5861    	0.249226	0.768181	0.900672	0.11531         	0.176777	0.389288	1  	0.13369 	0.5     	0.707952	0.750165	0.0427307                
+262	500  	936      	5861    	0.249226	0.76736 	0.900672	0.114925        	0.176777	0.390452	1  	0.133279	0.5     	0.707716	0.750165	0.0426517                
+263	500  	918      	5861    	0.249226	0.76736 	0.900672	0.114925        	0.176777	0.390452	1  	0.133279	0.5     	0.707716	0.750165	0.0426517                
+264	500  	946      	5861    	0.249226	0.767262	0.900672	0.114927        	0.176777	0.390729	1  	0.132999	0.5     	0.707709	0.750165	0.0426442                
+265	500  	958      	5861    	0.249226	0.766572	0.900672	0.115276        	0.176777	0.390917	1  	0.133128	0.5     	0.707662	0.750165	0.0425962                
+266	500  	936      	5861    	0.249226	0.767208	0.900672	0.11491         	0.176777	0.390223	1  	0.133043	0.5     	0.707817	0.750165	0.042784                 
+267	500  	935      	5861    	0.249869	0.768762	0.900672	0.111326        	0.176777	0.388689	1  	0.131385	0.5     	0.708192	0.750165	0.0425295                
+268	500  	946      	5861    	0.249869	0.769482	0.900672	0.110348        	0.176777	0.388563	1  	0.131335	0.5     	0.708156	0.750165	0.0425276                
+269	500  	943      	5861    	0.249869	0.769757	0.900672	0.110559        	0.176777	0.388496	1  	0.131422	0.5     	0.708107	0.750165	0.0425227                
+270	500  	951      	5861    	0.249869	0.769766	0.900672	0.110874        	0.176777	0.389617	1  	0.132363	0.5     	0.707597	0.750165	0.0433237                
+271	500  	938      	5861    	0.249869	0.770172	0.900672	0.111091        	0.176777	0.38815 	1  	0.131769	0.5     	0.708417	0.750165	0.0425506                
+272	500  	937      	5861    	0.249869	0.769609	0.900672	0.11081         	0.176777	0.388571	1  	0.131503	0.5     	0.708372	0.750165	0.0425177                
+273	500  	971      	5861    	0.249869	0.769076	0.900672	0.110735        	0.176777	0.389186	1  	0.13126 	0.5     	0.70822 	0.750165	0.0424451                
+274	500  	970      	5861    	0.249869	0.768457	0.900672	0.110837        	0.176777	0.390109	1  	0.131876	0.5     	0.707886	0.750165	0.0430564                
+275	500  	932      	5861    	0.249869	0.768336	0.900672	0.110759        	0.176777	0.390484	1  	0.131734	0.5     	0.707785	0.750165	0.0430253                
+276	500  	930      	5861    	0.249869	0.767427	0.900672	0.110693        	0.176777	0.391995	1  	0.131796	0.5     	0.707396	0.750165	0.0440203                
+277	500  	979      	5861    	0.249869	0.767172	0.900672	0.112306        	0.176777	0.392181	1  	0.132432	0.5     	0.707626	0.750165	0.0435375                
+278	500  	920      	5861    	0.249869	0.767672	0.900672	0.110389        	0.176777	0.392122	1  	0.131906	0.5     	0.707807	0.750165	0.0430607                
+279	500  	977      	5861    	0.249869	0.767681	0.900672	0.110393        	0.176777	0.392211	1  	0.131851	0.5     	0.707735	0.750165	0.0430356                
+280	500  	918      	5861    	0.249869	0.767547	0.900672	0.110292        	0.176777	0.392467	1  	0.131698	0.5     	0.707607	0.750165	0.0430081                
+281	500  	947      	5861    	0.249869	0.767312	0.900672	0.1101          	0.176777	0.392633	1  	0.131588	0.5     	0.707729	0.750165	0.043073                 
+282	500  	950      	5861    	0.249869	0.767482	0.900672	0.110029        	0.176777	0.393668	1  	0.131904	0.5     	0.707358	0.750165	0.0434608                
+283	500  	947      	5861    	0.249869	0.76708 	0.900672	0.11211         	0.176777	0.393725	1  	0.132746	0.5     	0.706968	0.750165	0.0444515                
+284	500  	942      	5861    	0.249299	0.767451	0.900672	0.112271        	0.176777	0.392869	1  	0.132196	0.5     	0.707703	0.750165	0.0433678                
+285	500  	943      	5861    	0.249869	0.768713	0.900672	0.110532        	0.176777	0.393384	1  	0.132249	0.5     	0.706601	0.750165	0.0440926                
+286	500  	929      	5861    	0.249869	0.767783	0.900672	0.111744        	0.176777	0.39402 	1  	0.132893	0.5     	0.706809	0.750165	0.0443046                
+287	500  	938      	5861    	0.249299	0.76677 	0.900672	0.113684        	0.176777	0.394477	1  	0.134017	0.5     	0.707075	0.750165	0.044002                 
+288	500  	927      	5861    	0.249299	0.766557	0.900672	0.114338        	0.176777	0.393286	1  	0.133643	0.5     	0.707589	0.750165	0.043332                 
+289	500  	954      	5861    	0.249869	0.767832	0.900672	0.111321        	0.176777	0.392711	1  	0.132938	0.5     	0.70758 	0.750165	0.0435328                
+290	500  	940      	5861    	0.249869	0.766632	0.900672	0.112076        	0.176777	0.394141	1  	0.133086	0.5     	0.707766	0.750165	0.0434062                
+291	500  	937      	5861    	0.249869	0.76441 	0.900672	0.113282        	0.176777	0.396113	1  	0.134677	0.5     	0.707466	0.750165	0.0437707                
+292	500  	961      	5861    	0.249869	0.76194 	0.900672	0.113852        	0.176777	0.399643	1  	0.135255	0.5     	0.706332	0.750165	0.0450257                
+293	500  	906      	5861    	0.249869	0.765028	0.900672	0.112347        	0.176777	0.39573 	1  	0.133365	0.5     	0.707187	0.750165	0.0442924                
+294	500  	947      	5861    	0.249869	0.764901	0.900672	0.112147        	0.176777	0.395926	1  	0.13349 	0.5     	0.707878	0.750165	0.0435076                
+295	500  	931      	5861    	0.249869	0.764939	0.900672	0.112392        	0.176777	0.396393	1  	0.133974	0.5     	0.707459	0.750165	0.0442091                
+296	500  	962      	5861    	0.249869	0.765394	0.900672	0.112327        	0.176777	0.395818	1  	0.134029	0.5     	0.707676	0.750165	0.0436161                
+297	500  	960      	5861    	0.24613 	0.762482	0.900672	0.115167        	0.176777	0.399132	1  	0.135076	0.5     	0.706925	0.750165	0.0442059                
+298	500  	953      	5861    	0.249299	0.762407	0.900672	0.115341        	0.176777	0.398898	1  	0.135226	0.5     	0.7071  	0.750165	0.0444221                
+299	500  	915      	5861    	0.249869	0.763026	0.900672	0.113426        	0.176777	0.398748	1  	0.135316	0.5     	0.707077	0.750165	0.0446025                
+300	500  	963      	5861    	0.249869	0.763382	0.900672	0.112657        	0.176777	0.397405	1  	0.1336  	0.5     	0.707305	0.750165	0.0438316                
+301	500  	945      	5861    	0.249869	0.761982	0.900672	0.114969        	0.176777	0.398825	1  	0.134777	0.5     	0.706899	0.750165	0.0441537                
+302	500  	936      	5861    	0.249869	0.761586	0.900672	0.115099        	0.176777	0.399177	1  	0.134683	0.5     	0.707171	0.750165	0.0439487                
+303	500  	937      	5861    	0.249869	0.763763	0.900672	0.114313        	0.176777	0.3971  	1  	0.134639	0.5     	0.707204	0.750165	0.0445728                
+304	500  	931      	5861    	0.249869	0.763895	0.900672	0.113141        	0.176777	0.3965  	1  	0.133858	0.5     	0.70802 	0.750165	0.0436841                
+305	500  	977      	5861    	0.249869	0.762859	0.900672	0.11363         	0.176777	0.398703	1  	0.134964	0.5     	0.706757	0.750165	0.0451849                
+306	500  	942      	5861    	0.249869	0.764376	0.900672	0.111816        	0.176777	0.397037	1  	0.133068	0.5     	0.707474	0.750165	0.0439427                
+307	500  	953      	5861    	0.249869	0.766042	0.900672	0.110705        	0.176777	0.395507	1  	0.132543	0.5     	0.707588	0.750165	0.0441245                
+308	500  	946      	5861    	0.249869	0.763184	0.900672	0.115177        	0.176777	0.398985	1  	0.13643 	0.5     	0.706943	0.750165	0.0450576                
+309	500  	971      	5861    	0.249869	0.764632	0.900672	0.112306        	0.176777	0.397586	1  	0.135055	0.5     	0.707407	0.750165	0.0449328                
+310	500  	924      	5861    	0.249869	0.763199	0.900672	0.113856        	0.176777	0.398612	1  	0.135389	0.5     	0.707429	0.750165	0.0449292                
+311	500  	934      	5861    	0.249869	0.762159	0.900672	0.112369        	0.176777	0.400479	1  	0.135107	0.5     	0.706987	0.750165	0.0456334                
+312	500  	936      	5861    	0.249869	0.76261 	0.900672	0.11149         	0.176777	0.400159	1  	0.134554	0.5     	0.707027	0.750165	0.0460342                
+313	500  	935      	5861    	0.249869	0.763092	0.900672	0.111213        	0.176777	0.39923 	1  	0.1335  	0.5     	0.706958	0.750165	0.0464606                
+314	500  	952      	5861    	0.249869	0.76295 	0.900672	0.113288        	0.176777	0.398812	1  	0.134069	0.5     	0.707377	0.750165	0.0462684                
+315	500  	972      	5861    	0.249869	0.763482	0.900672	0.111704        	0.176777	0.397584	1  	0.134448	0.5     	0.707868	0.750165	0.0458441                
+316	500  	934      	5861    	0.249869	0.764676	0.900672	0.11047         	0.176777	0.396229	1  	0.133188	0.5     	0.708801	0.750165	0.0445597                
+317	500  	935      	5861    	0.249869	0.764764	0.900672	0.110653        	0.176777	0.395673	1  	0.133009	0.5     	0.709018	0.750165	0.0444903                
+318	500  	953      	5861    	0.249869	0.762773	0.900672	0.113197        	0.176777	0.39616 	1  	0.133001	0.5     	0.70936 	0.750165	0.0438819                
+319	500  	953      	5861    	0.249869	0.758036	0.900672	0.117194        	0.176777	0.403541	1  	0.135722	0.5     	0.707408	0.750165	0.0447642                
+320	500  	937      	5861    	0.249869	0.758949	0.900672	0.116608        	0.176777	0.402805	1  	0.135646	0.5     	0.70769 	0.750165	0.0446241                
+321	500  	935      	5861    	0.249869	0.75558 	0.900672	0.119305        	0.176777	0.406586	1  	0.13739 	0.5     	0.707174	0.750165	0.0452519                
+322	500  	950      	5861    	0.249869	0.755304	0.900672	0.119058        	0.176777	0.407349	1  	0.137146	0.5     	0.706284	0.750165	0.0460249                
+323	500  	926      	5861    	0.249869	0.75705 	0.900672	0.115277        	0.176777	0.406092	1  	0.136135	0.5     	0.705873	0.750165	0.0470957                
+324	500  	937      	5861    	0.249869	0.755113	0.900672	0.115702        	0.176777	0.407603	1  	0.135389	0.5     	0.706169	0.750165	0.0464455                
+325	500  	945      	5861    	0.249869	0.755663	0.900672	0.116523        	0.176777	0.408699	1  	0.135776	0.5     	0.70559 	0.750165	0.0462049                
+326	500  	929      	5861    	0.249869	0.755277	0.900672	0.117034        	0.176777	0.408373	1  	0.13659 	0.5     	0.705915	0.750165	0.0461947                
+327	500  	941      	5861    	0.249869	0.755996	0.900672	0.116149        	0.176777	0.4084  	1  	0.137113	0.5     	0.705968	0.750165	0.0458909                
+328	500  	968      	5861    	0.249869	0.755846	0.900672	0.116224        	0.176777	0.408295	1  	0.137416	0.5     	0.705624	0.750165	0.0470633                
+329	500  	935      	5861    	0.249869	0.757281	0.900672	0.115853        	0.176777	0.406518	1  	0.136752	0.5     	0.705877	0.750165	0.0464343                
+330	500  	916      	5861    	0.249869	0.757674	0.900672	0.117132        	0.176777	0.405802	1  	0.136985	0.5     	0.706002	0.750165	0.0462955                
+331	500  	924      	5861    	0.249869	0.757289	0.900672	0.116874        	0.176777	0.40606 	1  	0.136512	0.5     	0.706183	0.750165	0.0462527                
+332	500  	937      	5861    	0.249869	0.756475	0.900672	0.116748        	0.176777	0.406951	1  	0.136706	0.5     	0.70591 	0.750165	0.0462658                
+333	500  	968      	5861    	0.249869	0.757412	0.900672	0.116343        	0.176777	0.406718	1  	0.136259	0.5     	0.705882	0.750165	0.046761                 
+334	500  	928      	5861    	0.249869	0.7579  	0.900672	0.114684        	0.176777	0.406284	1  	0.135217	0.5     	0.705832	0.750165	0.0466228                
+335	500  	933      	5861    	0.249869	0.75784 	0.900672	0.114612        	0.176777	0.406498	1  	0.135087	0.5     	0.706346	0.750165	0.046705                 
+336	500  	932      	5861    	0.249869	0.756816	0.900672	0.116234        	0.176777	0.406721	1  	0.135322	0.5     	0.706695	0.750165	0.0461815                
+337	500  	947      	5861    	0.249869	0.757021	0.900672	0.116205        	0.176777	0.406104	1  	0.135247	0.5     	0.706992	0.750165	0.0461205                
+338	500  	953      	5861    	0.249869	0.760016	0.900672	0.113484        	0.176777	0.404044	1  	0.134586	0.5     	0.707056	0.750165	0.0460036                
+339	500  	939      	5861    	0.249869	0.759337	0.900672	0.114695        	0.176777	0.405134	1  	0.135152	0.5     	0.707424	0.750165	0.0451477                
+340	500  	928      	5861    	0.249869	0.760255	0.900672	0.113568        	0.176777	0.404272	1  	0.134339	0.5     	0.707538	0.750165	0.0451247                
+341	500  	923      	5861    	0.249869	0.760319	0.900672	0.113621        	0.176777	0.40437 	1  	0.134257	0.5     	0.70738 	0.750165	0.0453368                
+342	500  	945      	5861    	0.249869	0.761439	0.900672	0.111954        	0.176777	0.402419	1  	0.133702	0.5     	0.707807	0.750165	0.0457943                
+343	500  	926      	5861    	0.249869	0.760584	0.900672	0.113026        	0.176777	0.402866	1  	0.133451	0.5     	0.707821	0.750165	0.0458946                
+344	500  	957      	5861    	0.249869	0.761777	0.900672	0.110861        	0.176777	0.401384	1  	0.13277 	0.5     	0.708464	0.750165	0.045287                 
+345	500  	945      	5861    	0.249869	0.759909	0.900672	0.11365         	0.176777	0.40327 	1  	0.13398 	0.5     	0.708734	0.750165	0.0449554                
+346	500  	949      	5861    	0.249869	0.760415	0.900672	0.111723        	0.176777	0.403476	1  	0.133448	0.5     	0.708792	0.750165	0.0448211                
+347	500  	935      	5861    	0.249869	0.76084 	0.900672	0.112348        	0.176777	0.402587	1  	0.133598	0.5     	0.708988	0.750165	0.044883                 
+348	500  	917      	5861    	0.249869	0.760855	0.900672	0.111674        	0.176777	0.402162	1  	0.133293	0.5     	0.709162	0.750165	0.0449183                
+349	500  	917      	5861    	0.249869	0.760722	0.900672	0.111566        	0.176777	0.402084	1  	0.133223	0.5     	0.709285	0.750165	0.0449281                
+350	500  	948      	5861    	0.249869	0.76008 	0.900672	0.111721        	0.176777	0.402306	1  	0.133091	0.5     	0.709397	0.750165	0.0448273                
+351	500  	934      	5861    	0.249869	0.760342	0.900672	0.111521        	0.176777	0.402704	1  	0.133316	0.5     	0.709094	0.750165	0.0453927                
+352	500  	927      	5861    	0.249869	0.75984 	0.900672	0.111199        	0.176777	0.40358 	1  	0.133145	0.5     	0.709017	0.750165	0.0453929                
+353	500  	953      	5861    	0.249869	0.759656	0.900672	0.111851        	0.176777	0.40396 	1  	0.13378 	0.5     	0.708493	0.750165	0.0459481                
+354	500  	913      	5861    	0.249869	0.760426	0.900672	0.111617        	0.176777	0.403512	1  	0.133631	0.5     	0.708294	0.750165	0.0462481                
+355	500  	906      	5861    	0.249869	0.760663	0.900672	0.111733        	0.176777	0.402955	1  	0.133549	0.5     	0.709117	0.750165	0.0454713                
+356	500  	953      	5861    	0.249869	0.76121 	0.900672	0.111363        	0.176777	0.402574	1  	0.133306	0.5     	0.709094	0.750165	0.0454586                
+357	500  	949      	5861    	0.249869	0.761202	0.900672	0.11135         	0.176777	0.402997	1  	0.133279	0.5     	0.708949	0.750165	0.0454625                
+358	500  	946      	5861    	0.249869	0.761084	0.900672	0.111225        	0.176777	0.403163	1  	0.13314 	0.5     	0.708822	0.750165	0.0454439                
+359	500  	950      	5861    	0.249869	0.760663	0.900672	0.112414        	0.176777	0.403939	1  	0.133791	0.5     	0.708362	0.750165	0.0456383                
+360	500  	912      	5861    	0.249869	0.760867	0.900672	0.111858        	0.176777	0.403811	1  	0.133362	0.5     	0.70857 	0.750165	0.0455547                
+361	500  	923      	5861    	0.249869	0.76115 	0.900672	0.112195        	0.176777	0.403516	1  	0.133894	0.5     	0.708634	0.750165	0.0454696                
+362	500  	908      	5861    	0.249869	0.759301	0.900672	0.111296        	0.176777	0.405865	1  	0.133409	0.5     	0.707818	0.750165	0.0462997                
+363	500  	933      	5861    	0.249869	0.758946	0.900672	0.111433        	0.176777	0.406685	1  	0.133836	0.5     	0.707777	0.750165	0.046396                 
+364	500  	951      	5861    	0.249869	0.760836	0.900672	0.110588        	0.176777	0.404043	1  	0.132884	0.5     	0.708529	0.750165	0.0455694                
+365	500  	944      	5861    	0.249869	0.760137	0.900672	0.110799        	0.176777	0.404884	1  	0.132941	0.5     	0.708644	0.750165	0.0455108                
+366	500  	965      	5861    	0.249869	0.759658	0.900672	0.111259        	0.176777	0.405299	1  	0.133558	0.5     	0.708451	0.750165	0.0458432                
+367	500  	943      	5861    	0.249869	0.759898	0.900672	0.109933        	0.176777	0.404447	1  	0.132026	0.5     	0.708876	0.750165	0.0454953                
+368	500  	962      	5861    	0.249226	0.759652	0.900672	0.11199         	0.176777	0.404436	1  	0.132685	0.5     	0.708618	0.750165	0.0461333                
+369	500  	945      	5861    	0.249869	0.76062 	0.900672	0.109674        	0.176777	0.403705	1  	0.132264	0.5     	0.708973	0.750165	0.0456501                
+370	500  	914      	5861    	0.249869	0.760748	0.900672	0.109581        	0.176777	0.403937	1  	0.13232 	0.5     	0.708716	0.750165	0.0457165                
+371	500  	941      	5861    	0.249869	0.761163	0.900672	0.109599        	0.176777	0.40361 	1  	0.1324  	0.5     	0.708955	0.750165	0.0454752                
+372	500  	960      	5861    	0.249869	0.760972	0.900672	0.109489        	0.176777	0.403783	1  	0.132278	0.5     	0.708954	0.750165	0.0454746                
+373	500  	945      	5861    	0.249869	0.761559	0.900672	0.109819        	0.176777	0.402883	1  	0.132446	0.5     	0.709107	0.750165	0.0452745                
+374	500  	966      	5861    	0.249869	0.75938 	0.900672	0.11166         	0.176777	0.405258	1  	0.133299	0.5     	0.708361	0.750165	0.0460293                
+375	500  	935      	5861    	0.249869	0.760817	0.900672	0.109325        	0.176777	0.40452 	1  	0.132141	0.5     	0.70845 	0.750165	0.045992                 
+376	500  	930      	5861    	0.249869	0.761216	0.900672	0.109516        	0.176777	0.403532	1  	0.132044	0.5     	0.70869 	0.750165	0.0457436                
+377	500  	953      	5861    	0.249869	0.759572	0.900672	0.113449        	0.176777	0.406922	1  	0.135872	0.5     	0.70748 	0.750165	0.0465413                
+378	500  	952      	5861    	0.249869	0.760883	0.900672	0.112726        	0.176777	0.405406	1  	0.134369	0.5     	0.707843	0.750165	0.0462962                
+379	500  	938      	5861    	0.249869	0.761184	0.900672	0.113132        	0.176777	0.405777	1  	0.135671	0.5     	0.707575	0.750165	0.0468827                
+380	500  	900      	5861    	0.249869	0.763333	0.900672	0.111168        	0.176777	0.404047	1  	0.134486	0.5     	0.707656	0.750165	0.0465176                
+381	500  	909      	5861    	0.249869	0.762954	0.900672	0.112611        	0.176777	0.404031	1  	0.134771	0.5     	0.708148	0.750165	0.0457628                
+382	500  	927      	5861    	0.249869	0.764155	0.900672	0.110756        	0.176777	0.402511	1  	0.134513	0.5     	0.708307	0.750165	0.0459477                
+383	500  	934      	5861    	0.249869	0.76383 	0.900672	0.110534        	0.176777	0.4037  	1  	0.134111	0.5     	0.707949	0.750165	0.0458954                
+384	500  	931      	5861    	0.249869	0.764443	0.900672	0.111529        	0.176777	0.402759	1  	0.134534	0.5     	0.70801 	0.750165	0.0459864                
+385	500  	972      	5861    	0.249869	0.766478	0.900672	0.110416        	0.176777	0.401731	1  	0.134093	0.5     	0.708097	0.750165	0.0459284                
+386	500  	953      	5861    	0.249869	0.765234	0.900672	0.111267        	0.176777	0.403074	1  	0.135117	0.5     	0.707934	0.750165	0.0460734                
+387	500  	933      	5861    	0.249869	0.765376	0.900672	0.111687        	0.176777	0.401864	1  	0.134531	0.5     	0.708419	0.750165	0.0457112                
+388	500  	939      	5861    	0.249299	0.765306	0.900672	0.113264        	0.176777	0.402108	1  	0.134599	0.5     	0.708152	0.750165	0.0459022                
+389	500  	931      	5861    	0.249299	0.765575	0.900672	0.112792        	0.176777	0.401524	1  	0.134354	0.5     	0.70803 	0.750165	0.0463716                
+390	500  	925      	5861    	0.249299	0.765663	0.900672	0.112927        	0.176777	0.401678	1  	0.134927	0.5     	0.708102	0.750165	0.0461356                
+391	500  	928      	5861    	0.249299	0.764866	0.900672	0.113743        	0.176777	0.402101	1  	0.134738	0.5     	0.70855 	0.750165	0.0453557                
+392	500  	929      	5861    	0.249869	0.7669  	0.900672	0.110351        	0.176777	0.400652	1  	0.133787	0.5     	0.708484	0.750165	0.0456402                
+393	500  	941      	5861    	0.249869	0.766871	0.900672	0.109941        	0.176777	0.401011	1  	0.133402	0.5     	0.708692	0.750165	0.0454179                
+394	500  	945      	5861    	0.249869	0.76682 	0.900672	0.109938        	0.176777	0.400612	1  	0.133172	0.5     	0.708926	0.750165	0.0451715                
+395	500  	961      	5861    	0.249869	0.766533	0.900672	0.110153        	0.176777	0.40075 	1  	0.133185	0.5     	0.708981	0.750165	0.0451196                
+396	500  	941      	5861    	0.249869	0.76287 	0.900672	0.109862        	0.176777	0.404391	1  	0.133078	0.5     	0.708532	0.750165	0.0458564                
+397	500  	941      	5861    	0.249299	0.761433	0.900672	0.112449        	0.176777	0.4059  	1  	0.134389	0.5     	0.707881	0.750165	0.0472073                
+398	500  	945      	5861    	0.249299	0.760645	0.900672	0.114423        	0.176777	0.4059  	1  	0.134389	0.5     	0.708407	0.750165	0.0460272                
+399	500  	944      	5861    	0.249869	0.762099	0.900672	0.112171        	0.176777	0.40459 	1  	0.134277	0.5     	0.708624	0.750165	0.0459642                
+400	500  	906      	5861    	0.249299	0.762012	0.900672	0.112894        	0.176777	0.404388	1  	0.133753	0.5     	0.708833	0.750165	0.0458829                
+401	500  	926      	5861    	0.249869	0.762059	0.900672	0.112446        	0.176777	0.404755	1  	0.133762	0.5     	0.708832	0.750165	0.0455823                
+402	500  	927      	5861    	0.249869	0.763162	0.900672	0.110729        	0.176777	0.403674	1  	0.133166	0.5     	0.709187	0.750165	0.0455013                
+403	500  	939      	5861    	0.249869	0.763333	0.900672	0.110746        	0.176777	0.403275	1  	0.132944	0.5     	0.709378	0.750165	0.0452778                
+404	500  	937      	5861    	0.249869	0.762672	0.900672	0.11047         	0.176777	0.404137	1  	0.132709	0.5     	0.709271	0.750165	0.0452317                
+405	500  	933      	5861    	0.249869	0.762431	0.900672	0.110509        	0.176777	0.404689	1  	0.132854	0.5     	0.70914 	0.750165	0.045213                 
+406	500  	934      	5861    	0.249869	0.761542	0.900672	0.110294        	0.176777	0.405561	1  	0.132708	0.5     	0.709037	0.750165	0.0451857                
+407	500  	931      	5861    	0.249869	0.761465	0.900672	0.110279        	0.176777	0.405758	1  	0.132592	0.5     	0.708889	0.750165	0.045133                 
+408	500  	936      	5861    	0.249869	0.761682	0.900672	0.11029         	0.176777	0.40582 	1  	0.132563	0.5     	0.708644	0.750165	0.0450908                
+409	500  	949      	5861    	0.249869	0.761682	0.900672	0.11029         	0.176777	0.40582 	1  	0.132563	0.5     	0.708644	0.750165	0.0450908                
+410	500  	951      	5861    	0.249869	0.760721	0.900672	0.110536        	0.176777	0.406829	1  	0.132761	0.5     	0.708752	0.750165	0.0451343                
+411	500  	947      	5861    	0.249869	0.761088	0.900672	0.110492        	0.176777	0.406657	1  	0.132886	0.5     	0.708714	0.750165	0.0451479                
+412	500  	919      	5861    	0.249869	0.760883	0.900672	0.110284        	0.176777	0.407524	1  	0.132826	0.5     	0.708295	0.750165	0.0457281                
+413	500  	975      	5861    	0.249263	0.759129	0.900672	0.113596        	0.176777	0.408353	1  	0.13404 	0.5     	0.708459	0.750165	0.0453834                
+414	500  	919      	5861    	0.249263	0.759838	0.900672	0.112794        	0.176777	0.407633	1  	0.133439	0.5     	0.708495	0.750165	0.0451471                
+415	500  	935      	5861    	0.249263	0.760047	0.900672	0.112944        	0.176777	0.407578	1  	0.133498	0.5     	0.708498	0.750165	0.0451391                
+416	500  	932      	5861    	0.249263	0.759494	0.900672	0.114297        	0.176777	0.407756	1  	0.133923	0.5     	0.708659	0.750165	0.0452065                
+417	500  	932      	5861    	0.249263	0.759275	0.900672	0.114125        	0.176777	0.408126	1  	0.133637	0.5     	0.708336	0.750165	0.0452568                
+418	500  	914      	5861    	0.249263	0.759194	0.900672	0.114001        	0.19245 	0.408693	1  	0.133133	0.5     	0.708289	0.750165	0.0452304                
+419	500  	936      	5861    	0.249263	0.759194	0.900672	0.114001        	0.19245 	0.408693	1  	0.133133	0.5     	0.708289	0.750165	0.0452304                
+420	500  	954      	5861    	0.249263	0.759116	0.900672	0.114151        	0.19245 	0.409013	1  	0.13319 	0.5     	0.708225	0.750165	0.0451741                
+421	500  	976      	5861    	0.249263	0.759123	0.900672	0.114156        	0.19245 	0.409013	1  	0.13319 	0.5     	0.708236	0.750165	0.0451831                
+422	500  	906      	5861    	0.249263	0.759689	0.900672	0.114144        	0.19245 	0.408791	1  	0.133334	0.5     	0.708237	0.750165	0.0451836                
+423	500  	942      	5861    	0.249263	0.759322	0.900672	0.114023        	0.19245 	0.408993	1  	0.133211	0.5     	0.708132	0.750165	0.0451621                
+424	500  	932      	5861    	0.249263	0.7589  	0.900672	0.113992        	0.19245 	0.409676	1  	0.132917	0.5     	0.708079	0.750165	0.0451244                
+425	500  	961      	5861    	0.249263	0.758978	0.900672	0.114386        	0.19245 	0.409633	1  	0.133018	0.5     	0.707949	0.750165	0.0450916                
+426	500  	916      	5861    	0.249263	0.759226	0.900672	0.114373        	0.19245 	0.409688	1  	0.133395	0.5     	0.707854	0.750165	0.0451618                
+427	500  	942      	5861    	0.249263	0.758573	0.900672	0.115004        	0.19245 	0.409908	1  	0.1337  	0.5     	0.707973	0.750165	0.0452389                
+428	500  	928      	5861    	0.249263	0.758936	0.900672	0.115157        	0.19245 	0.409239	1  	0.133698	0.5     	0.708195	0.750165	0.0451694                
+429	500  	954      	5861    	0.249263	0.758605	0.900672	0.114973        	0.19245 	0.409446	1  	0.133512	0.5     	0.708193	0.750165	0.0451676                
+430	500  	932      	5861    	0.249263	0.758039	0.900672	0.116773        	0.19245 	0.409789	1  	0.135394	0.5     	0.707809	0.750165	0.0462166                
+431	500  	969      	5861    	0.249263	0.759583	0.900672	0.116155        	0.19245 	0.408544	1  	0.135102	0.5     	0.708272	0.750165	0.045209                 
+432	500  	933      	5861    	0.249263	0.756367	0.900672	0.119609        	0.19245 	0.410739	1  	0.136253	0.5     	0.708468	0.750165	0.0454598                
+433	500  	951      	5861    	0.249263	0.75879 	0.900672	0.115705        	0.19245 	0.40773 	1  	0.134673	0.5     	0.709467	0.750165	0.0446217                
+434	500  	943      	5861    	0.249263	0.755471	0.900672	0.116975        	0.19245 	0.412012	1  	0.135891	0.5     	0.708825	0.750165	0.0455731                
+435	500  	952      	5861    	0.249263	0.754633	0.900672	0.11712         	0.19245 	0.413144	1  	0.136811	0.5     	0.708736	0.750165	0.0457387                
+436	500  	952      	5861    	0.249263	0.756225	0.900672	0.117048        	0.19245 	0.410304	1  	0.136088	0.5     	0.709243	0.750165	0.045782                 
+437	500  	915      	5861    	0.249263	0.754498	0.900672	0.11719         	0.19245 	0.412895	1  	0.136215	0.5     	0.709188	0.750165	0.0456382                
+438	500  	961      	5861    	0.249263	0.755364	0.900672	0.116985        	0.19245 	0.411779	1  	0.1358  	0.5     	0.709609	0.750165	0.0453873                
+439	500  	922      	5861    	0.249263	0.753999	0.900672	0.118523        	0.19245 	0.413385	1  	0.136374	0.5     	0.709383	0.750165	0.0455034                
+440	500  	913      	5861    	0.249263	0.755346	0.900672	0.11749         	0.19245 	0.411272	1  	0.135913	0.5     	0.709767	0.750165	0.0452712                
+441	500  	922      	5861    	0.249263	0.754393	0.900672	0.119222        	0.19245 	0.412034	1  	0.136501	0.5     	0.709869	0.750165	0.0452988                
+442	500  	936      	5861    	0.249263	0.753123	0.900672	0.119722        	0.19245 	0.412295	1  	0.138236	0.5     	0.710127	0.750165	0.0453262                
+443	500  	909      	5861    	0.249263	0.754372	0.900672	0.117556        	0.19245 	0.410989	1  	0.136485	0.5     	0.710269	0.750165	0.0454162                
+444	500  	950      	5861    	0.249263	0.756209	0.900672	0.116981        	0.19245 	0.408742	1  	0.135138	0.5     	0.711044	0.750165	0.044443                 
+445	500  	935      	5861    	0.249263	0.756163	0.900672	0.117267        	0.19245 	0.40983 	1  	0.13652 	0.5     	0.709869	0.750165	0.0465073                
+446	500  	954      	5861    	0.249263	0.757104	0.900672	0.116868        	0.19245 	0.408085	1  	0.135531	0.5     	0.71111 	0.750165	0.0445545                
+447	500  	906      	5861    	0.249263	0.758772	0.900672	0.116731        	0.19245 	0.405725	1  	0.135095	0.5     	0.711262	0.750165	0.0443673                
+448	500  	962      	5861    	0.249263	0.758145	0.900672	0.117074        	0.19245 	0.407248	1  	0.135663	0.5     	0.710815	0.750165	0.0454974                
+449	500  	953      	5861    	0.249263	0.758006	0.900672	0.11652         	0.19245 	0.407008	1  	0.135295	0.5     	0.711441	0.750165	0.0448681                
+450	500  	988      	5861    	0.249263	0.75802 	0.900672	0.116033        	0.19245 	0.406542	1  	0.134772	0.5     	0.711893	0.750165	0.0442865                
+451	500  	952      	5861    	0.249263	0.758017	0.900672	0.116029        	0.19245 	0.40656 	1  	0.134753	0.5     	0.711887	0.750165	0.0442819                
+452	500  	915      	5861    	0.249263	0.758961	0.900672	0.114479        	0.19245 	0.406221	1  	0.134536	0.5     	0.711886	0.750165	0.044282                 
+453	500  	944      	5861    	0.249263	0.75799 	0.900672	0.114352        	0.19245 	0.406994	1  	0.134214	0.5     	0.711853	0.750165	0.0442581                
+454	500  	921      	5861    	0.249263	0.757774	0.900672	0.114191        	0.19245 	0.407141	1  	0.134074	0.5     	0.711852	0.750165	0.0442574                
+455	500  	896      	5861    	0.249263	0.757774	0.900672	0.114191        	0.19245 	0.407141	1  	0.134074	0.5     	0.711852	0.750165	0.0442574                
+456	500  	940      	5861    	0.249263	0.757289	0.900672	0.113862        	0.19245 	0.407556	1  	0.133804	0.5     	0.711825	0.750165	0.0442399                
+457	500  	953      	5861    	0.249263	0.756854	0.900672	0.114792        	0.19245 	0.409061	1  	0.134719	0.5     	0.711235	0.750165	0.0445456                
+458	500  	906      	5861    	0.249263	0.756912	0.900672	0.114886        	0.19245 	0.409146	1  	0.134243	0.5     	0.711235	0.750165	0.0441949                
+459	500  	925      	5861    	0.249263	0.757834	0.900672	0.114776        	0.19245 	0.407632	1  	0.133607	0.5     	0.711579	0.750165	0.0439369                
+460	500  	952      	5861    	0.249263	0.75675 	0.900672	0.114818        	0.19245 	0.408794	1  	0.133978	0.5     	0.711353	0.750165	0.0445458                
+461	500  	958      	5861    	0.249263	0.755641	0.900672	0.1176          	0.19245 	0.409867	1  	0.135438	0.5     	0.710604	0.750165	0.0452536                
+462	500  	947      	5861    	0.249263	0.757503	0.900672	0.114772        	0.19245 	0.408001	1  	0.133762	0.5     	0.711419	0.750165	0.0439791                
+463	500  	927      	5861    	0.249263	0.757716	0.900672	0.115005        	0.19245 	0.408338	1  	0.134227	0.5     	0.71098 	0.750165	0.0447376                
+464	500  	912      	5861    	0.249263	0.758076	0.900672	0.114742        	0.19245 	0.407591	1  	0.1336  	0.5     	0.711407	0.750165	0.0440862                
+465	500  	933      	5861    	0.249263	0.757832	0.900672	0.114585        	0.19245 	0.407885	1  	0.133392	0.5     	0.711236	0.750165	0.0441316                
+466	500  	920      	5861    	0.249263	0.757832	0.900672	0.114585        	0.19245 	0.407885	1  	0.133392	0.5     	0.711236	0.750165	0.0441316                
+467	500  	946      	5861    	0.249263	0.757832	0.900672	0.114585        	0.19245 	0.407885	1  	0.133392	0.5     	0.711236	0.750165	0.0441316                
+468	500  	913      	5861    	0.249263	0.756082	0.900672	0.116679        	0.19245 	0.409697	1  	0.133897	0.5     	0.710934	0.750165	0.0440664                
+469	500  	926      	5861    	0.249263	0.756126	0.900672	0.11668         	0.19245 	0.409608	1  	0.133962	0.5     	0.71094 	0.750165	0.0440714                
+470	500  	909      	5861    	0.249263	0.756013	0.900672	0.116691        	0.19245 	0.409835	1  	0.133929	0.5     	0.710899	0.750165	0.0440471                
+471	500  	912      	5861    	0.249263	0.755977	0.900672	0.116673        	0.19245 	0.409947	1  	0.133842	0.5     	0.71081 	0.750165	0.0440094                
+472	500  	957      	5861    	0.249263	0.756103	0.900672	0.116705        	0.19245 	0.410077	1  	0.133756	0.5     	0.710694	0.750165	0.0439827                
+473	500  	955      	5861    	0.249263	0.756106	0.900672	0.116707        	0.19245 	0.410103	1  	0.133734	0.5     	0.710689	0.750165	0.0439789                
+474	500  	927      	5861    	0.249263	0.755692	0.900672	0.116651        	0.19245 	0.410883	1  	0.133403	0.5     	0.710594	0.750165	0.0439364                
+475	500  	921      	5861    	0.249263	0.756515	0.900672	0.11649         	0.19245 	0.410316	1  	0.133373	0.5     	0.710504	0.750165	0.0439924                
+476	500  	972      	5861    	0.249263	0.756486	0.900672	0.116408        	0.19245 	0.410286	1  	0.133931	0.5     	0.710472	0.750165	0.0440576                
+477	500  	918      	5861    	0.249263	0.756859	0.900672	0.116346        	0.19245 	0.410074	1  	0.133291	0.5     	0.710373	0.750165	0.0442053                
+478	500  	941      	5861    	0.249263	0.757374	0.900672	0.11685         	0.19245 	0.40987 	1  	0.133528	0.5     	0.710154	0.750165	0.0441821                
+479	500  	919      	5861    	0.249263	0.757525	0.900672	0.116772        	0.19245 	0.409709	1  	0.133547	0.5     	0.710165	0.750165	0.0441909                
+480	500  	912      	5861    	0.249263	0.757613	0.900672	0.116784        	0.19245 	0.410076	1  	0.133542	0.5     	0.709896	0.750165	0.0443601                
+481	500  	929      	5861    	0.249263	0.758049	0.900672	0.117113        	0.19245 	0.409616	1  	0.133697	0.5     	0.709963	0.750165	0.0440941                
+482	500  	888      	5861    	0.249263	0.755998	0.900672	0.117806        	0.19245 	0.411347	1  	0.135579	0.5     	0.709799	0.750165	0.0452719                
+483	500  	915      	5861    	0.249263	0.756727	0.900672	0.117668        	0.19245 	0.410467	1  	0.135083	0.5     	0.709932	0.750165	0.0453165                
+484	500  	931      	5861    	0.249263	0.757656	0.900672	0.117365        	0.19245 	0.408889	1  	0.134253	0.5     	0.710758	0.750165	0.0440497                
+485	500  	900      	5861    	0.249263	0.757413	0.900672	0.117697        	0.19245 	0.409076	1  	0.134829	0.5     	0.710895	0.750165	0.0441272                
+486	500  	959      	5861    	0.249263	0.757866	0.900672	0.117334        	0.19245 	0.408697	1  	0.134119	0.5     	0.711008	0.750165	0.0438909                
+487	500  	897      	5861    	0.249263	0.757819	0.900672	0.117494        	0.19245 	0.409402	1  	0.133971	0.5     	0.710605	0.750165	0.0440024                
+488	500  	932      	5861    	0.249263	0.757823	0.900672	0.117884        	0.19245 	0.409785	1  	0.134452	0.5     	0.709863	0.750165	0.0454292                
+489	500  	920      	5861    	0.249263	0.759194	0.900672	0.117742        	0.19245 	0.407134	1  	0.133659	0.5     	0.71084 	0.750165	0.0441396                
+490	500  	906      	5861    	0.249263	0.75933 	0.900672	0.117762        	0.19245 	0.40683 	1  	0.133777	0.5     	0.710859	0.750165	0.0441995                
+491	500  	930      	5861    	0.249263	0.759338	0.900672	0.117766        	0.19245 	0.406804	1  	0.133799	0.5     	0.710858	0.750165	0.0441989                
+492	500  	947      	5861    	0.249263	0.759338	0.900672	0.117766        	0.19245 	0.406804	1  	0.133799	0.5     	0.710858	0.750165	0.0441989                
+493	500  	914      	5861    	0.249263	0.759049	0.900679	0.117585        	0.19245 	0.407254	1  	0.133558	0.5     	0.711065	0.750165	0.0440331                
+494	500  	929      	5861    	0.249263	0.759226	0.900679	0.117872        	0.19245 	0.407413	1  	0.133927	0.5     	0.710984	0.750165	0.0440229                
+495	500  	951      	5861    	0.249263	0.759226	0.900679	0.117872        	0.19245 	0.407413	1  	0.133927	0.5     	0.710984	0.750165	0.0440229                
+496	500  	938      	5861    	0.249263	0.758645	0.900679	0.11788         	0.19245 	0.408313	1  	0.133847	0.5     	0.710807	0.750165	0.0439599                
+497	500  	940      	5861    	0.249263	0.759909	0.900679	0.117483        	0.19245 	0.406159	1  	0.133296	0.5     	0.711111	0.750165	0.0440567                
+498	500  	947      	5861    	0.249263	0.759855	0.900679	0.117476        	0.19245 	0.406144	1  	0.133294	0.5     	0.711281	0.750165	0.0440277                
+499	500  	944      	5861    	0.249263	0.759869	0.900679	0.117431        	0.19245 	0.406467	1  	0.13313 	0.5     	0.711268	0.750165	0.0440195                
+Optimization on fold finished in 00-06:24:04
+
+FEATURE SETS SELECTED
+
+PARETO FRONT
+Number of solutions = 117
+Features in hall of fame by prevalence:
+251 features: [0_SPATA18, 0_C1orf116, 0_UPK3B, 0_FLRT3, 0_CHP2, 0_EXOSC1, 0_CDR2L, 0_MID1, 0_ATP6V1B1, 0_KRT7, 0_LDB2, 0_XKR9, 0_KIF18A, 0_KRBA1, 0_PLEKHA2, 0_SEMA4D, 0_STAT4, 0_ETV3, 0_NDRG1, 0_BLK, 0_CA9, 0_NDUFA4L2, 0_NMB, 0_STC2, 0_CDKN1A, 0_INTS8, 0_EGFL7, 0_ZBTB8A, 0_AGK, 0_CNTNAP1, 0_HADH, 0_RNASET2, 0_RSBN1, 0_AKR1C3, 0_C11orf80, 0_HUNK, 0_KLRB1, 0_NGB, 0_PTPRE, 0_PWWP2B, 0_TOR1A, 0_ALKBH3, 0_CTTNBP2NL, 0_DDX47, 0_DNAJC24, 0_DVL1, 0_MFGE8, 0_NEUROD1, 0_PDK1, 0_PPP1R9A, 0_PRTN3, 0_PXN, 0_TCTN1, 0_TOP3A, 0_ZDHHC17, 0_ABHD14B, 0_ACSM2B, 0_ALDH7A1, 0_AMT, 0_ATF4, 0_CBLC, 0_CCDC102B, 0_CFB, 0_CHRM3, 0_COG1, 0_DLG1, 0_ELAC2, 0_ELMO3, 0_EME1, 0_ENPP3, 0_FANCL, 0_FGF2, 0_GCH1, 0_GLRX5, 0_HGF, 0_IMPA1, 0_KISS1R, 0_LRRC25, 0_LSM2, 0_MAP2K6, 0_MFNG, 0_MYC, 0_NBEA, 0_OXR1, 0_PCID2, 0_PIP5K1C, 0_POU2F1, 0_PRPF18, 0_PRR16, 0_PTPN9, 0_RIMS2, 0_SCYL3, 0_SERPINB6, 0_SLC16A1, 0_TAF8, 0_TATDN2, 0_TBX2, 0_U2AF1L4, 0_ZC3H18, 0_ZNF540, 0_A1CF, 0_ABCB7, 0_ABCC3, 0_ABLIM3, 0_ACE2, 0_ACTN3, 0_ACVRL1, 0_ADCY2, 0_AFG3L2, 0_AKAP12, 0_ALDH1A2, 0_ARPC1A, 0_ARSB, 0_ATP6V0A1, 0_BAK1, 0_BCHE, 0_BDH1, 0_BIRC3, 0_BMPR2, 0_BNIP3L, 0_C4orf19, 0_CARD11, 0_CARHSP1, 0_CBWD3, 0_CCDC12, 0_CCNJL, 0_CCR4, 0_CCRL2, 0_CDC42BPB, 0_CFHR1, 0_CHD3, 0_CLDN2, 0_COMMD1, 0_CPNE5, 0_CRYAB, 0_CYB5B, 0_DACT1, 0_DBNDD2, 0_DCAF11, 0_DCP1B, 0_DDX11, 0_DERL3, 0_DNAJB7, 0_DOK1, 0_DOK4, 0_EHHADH, 0_EID1, 0_EIF3E, 0_EIF4EBP2, 0_ENTPD5, 0_EXOG, 0_EYA4, 0_F2RL1, 0_FAM104A, 0_FIP1L1, 0_FMO4, 0_FZD1, 0_G3BP1, 0_G3BP2, 0_GANC, 0_GATAD2A, 0_GLIS3, 0_GLMN, 0_GMPR, 0_GORAB, 0_GPX3, 0_HEXIM1, 0_HHLA2, 0_HS3ST5, 0_HSF1, 0_HSPG2, 0_ITIH1, 0_ITIH5, 0_JAG2, 0_JUP, 0_KCNJ15, 0_KIAA1671, 0_KIF7, 0_KLF5, 0_LAPTM5, 0_LATS1, 0_LGALS3, 0_LIN54, 0_LRIT3, 0_LTA4H, 0_LTBP2, 0_MAP3K12, 0_MAP3K2, 0_MBTPS2, 0_MET, 0_MPV17L, 0_MYO10, 0_NSMCE2, 0_OAS2, 0_PARP12, 0_PARP3, 0_PBX2, 0_PIWIL4, 0_PPIC, 0_PPP1R7, 0_PSEN1, 0_RAB12, 0_RAB34, 0_RAD1, 0_RALBP1, 0_RAPGEF1, 0_REP15, 0_REPS1, 0_RPP25, 0_RPS16, 0_RPS3A, 0_RRN3, 0_SEC14L2, 0_SHISA5, 0_SIK3, 0_SLC16A7, 0_SLC27A4, 0_SLC36A4, 0_SLC43A1, 0_SMARCC2, 0_SMU1, 0_SND1, 0_SOD2, 0_SQSTM1, 0_STAB1, 0_STRADB, 0_STX12, 0_SVEP1, 0_TAP1, 0_TAP2, 0_TFB1M, 0_TLE2, 0_TMED7-TICAM2, 0_TMEM132E, 0_TMEM141, 0_TRIM21, 0_TSHR, 0_TTC17, 0_UBE2L3, 0_UROC1, 0_USP2, 0_USP4, 0_USP7, 0_VRK2, 0_WT1, 0_XK, 0_ZBTB12, 0_ZFAND2A, 0_ZNF19, 0_ZNF512, 0_ZNF521]
+
+LAST POPULATION
+Number of solutions = 500
+Features in hall of fame by prevalence:
+613 features: [0_SPATA18, 0_C1orf116, 0_UPK3B, 0_CHP2, 0_CDR2L, 0_FLRT3, 0_EXOSC1, 0_MID1, 0_KIF18A, 0_PLEKHA2, 0_XKR9, 0_ATP6V1B1, 0_LDB2, 0_KRT7, 0_NDRG1, 0_STAT4, 0_SEMA4D, 0_BLK, 0_CA9, 0_KRBA1, 0_ETV3, 0_NMB, 0_STC2, 0_EGFL7, 0_CNTNAP1, 0_NDUFA4L2, 0_CDKN1A, 0_INTS8, 0_ZBTB8A, 0_PDK1, 0_KLRB1, 0_HUNK, 0_RIMS2, 0_PRTN3, 0_RNASET2, 0_SLC16A1, 0_AKR1C3, 0_CHRM3, 0_CLDN2, 0_TOP3A, 0_ACTN3, 0_AGK, 0_CTTNBP2NL, 0_HADH, 0_LRCH2, 0_MFGE8, 0_NEUROD1, 0_NGB, 0_SCYL3, 0_C11orf80, 0_DCP1B, 0_DNAJC24, 0_G3BP2, 0_TCTN1, 0_XK, 0_F2RL1, 0_FABP7, 0_PIP5K1C, 0_PTPRE, 0_RSBN1, 0_TSC1, 0_ABCB7, 0_ADCY2, 0_ALKBH3, 0_MTA2, 0_NBEA, 0_PRR16, 0_PWWP2B, 0_PXN, 0_TOR1A, 0_CCDC102B, 0_DVL1, 0_ENPP3, 0_FOXP2, 0_GSPT2, 0_SUSD2, 0_UROC1, 0_WT1, 0_ACVRL1, 0_ALDH1A2, 0_BDH1, 0_CCDC12, 0_GLIS3, 0_GMPR, 0_LTBP2, 0_MAP3K2, 0_MYC, 0_PPP1R9A, 0_SHISA5, 0_STRADB, 0_ZDHHC17, 0_ACSM2B, 0_CARD11, 0_DDX47, 0_DNAJA2, 0_ELAC2, 0_KCNJ15, 0_MET, 0_MFNG, 0_MRPL38, 0_OXR1, 0_PLCG2, 0_SERPINB6, 0_CFHR1, 0_CHD3, 0_CPNE5, 0_CRYAB, 0_DLST, 0_EME1, 0_EXOG, 0_GANC, 0_GLRX5, 0_PRPF18, 0_RAD1, 0_SEC31A, 0_TAF8, 0_TXN, 0_UBE2L3, 0_ACE2, 0_AMT, 0_BCHE, 0_CCR4, 0_CDK5RAP3, 0_CDKN2C, 0_DDX11, 0_DLG1, 0_FAM53A, 0_FANCL, 0_FIP1L1, 0_FRAT1, 0_GLMN, 0_HEXIM1, 0_HHLA2, 0_HTATIP2, 0_KISS1R, 0_LRRC25, 0_MAP2K6, 0_NGEF, 0_OAS2, 0_PARP12, 0_PCID2, 0_PGAM5, 0_PRTFDC1, 0_PTPN9, 0_RAB34, 0_RBM17, 0_SAP30, 0_SAT1, 0_SLC36A4, 0_SPAG5, 0_SPRED2, 0_TLE2, 0_TRAF3IP1, 0_USP2, 0_ABHD14B, 0_ABLIM3, 0_ATF4, 0_BAIAP2L2, 0_BIRC3, 0_CARHSP1, 0_CBWD3, 0_CCRL2, 0_CECR2, 0_COG1, 0_DBF4B, 0_DHTKD1, 0_DNM1L, 0_DOK1, 0_DOK4, 0_EHHADH, 0_FKBP4, 0_G3BP1, 0_GNAI2, 0_GTPBP8, 0_HEYL, 0_HPCA, 0_HS3ST5, 0_KCNA5, 0_KPNA4, 0_LARS2, 0_LIN54, 0_LTA4H, 0_LYRM7, 0_MBTPS2, 0_MGAM, 0_MPHOSPH9, 0_MPV17L, 0_NANS, 0_NCOA6, 0_PNPLA8, 0_PPM1F, 0_PRPF38B, 0_PUS1, 0_REP15, 0_RPS16, 0_RRN3, 0_SGK1, 0_SMU1, 0_STAB1, 0_SUCLG1, 0_TATDN2, 0_TBX2, 0_TDG, 0_TMED7-TICAM2, 0_TRIP10, 0_TYW3, 0_U2AF1L4, 0_UBAP1, 0_USP4, 0_ZC3H18, 0_A1CF, 0_AARS2, 0_ABCC3, 0_AFG3L2, 0_AKAP1, 0_ALDH7A1, 0_AMPD2, 0_AP2B1, 0_APBB2, 0_ARPC1A, 0_ARRB1, 0_ARSB, 0_ATP6V0A1, 0_BAK1, 0_BNIP3L, 0_CBLC, 0_CDC42BPA, 0_CDK18, 0_CENPA, 0_CFB, 0_CHCHD6, 0_CHMP1B, 0_CISD2, 0_CNPY2, 0_COMMD3, 0_CTAGE1, 0_CTSC, 0_CWC25, 0_DACT1, 0_DAXX, 0_DBI, 0_DLGAP4, 0_DTNA, 0_EIF4EBP2, 0_ELMO3, 0_EMX1, 0_EYA4, 0_FAM174B, 0_FGF2, 0_FMN1, 0_FZD1, 0_GBP1, 0_GCH1, 0_GNAI3, 0_GORAB, 0_HDAC6, 0_HEBP2, 0_HGF, 0_IFNG, 0_ILDR1, 0_IMPA1, 0_KIF7, 0_LAMB1, 0_LFNG, 0_LGALS3, 0_LMAN2L, 0_LRG1, 0_LSM2, 0_LY75, 0_MAP1LC3B, 0_MAP3K12, 0_MPEG1, 0_MPHOSPH8, 0_NCAPH2, 0_NDUFAF1, 0_NMI, 0_PARP3, 0_PEX16, 0_PGRMC2, 0_PIWIL4, 0_POU2F1, 0_POU2F2, 0_PRKCH, 0_PSMB3, 0_PSMB9, 0_PSTK, 0_PYGL, 0_RAB12, 0_RALBP1, 0_RELA, 0_RPL21, 0_SCAP, 0_SIK3, 0_SND1, 0_SOD2, 0_STX12, 0_TAP2, 0_TMEM132E, 0_TRIM27, 0_UBOX5, 0_UCN, 0_ZFAND2A, 0_ZNF540, 0_ACSL3, 0_ADA, 0_ADD3, 0_ADI1, 0_AKAP12, 0_ALDH6A1, 0_ALG2, 0_ALKBH1, 0_ALOX15, 0_ANKRD12, 0_ANKRD13A, 0_ANKRD13D, 0_ANP32E, 0_ANXA9, 0_ARFIP1, 0_ARHGDIA, 0_ARIH1, 0_ATN1, 0_ATP6V1D, 0_ATRIP, 0_B3GNTL1, 0_BAG1, 0_BAP1, 0_BAZ1B, 0_BCAP29, 0_BCKDHA, 0_BMPR2, 0_BPNT1, 0_BRD3, 0_BSG, 0_C2orf69, 0_C4orf19, 0_C7, 0_CALM2, 0_CAND1, 0_CCNJL, 0_CCPG1, 0_CD276, 0_CDC25C, 0_CDC26, 0_CDC42BPB, 0_CDCA7L, 0_CDH23, 0_CDIPT, 0_CEP55, 0_CHD4, 0_CIC, 0_CLIP2, 0_CMPK2, 0_CMTM3, 0_CNNM1, 0_CNTROB, 0_COMMD1, 0_COX10, 0_CREB3L4, 0_CST3, 0_CTDSPL, 0_CXXC5, 0_CYB5B, 0_CYB5R1, 0_CYGB, 0_CYSLTR2, 0_DBNDD2, 0_DCAF11, 0_DDX41, 0_DDX58, 0_DERL3, 0_DGKG, 0_DHX37, 0_DIP2C, 0_DLX5, 0_DMAP1, 0_DNAJB7, 0_DNAJC1, 0_DNAJC18, 0_DNAJC5, 0_DYRK1A, 0_EID1, 0_EIF3E, 0_EML4, 0_ENTPD5, 0_EPS8L2, 0_ERBB3, 0_FADS1, 0_FAM104A, 0_FAM107B, 0_FAM89A, 0_FAM91A1, 0_FAR2, 0_FBXL12, 0_FBXL4, 0_FBXL5, 0_FCRL1, 0_FKBP3, 0_FMO4, 0_FOXK1, 0_FXR1, 0_G6PD, 0_GALNT5, 0_GATAD2A, 0_GLS, 0_GLYCTK, 0_GMDS, 0_GMEB1, 0_GNA12, 0_GPX3, 0_GRAMD1C, 0_GSTA4, 0_GYS1, 0_HADHA, 0_HAX1, 0_HIP1R, 0_HIPK1, 0_HIRIP3, 0_HNMT, 0_HNRNPA3, 0_HOXA4, 0_HSF1, 0_HSPG2, 0_HYI, 0_IRF2, 0_ITIH1, 0_ITIH5, 0_JAG2, 0_JUP, 0_KCNG1, 0_KCNS3, 0_KIAA1671, 0_KIF16B, 0_KIF21B, 0_KLF5, 0_KLF7, 0_LAPTM5, 0_LATS1, 0_LBH, 0_LIPH, 0_LMCD1, 0_LMO7, 0_LPIN1, 0_LRIT3, 0_LRRC45, 0_LRRN1, 0_LSS, 0_LUC7L3, 0_LY86, 0_MAP3K10, 0_MARK4, 0_MDFIC, 0_MED4, 0_MGAT2, 0_MIA2, 0_MKLN1, 0_MMP11, 0_MPDZ, 0_MPI, 0_MPZL1, 0_MRPL21, 0_MRPL47, 0_MSRB2, 0_MTMR11, 0_MYO10, 0_MYO9B, 0_NDUFA1, 0_NDUFB1, 0_NEDD1, 0_NFE2L2, 0_NIT2, 0_NOB1, 0_NOL7, 0_NSMCE2, 0_NSUN4, 0_NTHL1, 0_NUDT22, 0_NUP62, 0_P4HA2, 0_PALMD, 0_PBLD, 0_PBX2, 0_PCDHGA2, 0_PCK1, 0_PDE11A, 0_PDGFA, 0_PDLIM1, 0_PECR, 0_PGAM2, 0_PHC3, 0_PICK1, 0_PILRB, 0_PITPNM2, 0_PITRM1, 0_PLA2G15, 0_PLK1, 0_PLP2, 0_PNPLA3, 0_POP5, 0_PPAT, 0_PPIC, 0_PPP1R7, 0_PPP2R2C, 0_PRAF2, 0_PRDX3, 0_PRDX5, 0_PRKACA, 0_PRPF40A, 0_PSEN1, 0_PSMB6, 0_PSMD13, 0_PTGR2, 0_PTPRJ, 0_PUS10, 0_RABEP2, 0_RANBP1, 0_RAPGEF1, 0_RB1CC1, 0_RBMS2, 0_RDX, 0_REPS1, 0_RNF141, 0_RNF213, 0_RPL14, 0_RPP25, 0_RPS18, 0_RPS27A, 0_RPS3A, 0_RUSC1, 0_SCARB2, 0_SCO1, 0_SCRN2, 0_SEC14L1, 0_SEC14L2, 0_SECISBP2L, 0_SELL, 0_SEMA3A, 0_SEMA4B, 0_SF3B1, 0_SFXN2, 0_SH3D19, 0_SLC13A1, 0_SLC15A4, 0_SLC16A7, 0_SLC22A3, 0_SLC27A4, 0_SLC29A3, 0_SLC43A1, 0_SMARCA4, 0_SMARCC2, 0_SOCS6, 0_SPAG9, 0_SQSTM1, 0_SRI, 0_SRPRB, 0_ST8SIA3, 0_STON2, 0_STX11, 0_STX6, 0_SUMO2, 0_SVEP1, 0_SYNGR3, 0_TACO1, 0_TAOK1, 0_TAP1, 0_TCP11L1, 0_TFB1M, 0_TFDP1, 0_TGFA, 0_THG1L, 0_THYN1, 0_TIMM9, 0_TLK1, 0_TMCO1, 0_TMED7, 0_TMEM116, 0_TMEM141, 0_TMEM176A, 0_TMEM229B, 0_TMEM8B, 0_TMPRSS2, 0_TNFRSF11B, 0_TNRC6A, 0_TOR1B, 0_TPD52L2, 0_TPRN, 0_TRDMT1, 0_TRH, 0_TRIM21, 0_TSHR, 0_TTC17, 0_TTC27, 0_TTC30B, 0_TTC39C, 0_TUBA1C, 0_TUBGCP3, 0_UCP3, 0_UPB1, 0_USP7, 0_VAMP7, 0_VANGL1, 0_VEZT, 0_VRK2, 0_WDR33, 0_WNK1, 0_WRAP53, 0_XPC, 0_ZBTB12, 0_ZCCHC24, 0_ZFR, 0_ZKSCAN4, 0_ZNF19, 0_ZNF512, 0_ZNF521]
+
+BEST SUMS WITH SIZE 50
+Number of solutions = 50
+Features in hall of fame by prevalence:
+59 features: [0_SPATA18, 0_CA9, 0_FLRT3, 0_NDUFA4L2, 0_STC2, 0_EME1, 0_KIF18A, 0_LDB2, 0_INTS8, 0_AKR1C3, 0_PLEKHA2, 0_SLC16A1, 0_EXOSC1, 0_FAM53A, 0_GORAB, 0_KRT7, 0_MID1, 0_PDK1, 0_PDLIM1, 0_B3GNTL1, 0_BDH1, 0_CCNJL, 0_CDC123, 0_CDC37L1, 0_CDK5RAP3, 0_CDKN1A, 0_CDKN2C, 0_CLDN2, 0_COASY, 0_CTDSPL, 0_DLAT, 0_ENPP3, 0_FABP7, 0_GNAI2, 0_HPS1, 0_IFT20, 0_ILDR1, 0_LARS2, 0_LPAR2, 0_LRRC56, 0_MAP3K12, 0_MIB1, 0_MRM1, 0_PLCG2, 0_POP5, 0_PRKCH, 0_PSMB3, 0_PYGL, 0_RBMS2, 0_RNASET2, 0_SAP30, 0_SGK1, 0_SLC27A4, 0_SSX2IP, 0_SUCLG1, 0_TGFA, 0_TTC27, 0_UCN, 0_UPB1]
+
+BEST SUMS WITH SIZE 100
+Number of solutions = 100
+Features in hall of fame by prevalence:
+110 features: [0_SPATA18, 0_FLRT3, 0_CA9, 0_NDUFA4L2, 0_STC2, 0_LDB2, 0_ENPP3, 0_KIF18A, 0_PLEKHA2, 0_EME1, 0_EXOSC1, 0_INTS8, 0_SLC16A1, 0_KRT7, 0_MID1, 0_AKR1C3, 0_BDH1, 0_FADS1, 0_PDK1, 0_POP5, 0_AMT, 0_CDKN2C, 0_CNTNAP1, 0_FAM53A, 0_GORAB, 0_LARS2, 0_PDLIM1, 0_SAP30, 0_TFB1M, 0_UPB1, 0_ACSM2B, 0_ADCY2, 0_AMPD2, 0_AUH, 0_AUP1, 0_B3GNTL1, 0_BCL2L2, 0_BMI1, 0_BSG, 0_CBX7, 0_CCDC12, 0_CCNJL, 0_CDC123, 0_CDC37L1, 0_CDK5RAP3, 0_CDKN1A, 0_CEP55, 0_CLDN2, 0_CMTM3, 0_COASY, 0_COX10, 0_CREB3L4, 0_CTDSPL, 0_DGKA, 0_DLAT, 0_DNAJA2, 0_ENO2, 0_ENTPD5, 0_ETFDH, 0_FABP7, 0_FAM104A, 0_FAM104B, 0_FUS, 0_GBP1, 0_GNAI2, 0_GNG5, 0_HCRTR1, 0_HPS1, 0_IFT20, 0_IKBIP, 0_ILDR1, 0_LIN54, 0_LPAR2, 0_LRRC56, 0_LSM2, 0_LZTS1, 0_MAP3K12, 0_MARK2, 0_MGST1, 0_MIB1, 0_MRM1, 0_NMT1, 0_NUP85, 0_PLCG2, 0_PNPLA4, 0_PPP2R2C, 0_PRKCH, 0_PSMB3, 0_PYGL, 0_RB1, 0_RBMS2, 0_RGL2, 0_RNASET2, 0_SGK1, 0_SLC13A1, 0_SLC15A4, 0_SLC27A4, 0_SSX2IP, 0_STX10, 0_SUCLG1, 0_TCTN1, 0_TGFA, 0_TTC27, 0_TUBGCP6, 0_UCN, 0_UFC1, 0_UPK3B, 0_XKR9, 0_ZFR, 0_ZSCAN16]
