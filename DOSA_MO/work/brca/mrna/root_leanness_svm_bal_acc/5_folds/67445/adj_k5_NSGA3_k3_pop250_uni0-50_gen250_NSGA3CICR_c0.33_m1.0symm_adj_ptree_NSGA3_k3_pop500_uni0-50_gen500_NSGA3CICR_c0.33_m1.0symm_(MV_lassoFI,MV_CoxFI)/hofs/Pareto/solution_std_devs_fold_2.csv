@@ -1,0 +1,5 @@
+inner_cv_svm_bal_acc,inner_cv_root_leanness,train_svm_bal_acc,train_root_leanness,test_svm_bal_acc,test_root_leanness
+,0.0,0.017859978676402086,0.0,0.04523652512635186,0.0
+,0.0,0.013691136988261646,0.0,0.05100936400219002,0.0
+,0.0,0.014541560501052134,0.0,0.06057684559250389,0.0
+,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,349 @@
+
+RUNNING ADJUSTED (MO-5-FOLDS CREATOR, NSGA-III MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (MO-3-FOLDS CREATOR, POP 250, UNIFORM(0, 50), GEN 250, SORT NSGA3CICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP), ADJUSTER LEARNER WITH RSVR AND INPUT TRANSFORMER KEEPING ORIGINAL FITNESS, STANDARD DEVIATION, NUMBER OF FEATURES AND DROPPING BOOTSTRAP MEAN, NSGA-III MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (MO-3-FOLDS CREATOR, POP 500, UNIFORM(0, 50), GEN 500, SORT NSGA3CICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP) WITH (MULTI-VIEW LASSO FI, MULTI-VIEW COX FI)
+Date = 2023-09-30
+Machine = sampo2
+CPUs detected in the system = 80
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)
+Feature selector:
+Multi-objective feature selector with inner composite feature selector with
+categorical: feature selector any na and anova
+survival: feature selector Cox
+Inner optimizer:
+Adjusted optimizer
+Folds creator = MO-5-folds creator
+Optimizer for tuning:
+Name = NSGA-III multi-view multi-objective optimizer (MO-3-folds creator, pop 250, uniform(0, 50), gen 250, sort NSGA3CICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm
+Population size = 250
+Number of features in initial individuals = uniform(0, 50)
+Number of generations = 250
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA-III multi-view multi-objective optimizer with Clone Index elitist and clone repurposing
+Objectives = [survival SKSurv Cox model concordance index, root leanness]
+Hall of fame factories = [Pareto front factory]
+Folds creator = MO-3-folds creator
+
+Adjuster learner = adjuster learner with rSVR and input transformer keeping original fitness, standard deviation, number of features and dropping bootstrap mean
+Main optimizer:
+NSGA* factory
+Name = NSGA-III multi-view multi-objective optimizer (MO-3-folds creator, pop 500, uniform(0, 50), gen 500, sort NSGA3CICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm
+Population size = 500
+Number of features in initial individuals = uniform(0, 50)
+Number of generations = 500
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA-III multi-view multi-objective optimizer with Clone Index elitist and clone repurposing
+Hall of fame factories = [Pareto front factory, Last population factory, best sums with size 50 factory, best sums with size 100 factory]
+Folds creator = MO-3-folds creator
+
+Multi-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance Cox
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 01-22:17:20
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME PARETO FRONT
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.275547424919488, 0.3981647056758258, 0.2723072694753874, 0.34507515385305154, 0.0]
+Mean of folds = 0.25821891078475057
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR
+Stability of features by weights: 0.07239202944717094
+Stability of features by unions: 0.040964488283253275
+Stability of features by Spearman: 0.07781480598486874
+Stability of features by top 50: 0.08399999999999996
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.6029667792037021
+Train hypervolume: 0.7034080027463427
+Test hypervolume: 0.6658244992709861
+Cross hypervolume: 0.6197241072389854
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.647875429232323
+Train hypervolume: 0.6932278269835651
+Test hypervolume: 0.6058081527064009
+Cross hypervolume: 0.6093672382827213
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.6277213112277328
+Train hypervolume: 0.7100000751248954
+Test hypervolume: 0.5657502174433686
+Cross hypervolume: 0.5820937159315576
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.6312654951883944
+Train hypervolume: 0.7160149602717154
+Test hypervolume: 0.559197801936251
+Cross hypervolume: 0.5732962962614179
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.8423753728472028
+Train hypervolume: 0.5974081332912187
+Test hypervolume: 0.5966327781058908
+Cross hypervolume: 0.6338370689833264
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.6704408775398709
+Train hypervolume: 0.6840117996835475
+Test hypervolume: 0.5986426898925795
+Cross hypervolume: 0.6036636853396017
+
+
+EVALUATING HALL OF FAME LAST POPULATION
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.285218252355568, 0.44253394033716564, 0.285281594805657, 0.352633301893855, 0.12045384101536406]
+Mean of folds = 0.29722418608152196
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR
+Stability of features by weights: 0.06858700170444099
+Stability of features by unions: 0.054736153397449305
+Stability of features by Spearman: 0.04937003118596067
+Stability of features by top 50: 0.06600000000000006
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.6029667792037021
+Train hypervolume: 0.7075448019060928
+Test hypervolume: 0.6658244992709861
+Cross hypervolume: 0.6197241072389854
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.647875429232323
+Train hypervolume: 0.6983912912260348
+Test hypervolume: 0.6361581583996935
+Cross hypervolume: 0.6093672382827213
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.6277213112277328
+Train hypervolume: 0.7132324895888866
+Test hypervolume: 0.6094893622957043
+Cross hypervolume: 0.5820937159315576
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.6312654951883944
+Train hypervolume: 0.7179479631420949
+Test hypervolume: 0.6124289930877191
+Cross hypervolume: 0.5732962962614179
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.8423753728472028
+Train hypervolume: 0.6227565892670808
+Test hypervolume: 0.6800689132128891
+Cross hypervolume: 0.6338370689833264
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.6704408775398709
+Train hypervolume: 0.691974627026038
+Test hypervolume: 0.6407939852533984
+Cross hypervolume: 0.6036636853396017
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.0, 0.0, 0.0, 0.0, 0.0]
+Mean of folds = 0.0
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR
+Stability of features by weights: 0.09787755102040807
+Stability of features by unions: 0.09787755102040818
+Stability of features by Spearman: 0.09571515108186839
+Stability of features by top 50: 0.10799999999999998
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.5122641319493138
+Train hypervolume: 0.6003380279548731
+Test hypervolume: 0.647700273702323
+Cross hypervolume: 0.5772414943999409
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.5966827229687529
+Train hypervolume: 0.6060497531912953
+Test hypervolume: 0.6172316135408349
+Cross hypervolume: 0.5764722396589563
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.532425507839251
+Train hypervolume: 0.6042533672095449
+Test hypervolume: 0.6510587993499592
+Cross hypervolume: 0.5169631360270848
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.5467041899612695
+Train hypervolume: 0.6186270401391398
+Test hypervolume: 0.6104274369569542
+Cross hypervolume: 0.5464335829068128
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.6638565758826216
+Train hypervolume: 0.42343771661360236
+Test hypervolume: 0.4862857228244774
+Cross hypervolume: 0.327785940092408
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.5703866257202417
+Train hypervolume: 0.5705411810216912
+Test hypervolume: 0.6025407692749097
+Cross hypervolume: 0.5089792786170405
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 100
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.0, 0.0, 0.0, 0.0, 0.005353535353535353]
+Mean of folds = 0.0010707070707070706
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR
+Stability of features by weights: 0.1036649682667381
+Stability of features by unions: 0.10395959595959581
+Stability of features by Spearman: 0.09960221536201617
+Stability of features by top 50: 0.11999999999999988
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./brca/mrna/SKSurvCox_c-index_root_leanness/5_folds/67445/adj_k5_NSGA3_k3_pop250_uni0-50_gen250_NSGA3CICR_c0.33_m1.0symm_adj_rSVR_NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.5122641319493138
+Train hypervolume: 0.6003380279548731
+Test hypervolume: 0.647700273702323
+Cross hypervolume: 0.5772414943999409
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.5966827229687529
+Train hypervolume: 0.6060497531912953
+Test hypervolume: 0.6172316135408349
+Cross hypervolume: 0.5764722396589563
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.532425507839251
+Train hypervolume: 0.6042533672095449
+Test hypervolume: 0.6594509548694014
+Cross hypervolume: 0.5169631360270848
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.5467041899612695
+Train hypervolume: 0.6186270401391398
+Test hypervolume: 0.6170557344933861
+Cross hypervolume: 0.5464335829068128
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.6964928311628433
+Train hypervolume: 0.45670331237178624
+Test hypervolume: 0.5171103558405337
+Cross hypervolume: 0.3975628602013037
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.5769138767762861
+Train hypervolume: 0.5771943001733278
+Test hypervolume: 0.6117097864892959
+Cross hypervolume: 0.5229346626388197
+
