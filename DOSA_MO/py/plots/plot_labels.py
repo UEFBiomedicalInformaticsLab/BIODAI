@@ -1,0 +1,108 @@
+from typing import Optional
+
+from input_data.swedish_input_creator import SWEDISH_NICK
+from model.regression.regressors_list import NICK_TO_REGRESSOR
+
+SW_LAB = "Sw"
+SWT_LAB = "SwT"
+CSW_LAB = "CSw"
+LCSW_LAB = "LCSw"
+SW_PREF = SW_LAB+" "
+SWT_PREF = SWT_LAB+" "
+CSW_PREF = CSW_LAB+" "
+LCSW_PREF = LCSW_LAB+" "
+CH_SUFF = "-CH"
+CHS_SUFF = "-CHS"
+CHP_SUFF = "-CHP"
+
+LASSO_MO_LAB = "LASSO-MO"
+GF_LAB = "GF"
+RFE_LAB = "RFE"
+NSGA_LAB = "NSGA"
+NSGA2_LAB = NSGA_LAB+"2"
+NSGA3_LAB = NSGA_LAB+"3"
+NSGA2_CH_LAB = NSGA2_LAB+CH_SUFF
+NSGA2_CHS_LAB = NSGA2_LAB+CHS_SUFF
+NSGA2_CHP_LAB = NSGA2_LAB+CHP_SUFF
+NSGA3_CH_LAB = NSGA3_LAB+CH_SUFF
+NSGA3_CHS_LAB = NSGA3_LAB+CHS_SUFF
+NSGA3_CHP_LAB = NSGA3_LAB+CHP_SUFF
+ALL_NSGA_LABS = [NSGA2_LAB, NSGA2_CH_LAB, NSGA2_CHS_LAB, NSGA2_CHP_LAB,
+                 NSGA3_LAB, NSGA3_CH_LAB, NSGA3_CHS_LAB, NSGA3_CHP_LAB]
+ALL_SW_LABS = [SW_PREF+n for n in ALL_NSGA_LABS]
+ALL_SWT_LABS = [SWT_PREF+n for n in ALL_NSGA_LABS]
+ALL_CSW_LABS = [CSW_PREF+n for n in ALL_NSGA_LABS]
+ALL_LCSW_LABS = [LCSW_PREF+n for n in ALL_NSGA_LABS]
+
+SW_NSGA2_CHS_LAB = SW_PREF + NSGA2_CHS_LAB
+SW_NSGA2_CHP_LAB = SW_PREF + NSGA2_CHP_LAB
+CSW_NSGA3_CHS_LAB = CSW_PREF + NSGA3_CHS_LAB
+CSW_NSGA3_CHP_LAB = CSW_PREF + NSGA3_CHP_LAB
+LCSW_NSGA3_CHS_LAB = LCSW_PREF + NSGA3_CHS_LAB
+LCSW_NSGA3_CHP_LAB = LCSW_PREF + NSGA3_CHP_LAB
+
+
+ALL_GA_LABS = ALL_NSGA_LABS + ALL_SW_LABS + ALL_SWT_LABS + ALL_CSW_LABS + ALL_LCSW_LABS
+
+NON_GA_MAIN_WITH_INNER = [RFE_LAB, GF_LAB]
+ALL_MAIN_WITH_INNER = NON_GA_MAIN_WITH_INNER + ALL_GA_LABS
+ALL_MAIN_LABS = [LASSO_MO_LAB] + ALL_MAIN_WITH_INNER
+SELECTED_MAIN_LABS = [NSGA3_CHS_LAB, NSGA3_CHP_LAB, SW_NSGA2_CHS_LAB, SW_NSGA2_CHP_LAB,
+                      CSW_NSGA3_CHS_LAB, CSW_NSGA3_CHP_LAB,
+                      LCSW_NSGA3_CHS_LAB, LCSW_NSGA3_CHP_LAB]
+ALL_MAIN_NO_NSGA3 = [LASSO_MO_LAB, RFE_LAB, GF_LAB, NSGA2_LAB, NSGA2_CH_LAB, NSGA2_CHS_LAB]
+
+NB_LAB = "NB"
+RF_LAB = "RF"
+RF_LEGACY_LAB = "RF_old"
+LR_LAB = "LR"
+SVM_LAB = "SVM"
+TREE_LAB = "tree"
+
+ALL_INNER_LABS = [NB_LAB, SVM_LAB, TREE_LAB, RF_LAB, LR_LAB, RF_LEGACY_LAB]
+SELECTED_INNER_LABS = [NB_LAB, SVM_LAB]
+
+PROPER_ADJUSTER_REGRESSORS_LABS = list(NICK_TO_REGRESSOR.keys())
+ALL_ADJUSTER_REGRESSORS_LABS = [None] + PROPER_ADJUSTER_REGRESSORS_LABS
+DEFAULT_ADJUSTER_REGRESSORS_LABS = ALL_ADJUSTER_REGRESSORS_LABS
+
+TCGA_BRCA_LAB = "tcga_brca"
+TCGA_LU_LAB = "tcga_lu"
+TCGA_LU2_LAB = "tcga_lu2"
+TCGA_DIG5_LAB = "tcga_dig5"
+TCGA_DIG_TYPE_LAB = "tcga_dig_type"
+TCGA_KI_LAB = "tcga_ki"
+TCGA_KI3_LAB = "tcga_ki3"
+TCGA_OV_LAB = "tcga_ov"
+TCGA_THCA2_LAB = "tcga_thca2"
+TCGA_THCA3_LAB = "tcga_thca3"
+TCGA_THCA_BL_LAB = "tcga_thca_bl"
+TCGA_KID_IHC_LAB = "tcga_ki_ihc"
+TCGA_KID_IHC_DET_LAB = "tcga_ki_ihc_det"
+TCGA_KID_IHC_OS_LAB = "tcga_ki_ihc_os"
+TCGA_KID_IHC_PFI_LAB = "tcga_ki_ihc_pfi"
+TCGA_KID_IHC_DSS_LAB = "tcga_ki_ihc_dss"
+TCGA_KID_IHC_MRNA_MIRNA_LAB = "tcga_ki_ihc_mrna_mirna"
+TCGA_KID_IHC_MRNA_MIRNA_OS_LAB = "tcga_ki_ihc_mrna_mirna_os"
+SWEDISH_LAB = SWEDISH_NICK
+TCGA_BRCA_MRNA_MIRNA_LAB = "tcga_brca_mrna_mirna"
+
+
+ALL_CV_DATASETS = [
+    TCGA_BRCA_LAB, TCGA_LU_LAB, TCGA_LU2_LAB, TCGA_DIG5_LAB, TCGA_KI_LAB, TCGA_OV_LAB,
+    TCGA_THCA3_LAB, TCGA_THCA_BL_LAB, TCGA_DIG_TYPE_LAB]
+
+
+def main_and_inner_label(main_lab: str, inner_lab: Optional[str], adjuster_regressor: Optional[str] = None) -> str:
+    """For example: NSGA2 NB."""
+    res = ""
+    if adjuster_regressor is not None:
+        res += adjuster_regressor + " "
+    res += main_lab
+    if inner_lab is not None:
+        res += " " + inner_lab
+    return res
+
+
+def has_classification_inner_model(main_lab: str) -> bool:
+    return main_lab != LASSO_MO_LAB
