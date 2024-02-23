@@ -14,6 +14,8 @@ directory is needed in order to use them. TCGA breast data is in "work/brca/inpu
 split zip archive in the files "work/swedish/input/mrna.zip.00*". Information on the datasets and our preprocessing
 is in Cattelani and Fortino [1].
 
+## How to start the programs
+
 The main Python programs receive in input an INI file with the configuration of a test. All the INI file used to produce
 the paper results are in the directory "work/setups".
 A configuration file starts with "[MVMOO_SETUP]".
