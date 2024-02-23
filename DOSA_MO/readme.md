@@ -14,6 +14,8 @@ directory is needed in order to use them. TCGA breast data is in "work/brca/inpu
 split zip archive in the files "work/swedish/input/mrna.zip.00*". Information on the datasets and our preprocessing
 is in Cattelani and Fortino [1].
 
+This project is licensed under the terms of the MIT license.
+
 ## How to start the programs
 
 The main Python programs receive in input an INI file with the configuration of a test. All the INI file used to produce
@@ -86,6 +88,24 @@ python ../py/plot_all_from_batteries.py
 from inside the "work" directory it is possible to produce all the summary tables and plots that aggregate multiple
 runs by datasets and objectives. It automatically searches the work directory for the necessary test results and creates
 the plots/tables.
+
+To run the program with a custom dataset, place in the directory work/custom/input a csv file with independent variables
+"mrna.csv" and a file with the outcomes "outcome.csv". Each row in the files is a sample, and the order must be
+consistent between the two files. The first row is for the header. Each column in the independent variables file is
+named with the feature name. The outcomes file can have a column "type" if there is a classification outcome (classes
+can be any string), and two columns "Event" and "Time" if there is a survival outcome. Event is 0 (alive) or 1 (dead).
+Time is numeric. It is allowed but not necessary to have both a classification and a survival outcome.
+A small example dataset is already present in the work/custom/input directory, and an example setup file for running it
+is "work/setups/custom_example.ini".
+
+The suggested list of package requirements is in the file requirements.txt.
+
+The R script load_tcga_brca.R creates the mrna.csv and outcome.csv related to the breast TCGA dataset.
+Similarly, the script load_tcga_kir.R creates the csv files for the kidney.
+In order to work the R scripts require an internet connection. These data files are already present in the work
+directory, still the scripts are included for reproducibility.
+
+## Program results
 
 The results for a k-fold cross-validation or an external validation are saved in a subdirectory of "work". The path is
 composed by the name of the dataset, then the type of data ("mrna"), the objectives, the type of validation, the
@@ -258,25 +278,8 @@ Statistics are saved in this file in order to compute them only once.
 If the setup includes a classification objective, this directory is filled with a csv file representing
 the confusion matrix of each solution. Order of the solutions in these files is consistent.
 
-To run the program with a custom dataset, place in the directory work/custom/input a csv file with independent variables
-"mrna.csv" and a file with the outcomes "outcome.csv". Each row in the files is a sample, and the order must be
-consistent between the two files. The first row is for the header. Each column in the independent variables file is
-named with the feature name. The outcomes file can have a column "type" if there is a classification outcome (classes
-can be any string), and two columns "Event" and "Time" if there is a survival outcome. Event is 0 (alive) or 1 (dead).
-Time is numeric. It is allowed but not necessary to have both a classification and a survival outcome.
-A small example dataset is already present in the work/custom/input directory, and an example setup file for running it
-is "work/setups/custom_example.ini".
+## Bibliography
 
-The suggested list of package requirements is in the file requirements.txt.
-
-The R script load_tcga_brca.R creates the mrna.csv and outcome.csv related to the breast TCGA dataset.
-Similarly, the script load_tcga_kir.R creates the csv files for the kidney.
-In order to work the R scripts require an internet connection. These data files are already present in the work
-directory, still the scripts are included for reproducibility.
-
-This project is licensed under the terms of the MIT license.
-
-Bibliography
 [1] Luca Cattelani, Vittorio Fortino. "Dual-stage optimizer for systematic overestimation
 adjustment applied to multi-objective genetic algorithms for biomarker selection",
 arXiv preprint, arXiv:2312.16624 (2023), https://doi.org/10.48550/arXiv.2312.16624
