@@ -5,7 +5,7 @@ Adjustment in Multi-Objective problems).
 
 The project is described in Cattelani and Fortino [1].
 
-The main program is in Python, we include also R scripts that were used to prepare the TCGA datasets.
+The main program is in Python (version 2.9+), we include also R scripts that were used to prepare the TCGA datasets.
 
 All the data files needed to run the tests are included in this repository. All the results, including plots, are
 included in this repository, but can also be generated again by a user launching the Python programs.
@@ -75,12 +75,12 @@ supported on every system configuration.
 - logistic_max_iter. The maximum number of iterations used by the logistic regression inner model. Ignored when using
 another inner model.
 
-The Python script py/run_with_setups.py is used to run the k-fold cross-validation and the final optimization
+The Python script py/biodai_cv.py is used to run the k-fold cross-validation and the final optimization
 (optimization on the whole dataset). It gets in input an INI setup file. An example of run from command line
 (from inside the working directory "work") is
-python ../py/run_with_setups.py setups/kidney_ihc_det/bal_acc/adj_svr_nsga3_chs_short.ini
+python ../py/biodai_cv.py setups/kidney_ihc_det/bal_acc/adj_svr_nsga3_chs_short.ini
 
-The Python script py/external_validator.py runs an external validation. It gets in input an INI setup file
+The Python script py/biodai_external.py runs an external validation. It gets in input an INI setup file
 and works in an analogous way as run_with_setups.py.
 
 By launching
@@ -283,8 +283,10 @@ the confusion matrix of each solution. Order of the solutions in these files is 
 [1] Luca Cattelani, Vittorio Fortino. "Dual-stage optimizer for systematic overestimation
 adjustment applied to multi-objective genetic algorithms for biomarker selection",
 arXiv preprint, arXiv:2312.16624 (2023), https://doi.org/10.48550/arXiv.2312.16624
+
 [2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. "Improving biomarker selection for cancer subtype
 classification through multi-objective optimization", TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
+
 [3] Luca Cattelani, Vittorio Fortino. "Improved NSGA-II algorithms for multi-objective biomarker discovery",
 Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26,
 https://doi.org/10.1093/bioinformatics/btac463
