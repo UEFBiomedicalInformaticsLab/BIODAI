@@ -43,14 +43,14 @@ Other two parameters are used to set the minimum and maximum number of features 
 - initial_features_min and initial_features_max. Two numbers to specify the minimum and maximum number of features in an
 initial solution.
 - sorting_strategy. The sorting strategy to use before selection and tournament. It can be "crowding_distance_full"
-for NSGA2 implied sorting or "crowding_distance_clone_index" to use the clone index as primary sorting criteria.
-- use_clone_repurposing. A Boolean. If true clone repurposing is used.
+for NSGA2 implied sorting or "crowding_distance_clone_index" to use the clone index as primary sorting criteria [2].
+- use_clone_repurposing. A Boolean. If true clone repurposing is used [2].
 - logistic_max_iter. The maximum number of iterations used by the logistic regression inner model. Ignored when using
 another inner model.
 - feature_importance_categorical. The strategy used to compute the feature importance for the GA-based algorithms.
-With the default of "none" a uniform feature importance is used. With "lasso" the LASSO feature importance is used.
+With the default of "none" a uniform feature importance is used. With "lasso" the LASSO feature importance is used [2].
 - bitlist_mutation_operator. With the default of "flip" a bit-flip operator is used. With "symm" the symmetric mutation
-is used instead.
+is used instead [2].
 - inner_n_folds. The number of folds used inside the optimizer for evaluating the solutions. Ignored if the optimizer
 does not use internal cross-validation. Defaults to 3.
 
@@ -82,3 +82,5 @@ Other similar scripts can be found in py/cattelani2023. They are
 - summary_statistics_subplotter.py
 
 This project is licensed under the terms of the MIT license.
+
+[2] Luca Cattelani, Vittorio Fortino, Improved NSGA-II algorithms for multi-objective biomarker discovery, Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26, https://doi.org/10.1093/bioinformatics/btac463
