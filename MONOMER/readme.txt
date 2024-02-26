@@ -1,4 +1,5 @@
 Publicly available source code and data for the project Multi-objective OptimizatioN Of bioMarkERs (MONOMER).
+The project is described in Cattelani et al. [1].
 
 The main program is in Python, we include also R scripts that were used to prepare the TCGA datasets.
 
@@ -83,4 +84,5 @@ Other similar scripts can be found in py/cattelani2023. They are
 
 This project is licensed under the terms of the MIT license.
 
+[1] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. Improving biomarker selection for cancer subtype classification through multi-objective optimization. TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
 [2] Luca Cattelani, Vittorio Fortino, Improved NSGA-II algorithms for multi-objective biomarker discovery, Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26, https://doi.org/10.1093/bioinformatics/btac463
