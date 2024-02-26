@@ -14,6 +14,19 @@ directory is needed in order to use them. TCGA breast data is in "work/brca/inpu
 split zip archive in the files "work/swedish/input/mrna.zip.00*". Information on the datasets and our preprocessing
 is in Cattelani and Fortino [1].
 
+Both case studies were addressed by using internalexternal CV on TCGA [4] data. Additionally, the
+breast cancer case study includes an external validation with training on TCGA data and testing on
+SCAN-B data [5]. TCGA transcriptomic datasets were downloaded with the curatedTCGAData R-package version 2.0.1
+from assays of type RNASeq2GeneNorm [6]. The external gene expression-based transcriptomic
+dataset for breast cancer was obtained from the Gene Expression Omnibus (GEO) database (GSE96058)
+collected from the SCAN-B consortium. For the task of classifying cancer subtypes
+in TCGA kidney cancer patients, we focused on distinguishing clear-cell renal cell carcinoma (ccRCC),
+chromophobe renal cell carcinoma (ChRCC), and papillary renal cell carcinoma, which was further divided
+into two subtypes based on recent studies identifying distinct clinical categories. These are referred to as
+PRCC T1 and PRCC T2. Additionally, we included samples of normal non-cancerous tissues. This classification
+system is based on a study published by Ricketts et al. [7]. Overall survival data for TCGA
+kidney cancer is from Liu et al. [8].
+
 This project is licensed under the terms of the MIT license.
 
 ## How to start the programs
@@ -314,14 +327,37 @@ the confusion matrix of each solution. Order of the solutions in these files is 
 
 ## Bibliography
 
-[1] Luca Cattelani, Vittorio Fortino. "Dual-stage optimizer for systematic overestimation
-adjustment applied to multi-objective genetic algorithms for biomarker selection",
+[1] Luca Cattelani, Vittorio Fortino. Dual-stage optimizer for systematic overestimation
+adjustment applied to multi-objective genetic algorithms for biomarker selection.
 arXiv preprint, arXiv:2312.16624 (2023), https://doi.org/10.48550/arXiv.2312.16624
 
-[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. "Improving biomarker selection for cancer subtype
-classification through multi-objective optimization", TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
+[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. Improving biomarker selection for cancer subtype
+classification through multi-objective optimization. TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
 
-[3] Luca Cattelani, Vittorio Fortino. "Improved NSGA-II algorithms for multi-objective biomarker discovery",
+[3] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery.
 Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26,
 https://doi.org/10.1093/bioinformatics/btac463
 
+[4] Carolyn Hutter, Jean Claude Zenklusen. The cancer genome atlas: creating lasting value beyond
+its data. Cell, 173(2):283–285, 2018.
+
+[5] Christian Brueffer, Johan Vallon-Christersson, Dorthe Grabau, Anna Ehinger, Jari Hakkinen, Cecilia
+Hegardt, Janne Malina, Yilun Chen, Par-Ola Bendahl, Jonas Manjer, Martin Malmberg,
+Christer Larsson, Niklas Loman, Lisa Rydén, Ake Borg, Lao H. Saal. Clinical value of rna
+sequencing–based classifiers for prediction of the five conventional breast cancer biomarkers: a report
+from the population-based multicenter sweden cancerome analysis network—breast initiative.
+JCO precision oncology, 2:1–18, Mar 2018. doi:10.1200/PO.17.00135. URL https://doi.org/10.1200/PO.17.00135.
+PMID: 32913985.
+
+[6] Marcel Ramos, Ludwig Geistlinger, Sehyun Oh, Lucas Schiffer, Rimsha Azhar, Hanish Kodali, Ino
+de Bruijn, Jianjiong Gao, Vincent J Carey, Martin Morgan, et al. Multiomic integration of public
+oncology databases in bioconductor. JCO Clinical Cancer Informatics, 1:958–971, 2020.
+
+[7] Christopher J Ricketts, Aguirre A De Cubas, Huihui Fan, Christof C Smith, Martin Lang, Ed Reznik, Reanne
+Bowlby, Ewan A Gibb, Rehan Akbani, Rameen Beroukhim, et al. The cancer genome atlas comprehensive
+molecular characterization of renal cell carcinoma. Cell reports, 23(1):313–326, 2018.
+
+[8] Jianfang Liu, Tara Lichtenberg, Katherine A Hoadley, Laila M Poisson, Alexander J Lazar, Andrew
+D Cherniack, Albert J Kovatich, Christopher C Benz, Douglas A Levine, Adrian V Lee,
+et al. An integrated tcga pan-cancer clinical data resource to drive high-quality survival outcome analytics.
+Cell, 173(2):400–416, 2018.
