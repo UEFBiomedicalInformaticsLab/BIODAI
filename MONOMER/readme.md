@@ -14,12 +14,14 @@ All the data files needed to run the tests are included in this repository, exce
 it is too large for GitHub. All the results, including plots, are included in this repository,
 but can also be generated again by a user launching the Python programs.
 
+## Launching the programs
+
 The main Python programs get in input an INI file with the configuration of a test. All the INI file used to produce
 the paper results are in the directory work/setups.
 A configuration file starts with [MVMOO_SETUP].
 
 The most important parameters are the following.
-- dataset. The name of the dataset to be used for internal-external cross-validation or as training for
+- **dataset**. The name of the dataset to be used for internal-external cross-validation or as training for
 external validation. Valid options include "brca" (TCGA breast), "luad_lusc" (TCGA lung),
 "tcga_kir" (TCGA kidney with 4 classes), "tcga_kir3" (TCGA kidney with 3 classes), tcga_ov (TCGA ovary),
 "swedish" (SCAN-B), "cptac3_sub_uq4" (CPTAC-3), "kid_gse152938d" (GSE152938), and "ext_ov2" (GSE102073).
