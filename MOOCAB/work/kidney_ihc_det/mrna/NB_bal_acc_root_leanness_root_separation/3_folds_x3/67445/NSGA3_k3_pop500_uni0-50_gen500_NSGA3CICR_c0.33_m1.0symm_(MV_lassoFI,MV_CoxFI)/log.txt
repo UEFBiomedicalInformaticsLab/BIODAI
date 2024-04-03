@@ -1,0 +1,506 @@
+
+RUNNING NSGA-III MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (MO-3-FOLDS CREATOR, POP 500, UNIFORM(0, 50), GEN 500, SORT NSGA3CICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP) WITH (MULTI-VIEW LASSO FI, MULTI-VIEW COX FI)
+Date = 2023-07-09
+Machine = sampo2
+CPUs detected in the system = 80
+Number of outer folds = 9
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)
+Feature selector:
+Multi-objective feature selector with inner composite feature selector with
+categorical: feature selector any na and anova
+survival: feature selector Cox
+Inner optimizer:
+Name = NSGA-III multi-view multi-objective optimizer (MO-3-folds creator, pop 500, uniform(0, 50), gen 500, sort NSGA3CICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm
+Population size = 500
+Number of features in initial individuals = uniform(0, 50)
+Number of generations = 500
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA-III multi-view multi-objective optimizer with Clone Index elitist and clone repurposing
+Objectives = [type naive Bayes balanced accuracy, root separation, root leanness]
+Hall of fame factories = [Pareto front factory, Last population factory, Best 50 by sum factory, Best 100 by sum factory]
+Folds creator = MO-3-folds creator
+Multi-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance Cox
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-11:12:54
+
+APPLYING EVALUATORS
+
+EVALUATING HALL OF FAME PARETO FRONT
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.1338259127372207, 0.12947668026793616, 0.14059000796595741, 0.16182776691031692, 0.16114647423369724, 0.169988674568194, 0.14456640750541117, 0.16585350042541994, 0.15960280242917155]
+Mean of folds = 0.15187535856036946
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.16389599788352038
+Stability of features by unions: 0.11462378864460421
+Stability of features by Spearman: 0.08355169875005687
+Stability of features by top 50: 0.14444444444444438
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for type naive Bayes balanced accuracy vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.38668680063990696
+Train hypervolume: 0.3874546681437623
+Test hypervolume: 0.3778896511216332
+Cross hypervolume: 0.3705329331178729
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.4089529886427293
+Train hypervolume: 0.40981886490551556
+Test hypervolume: 0.35991083143883523
+Cross hypervolume: 0.3546025101569799
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.3841259138949076
+Train hypervolume: 0.38457913656395154
+Test hypervolume: 0.3940757341345978
+Cross hypervolume: 0.39706606407416273
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.39372754158051065
+Train hypervolume: 0.3949891802079575
+Test hypervolume: 0.3721235776304638
+Cross hypervolume: 0.36572337550167094
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.38620455045402624
+Train hypervolume: 0.3879608751399977
+Test hypervolume: 0.3901847974953372
+Cross hypervolume: 0.38806983906285825
+
+Hypervolumes for fold 5
+Inner cross-validation hypervolume: 0.3979023999816912
+Train hypervolume: 0.39926777661336205
+Test hypervolume: 0.36594971883403593
+Cross hypervolume: 0.3678133782317095
+
+Hypervolumes for fold 6
+Inner cross-validation hypervolume: 0.39073942340160006
+Train hypervolume: 0.39191747068598537
+Test hypervolume: 0.3769146104571311
+Cross hypervolume: 0.37648272282959144
+
+Hypervolumes for fold 7
+Inner cross-validation hypervolume: 0.3921295003596519
+Train hypervolume: 0.3935523723705422
+Test hypervolume: 0.37315116413519844
+Cross hypervolume: 0.37126586986188775
+
+Hypervolumes for fold 8
+Inner cross-validation hypervolume: 0.3891710315546569
+Train hypervolume: 0.3899722775656016
+Test hypervolume: 0.3780640807416939
+Cross hypervolume: 0.3814401517439668
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.39218223894552007
+Train hypervolume: 0.3932791802440751
+Test hypervolume: 0.37647379622099186
+Cross hypervolume: 0.37477742717563334
+
+
+EVALUATING HALL OF FAME LAST POPULATION
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.08122660145017026, 0.09017578612111848, 0.08108344101460933, 0.060420149104453064, 0.06952786142602013, 0.08820980738015559, 0.07838565473372508, 0.06723089690754556, 0.09009487646977894]
+Mean of folds = 0.0784838971786196
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.18656599117104755
+Stability of features by unions: 0.16881978717638535
+Stability of features by Spearman: 0.12293646754606097
+Stability of features by top 50: 0.16222222222222227
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for type naive Bayes balanced accuracy vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.3846905449503102
+Train hypervolume: 0.3854227882523326
+Test hypervolume: 0.37915680576216204
+Cross hypervolume: 0.36717307649079967
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.4072634194084195
+Train hypervolume: 0.4082428755728765
+Test hypervolume: 0.35963837126236814
+Cross hypervolume: 0.3586378316333548
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.38255072960270964
+Train hypervolume: 0.3826732098168902
+Test hypervolume: 0.39339914612000526
+Cross hypervolume: 0.3974133807513441
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.39111569265705254
+Train hypervolume: 0.39258799341676853
+Test hypervolume: 0.3744933389240311
+Cross hypervolume: 0.3627756839389645
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.3837508001240794
+Train hypervolume: 0.3854194235350549
+Test hypervolume: 0.3957459997098089
+Cross hypervolume: 0.3842469307409569
+
+Hypervolumes for fold 5
+Inner cross-validation hypervolume: 0.3959216468175167
+Train hypervolume: 0.3982485837710669
+Test hypervolume: 0.36809639786745074
+Cross hypervolume: 0.37036822698534083
+
+Hypervolumes for fold 6
+Inner cross-validation hypervolume: 0.3885986949800815
+Train hypervolume: 0.3907784555441966
+Test hypervolume: 0.37592815530556584
+Cross hypervolume: 0.3774227156042704
+
+Hypervolumes for fold 7
+Inner cross-validation hypervolume: 0.3906066965951138
+Train hypervolume: 0.3915365541475299
+Test hypervolume: 0.373664580609022
+Cross hypervolume: 0.3703106757234555
+
+Hypervolumes for fold 8
+Inner cross-validation hypervolume: 0.3872460310326305
+Train hypervolume: 0.3883761044547188
+Test hypervolume: 0.38046262433438277
+Cross hypervolume: 0.38137250125856875
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.3901938062408793
+Train hypervolume: 0.391476220945715
+Test hypervolume: 0.3778428244327552
+Cross hypervolume: 0.3744134470141172
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.21251895043731778, 0.21113119533527697, 0.2048843537414966, 0.156689990281827, 0.229865889212828, 0.16119533527696794, 0.2467327502429543, 0.2020952380952381, 0.17296404275996113]
+Mean of folds = 0.19978641615376308
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.41434089787557093
+Stability of features by unions: 0.4057086320191159
+Stability of features by Spearman: 0.42007863678031315
+Stability of features by top 50: 0.6094444444444445
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for type naive Bayes balanced accuracy vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.3228248154241335
+Train hypervolume: 0.3243618560734529
+Test hypervolume: 0.32408136146697625
+Cross hypervolume: 0.3121413514427959
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.34281780377540316
+Train hypervolume: 0.34591129343383586
+Test hypervolume: 0.3036448809578864
+Cross hypervolume: 0.2948716001156385
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.32073842641598965
+Train hypervolume: 0.3196093151418325
+Test hypervolume: 0.3278739289576758
+Cross hypervolume: 0.3205137720163865
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.32674013151534004
+Train hypervolume: 0.32999295905915704
+Test hypervolume: 0.3174400003727054
+Cross hypervolume: 0.31232004069898406
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.29212973189649627
+Train hypervolume: 0.29032218621459266
+Test hypervolume: 0.2959814920802618
+Cross hypervolume: 0.2871774552395984
+
+Hypervolumes for fold 5
+Inner cross-validation hypervolume: 0.33142916941393147
+Train hypervolume: 0.3328286229489643
+Test hypervolume: 0.3125578237051239
+Cross hypervolume: 0.3098767457008222
+
+Hypervolumes for fold 6
+Inner cross-validation hypervolume: 0.32573220877250625
+Train hypervolume: 0.3266140745013816
+Test hypervolume: 0.3159171466313775
+Cross hypervolume: 0.30990012848663423
+
+Hypervolumes for fold 7
+Inner cross-validation hypervolume: 0.3283736468328914
+Train hypervolume: 0.3306171744339533
+Test hypervolume: 0.3164350822517317
+Cross hypervolume: 0.30547542015285795
+
+Hypervolumes for fold 8
+Inner cross-validation hypervolume: 0.3199902886988882
+Train hypervolume: 0.3211749854572705
+Test hypervolume: 0.31407020103642513
+Cross hypervolume: 0.31678802642893356
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.32341958030506446
+Train hypervolume: 0.32460360747382677
+Test hypervolume: 0.31422243527335153
+Cross hypervolume: 0.30767383780918345
+
+
+EVALUATING HALL OF FAME BEST SUMS WITH SIZE 100
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-CROSS_EVALUATOR
+Mean Jaccard all vs others for each fold
+[0.18823376623376623, 0.18871308321308322, 0.16796248196248195, 0.1454030784030784, 0.2396091871091871, 0.16640596440596442, 0.24057575757575755, 0.17495959595959595, 0.177999037999038]
+Mean of folds = 0.18776243920688365
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-CROSS_EVALUATOR
+Stability of features by weights: 0.4071328271355257
+Stability of features by unions: 0.3281679515359843
+Stability of features by Spearman: 0.3438428767925166
+Stability of features by top 50: 0.3388888888888889
+
+APPLYING USAGE OF VIEWS
+Prevalence of features selected in each view
+mrna = 1.0
+Distribution of views in each fold
+[[1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0]]
+Stability of views = 1.0
+
+APPLYING FOLD SAVER
+
+APPLYING HALL OF FAMES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/
+
+APPLYING CONFUSION MATRICES SAVER
+Path for hall of fames = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/confusion_matrix/
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER
+Path for plots = ./kidney_ihc_det/mrna/NB_bal_acc_root_leanness_root_separation/3_folds_x3/67445/NSGA3_k3_pop500_uni0-50_gen500_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for type naive Bayes balanced accuracy vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for type naive Bayes balanced accuracy vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root separation vs root leanness
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs type naive Bayes balanced accuracy
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+Creating plots for root leanness vs root separation
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.3228279000071759
+Train hypervolume: 0.3253351671743131
+Test hypervolume: 0.3252007086548066
+Cross hypervolume: 0.31210430200429373
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.3431427839829804
+Train hypervolume: 0.3459801945998131
+Test hypervolume: 0.3108886524066983
+Cross hypervolume: 0.29660418403472183
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.3207384264159896
+Train hypervolume: 0.3206950124069053
+Test hypervolume: 0.3333552866034916
+Cross hypervolume: 0.3205137720163865
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.3268269670214602
+Train hypervolume: 0.3310896176478878
+Test hypervolume: 0.31761128890947593
+Cross hypervolume: 0.311227181814737
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.32842571231312584
+Train hypervolume: 0.32731398946592705
+Test hypervolume: 0.3314027677934538
+Cross hypervolume: 0.32457162998503913
+
+Hypervolumes for fold 5
+Inner cross-validation hypervolume: 0.33142916941393147
+Train hypervolume: 0.3328338890506727
+Test hypervolume: 0.3127315986443083
+Cross hypervolume: 0.3098767457008222
+
+Hypervolumes for fold 6
+Inner cross-validation hypervolume: 0.32635674522293306
+Train hypervolume: 0.32743116805100414
+Test hypervolume: 0.31955194062290365
+Cross hypervolume: 0.30966822521981713
+
+Hypervolumes for fold 7
+Inner cross-validation hypervolume: 0.3287545413032682
+Train hypervolume: 0.3310065045230464
+Test hypervolume: 0.31780622099808714
+Cross hypervolume: 0.3077949237620493
+
+Hypervolumes for fold 8
+Inner cross-validation hypervolume: 0.3243553781651862
+Train hypervolume: 0.3252811966352143
+Test hypervolume: 0.3173270480206632
+Cross hypervolume: 0.31742615516764255
+
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.32809529153845013
+Train hypervolume: 0.32966297106164266
+Test hypervolume: 0.32065283473932094
+Cross hypervolume: 0.3121985688561677
+
