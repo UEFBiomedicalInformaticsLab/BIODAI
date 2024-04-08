@@ -14,7 +14,7 @@ directory is needed in order to use them. TCGA breast data is in "work/brca/inpu
 split zip archive in the files "work/swedish/input/mrna.zip.00*". Information on the datasets and our preprocessing
 is in Cattelani and Fortino [1].
 
-Both case studies were addressed by using internalexternal CV on TCGA [4] data. Additionally, the
+Both case studies were addressed by using k-fold CV on TCGA [4] data. Additionally, the
 breast cancer case study includes an external validation with training on TCGA data and testing on
 SCAN-B data [5]. TCGA transcriptomic datasets were downloaded with the curatedTCGAData R-package version 2.0.1
 from assays of type RNASeq2GeneNorm [6]. The external gene expression-based transcriptomic
