@@ -23,15 +23,6 @@ TCGA_KID_IHC_DET_ACC_SEP_BATTERY = TestBatteryCV(
     nick=TCGA_KID_IHC_DET_LAB,
     generations=GenerationsStrategy(concatenated=500))
 
-TCGA_KID_IHC_DET_ACC_BATTERY = TestBatteryCV(
-    objective_computers=[BalancedAccuracy(), RootLeanness()],
-    n_outer_folds=3,
-    cv_repeats=3,
-    dataset_labels=[TCGA_KID_IHC_DET_LAB],
-    cox_fi=True,
-    nick=TCGA_KID_IHC_DET_LAB,
-    generations=GenerationsStrategy(concatenated=500))
-
 TCGA_KID_IHC_DET_ACC_NONADJ_BATTERY = TestBatteryCV(
     objective_computers=[BalancedAccuracy(), RootLeanness()],
     n_outer_folds=3,
@@ -91,5 +82,9 @@ TCGA_KID_IHC_DET_OS_ACC_NONADJ_BATTERY = TestBatteryCV(
 
 ALL_BATTERIES = [
     TCGA_KID_IHC_DET_ACC_SEP_BATTERY,
-    TCGA_KID_IHC_DET_ACC_BATTERY,
-    TCGA_KID_IHC_DET_SEP_BATTERY]
+    TCGA_KID_IHC_DET_ACC_NONADJ_BATTERY,
+    TCGA_KID_IHC_DET_SEP_BATTERY,
+    TCGA_KID_IHC_DET_OS_NONADJ_BATTERY,
+    TCGA_KID_IHC_DET_OS_SEP_BATTERY,
+    TCGA_KID_IHC_DET_OS_ACC_NONADJ_BATTERY,
+    TCGA_KID_IHC_DET_OS_ACC_SEP_BATTERY]

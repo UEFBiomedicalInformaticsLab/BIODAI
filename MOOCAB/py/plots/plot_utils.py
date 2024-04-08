@@ -95,7 +95,7 @@ def multi_line_plot_ax(
             plt.ylim(bottom=y_min)
         if y_max is not None:
             plt.ylim(top=y_max)
-        ax.grid(b=True)
+        ax.grid(visible=True)
         labs = [line.get_label() for line in lines]
         ax.legend(lines, labs, loc="lower right")
         format_tick_labels(ax=ax, decimals=decimals)
