@@ -31,8 +31,8 @@ This project is licensed under the terms of the MIT license.
 
 ## How to start the programs
 
-The main Python programs receive in input an INI file with the configuration of a test. All the INI file used to produce
-the paper results are in the directory "work/setups".
+The main Python programs receive in input an INI file with the configuration of a test.
+All the INI files used to produce the paper results are in the directory "work/setups".
 A configuration file starts with "[MVMOO_SETUP]".
 
 The most important parameters, including all the parameters needed to replicate our results, are the following.
