@@ -68,9 +68,12 @@ Other two parameters are used to set the minimum and maximum number of features 
 - **initial_features_min** and **initial_features_max**. Two numbers to specify the minimum and maximum number of features in an
 initial solution.
 - **sorting_strategy**. The sorting strategy to use before selection and tournament. It can be "crowding_distance_full"
-for NSGA2 implied sorting, "crowding_distance_clone_index" to use the clone index as primary sorting criteria [3], or
+for NSGA2 implied sorting, "crowding_distance_clone_index" to use the clone index as primary sorting criteria [3],
+"nsga3" for NSGA3 implied sorting, or
 "nsga3_clone_index" to use NSGA3 implied sorting with clone index as primary sorting criteria.
 - **use_clone_repurposing**. A Boolean. Defaults to false. If true clone repurposing [3] is used.
+- **bitlist_mutation_operator**. With the default of "flip" a bit-flip operator is used. With "symm" the symmetric mutation
+is used instead.
 - **feature_importance_categorical**. The strategy used to take classification into account for computing the feature
 importance [3] for the GA-based algorithms. With the default of "none" a uniform feature importance is used.
 With "lasso" the LASSO feature importance is used.
@@ -81,7 +84,7 @@ With "cox" the coefficients of an adaptively l1 regularized Cox are used to comp
 does not use internal cross-validation. Defaults to 3.
 - **outer_n_folds**. The number of folds used when performing k-fold cross-validation. Defaults to 5.
 - **cv_repeats**. The number of repetitions of the k-fold cross-validation. Defaults to 1.
-- fold_parallelism. A Boolean. Defaults to true. If true the folds of a k-fold cross-validation are run in parallel.
+- **fold_parallelism**. A Boolean. Defaults to true. If true the folds of a k-fold cross-validation are run in parallel.
 It is suggested to disable this parallelism when running survival analysis because its parallel execution is not
 supported on every system configuration.
 - **seed**. Integer value used to initialize the pseudo-random number generation. Defaults to 48723.
