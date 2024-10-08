@@ -328,6 +328,28 @@ Statistics are saved in this file in order to compute them only once.
 If the setup includes a classification objective, this directory is filled with a csv file representing
 the confusion matrix of each solution. Order of the solutions in these files is consistent.
 
+## Summary results
+
+Starting from the "work" directory, it is possible to find also analyses that take into account multiple
+program runs at the same time. There is one battery of this kind of analyses for each combination of
+dataset, objectives and validation type (k-fold CV or external).
+- **work/summary_stats/***
+For each battery, barplots that compare the algorithms according to different metrics. E.g. Cross hypervolume
+or Pareto delta.
+- **work/summary_stats/*/baseline_best_comparison.png**
+A comparison of performance between the best solutions found without DOSA-MO
+and the best solutions found with DOSA-MO (according to CHV).
+When k-fold CV is used all the folds are shown together.
+- **work/summary_stats/cv/*/best_hof.txt**
+This file is present when the battery is evaluated with k-fold CV.
+It is a list of the biomarkers found by the best algorithm.
+The best algorithm is chosen according to the CHV measured with k-fold CV.
+The biomarkers are then computed running the best algorithm on the whole training set.
+- **work/summary_stats/external/*/best_solutions.txt**
+This file is present when the battery is evaluated with external validation.
+It is a list of the best biomarkers found by all the algorithms combined.
+The best biomarkers are chosen according to the performance measured on the external dataset.
+
 ## Bibliography
 
 [1] Luca Cattelani, Vittorio Fortino. Dual-stage optimizer for systematic overestimation
