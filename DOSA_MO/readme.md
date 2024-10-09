@@ -340,6 +340,7 @@ or Pareto delta.
 A comparison of performance between the best solutions found without DOSA-MO
 and the best solutions found with DOSA-MO (according to CHV).
 When k-fold CV is used all the folds are shown together.
+This file is not present for setups with 3+ objectives since the plot would be difficult to read.
 - **work/summary_stats/cv/*/best_hof.txt**
 This file is present when the battery is evaluated with k-fold CV.
 It is a list of the biomarkers found by the best algorithm.
