@@ -355,14 +355,16 @@ The best biomarkers are chosen according to the performance measured on the exte
 
 [1] Luca Cattelani, Vittorio Fortino. Dual-stage optimizer for systematic overestimation
 adjustment applied to multi-objective genetic algorithms for biomarker selection.
-arXiv preprint, arXiv:2312.16624 (2023), https://doi.org/10.48550/arXiv.2312.16624
+arXiv preprint, arXiv:2312.16624 (2023). URL https://doi.org/10.48550/arXiv.2312.16624
 
-[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. Improving biomarker selection for cancer subtype
-classification through multi-objective optimization. TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
+[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino.
+A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based
+biomarker discovery. In IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
+doi:10.1109/TCBB.2024.3480150. URL https://doi.org/10.1109/TCBB.2024.3480150
 
 [3] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery.
-Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26,
-https://doi.org/10.1093/bioinformatics/btac463
+Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26.
+URL https://doi.org/10.1093/bioinformatics/btac463
 
 [4] Carolyn Hutter, Jean Claude Zenklusen. The cancer genome atlas: creating lasting value beyond
 its data. Cell, 173(2):283–285, 2018.
