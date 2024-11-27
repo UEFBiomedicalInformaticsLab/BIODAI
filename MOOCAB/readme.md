@@ -3,8 +3,8 @@
 Publicly available source code and data for the project MOOCAB
 (Multi-Objective Optimization for Clinically Actionable Biomarkers).
 
-The project is described in Cattelani and Fortino, "Multi-objective optimization strategies to identify clinically
-actionable biomarkers: a case study on kidney cancer" [5].
+The project is described in Cattelani and Fortino,
+"Triple and quadruple optimization for feature selection in cancer biomarker discovery" [5].
 
 The main program is in Python (version 2.9+), we include also R scripts that were used to prepare the TCGA datasets.
 
@@ -279,8 +279,10 @@ the confusion matrix of each solution. Order of the solutions in these files is 
 adjustment applied to multi-objective genetic algorithms for biomarker selection.
 arXiv preprint, arXiv:2312.16624 (2023), https://doi.org/10.48550/arXiv.2312.16624
 
-[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. Improving biomarker selection for cancer subtype
-classification through multi-objective optimization. TechRxiv (2023), https://doi.org/10.36227/techrxiv.24321154.v2
+[2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino.
+A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based
+biomarker discovery. In IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
+doi:10.1109/TCBB.2024.3480150. URL https://doi.org/10.1109/TCBB.2024.3480150
 
 [3] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery.
 Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26,
@@ -289,8 +291,10 @@ https://doi.org/10.1093/bioinformatics/btac463
 [4] Carolyn Hutter, Jean Claude Zenklusen. The cancer genome atlas: creating lasting value beyond
 its data. Cell, 173(2):283–285, 2018.
 
-[5] Luca Cattelani, Vittorio Fortino. Multi-objective optimization strategies to identify clinically
-actionable biomarkers: a case study on kidney cancer. To be published.
+[5] Luca Cattelani, Vittorio Fortino.
+Triple and quadruple optimization for feature selection in cancer biomarker discovery.
+Journal of Biomedical Informatics,
+Volume 159, 2024, 104736, ISSN 1532-0464. URL https://doi.org/10.1016/j.jbi.2024.104736
 
 [6] Marcel Ramos, Ludwig Geistlinger, Sehyun Oh, Lucas Schiffer, Rimsha Azhar, Hanish Kodali, Ino
 de Bruijn, Jianjiong Gao, Vincent J Carey, Martin Morgan, et al. Multiomic integration of public
