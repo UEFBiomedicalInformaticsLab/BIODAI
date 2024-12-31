@@ -355,12 +355,15 @@ The best biomarkers are chosen according to the performance measured on the exte
 
 [1] Luca Cattelani, Vittorio Fortino. Dual-stage optimizer for systematic overestimation
 adjustment applied to multi-objective genetic algorithms for biomarker selection.
-arXiv preprint, arXiv:2312.16624 (2023). URL https://doi.org/10.48550/arXiv.2312.16624
+Briefings in Bioinformatics, Volume 26, Issue 1, January 2025, bbae674.
+URL https://doi.org/10.1093/bib/bbae674
 
 [2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino.
-A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based
-biomarker discovery. In IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
-doi:10.1109/TCBB.2024.3480150. URL https://doi.org/10.1109/TCBB.2024.3480150
+A Comprehensive Evaluation Framework for Benchmarking Multi-Objective Feature Selection
+in Omics-Based Biomarker Discovery.
+In IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+vol. 21, no. 6, pp. 2432-2446, Nov.-Dec. 2024.
+URL https://doi.org/10.1109/TCBB.2024.3480150
 
 [3] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery.
 Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26.
