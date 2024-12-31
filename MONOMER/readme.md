@@ -91,8 +91,10 @@ Other similar scripts can be found in py/cattelani2023. They are
 ## Bibliography
 
 [1] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino.
-A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based
-biomarker discovery. In IEEE/ACM Transactions on Computational Biology and Bioinformatics, 2024.
-doi:10.1109/TCBB.2024.3480150. URL https://doi.org/10.1109/TCBB.2024.3480150
+A Comprehensive Evaluation Framework for Benchmarking Multi-Objective Feature Selection
+in Omics-Based Biomarker Discovery.
+In IEEE/ACM Transactions on Computational Biology and Bioinformatics,
+vol. 21, no. 6, pp. 2432-2446, Nov.-Dec. 2024.
+URL https://doi.org/10.1109/TCBB.2024.3480150
 
 [2] Luca Cattelani, Vittorio Fortino, Improved NSGA-II algorithms for multi-objective biomarker discovery, Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26, https://doi.org/10.1093/bioinformatics/btac463
