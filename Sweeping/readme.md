@@ -1,31 +1,18 @@
-# DOSA-MO
+# Sweeping*
 
-Publicly available source code and data for the project DOSA-MO (Dual-stage Optimizer for Systematic overestimation
-Adjustment in Multi-Objective problems).
+Publicly available source code and data for the project Sweeping*.
 
-The project is described in Cattelani and Fortino [1].
+The project is described in Cattelani and Fortino [5], soon to be published as a preprint.
 
 The main program is in Python (version 2.9+), we include also R scripts that were used to prepare the TCGA datasets.
 
 All the data files needed to run the tests are included in this repository. All the results, including plots, are
 included in this repository, but can also be generated again by a user launching the Python programs.
-TCGA breast and SCAN-B mrna data files are zipped because they are too large for GitHub. Unzipping the files to the same
-directory is needed in order to use them. TCGA breast data is in "work/brca/input/mrna.zip". SCAN-B data is in a
-split zip archive in the files "work/swedish/input/mrna.zip.00*". Information on the datasets and our preprocessing
-is in Cattelani and Fortino [1].
+Information on the datasets is in Cattelani and Fortino [5].
 
-Both case studies were addressed by using k-fold CV on TCGA [4] data. Additionally, the
-breast cancer case study includes an external validation with training on TCGA data and testing on
-SCAN-B data [5]. TCGA transcriptomic datasets were downloaded with the curatedTCGAData R-package version 2.0.1
-from assays of type RNASeq2GeneNorm [6]. The external gene expression-based transcriptomic
-dataset for breast cancer was obtained from the Gene Expression Omnibus (GEO) database (GSE96058)
-collected from the SCAN-B consortium. For the task of classifying cancer subtypes
-in TCGA kidney cancer patients, we focused on distinguishing clear-cell renal cell carcinoma (ccRCC),
-chromophobe renal cell carcinoma (ChRCC), and papillary renal cell carcinoma, which was further divided
-into two subtypes based on recent studies identifying distinct clinical categories. These are referred to as
-PRCC T1 and PRCC T2. Additionally, we included samples of normal non-cancerous tissues. This classification
-system is based on a study published by Ricketts et al. [7]. Overall survival data for TCGA
-kidney cancer is from Liu et al. [8].
+Experiments were addressed by using k-fold CV on TCGA [4] data.
+TCGA transcriptomic datasets were downloaded with the curatedTCGAData R-package version 2.0.1
+from assays of type RNASeq2GeneNorm [6].
 
 This project is licensed under the terms of the MIT license.
 
@@ -36,25 +23,14 @@ All the INI files used to produce the paper results are in the directory "work/s
 A configuration file starts with "[MVMOO_SETUP]".
 
 The most important parameters, including all the parameters needed to replicate our results, are the following.
-- **dataset.** The name of the dataset to be used for k-fold cross-validation or as training for external validation.
-Valid options include "brca" (TCGA breast), "swedish" (SCAN-B),
-"kidney_ihc_det" (TCGA kidney with genes favorable for immunohistochemistry),
-"kidney_ihc_det_os" (TCGA kidney with genes favorable for immunohistochemistry, including survival data),
-and "custom". The preparation of the cancer datasets is described in Cattelani and Fortino [1].
-Selecting the "custom" option a user can provide its own dataset.
-- **mvmo_algorithm**. The name of the main algorithm. Select "classic_ga" for NSGA*, "adjusted" for DOSA-MO wrapping NSGA*.
-- **adjuster_regressor**. The regression model used by DOSA-MO to predict the overestimation. Ignored by the other main
-algorithms. The options include "zero" (predicts always 0), "dummy" (weighed average), "ptree" (pruned decision tree),
-"RFReg" (random forest regression), "SVR" (support vector regression), and "rSVR" (SVR with optimized regularization).
-- **objectives**. A string that specifies the objectives and if required also the inner model. For balanced accuracy and
-root-leanness with naive Bayes as inner model it is "[["bal_acc", "naive_bayes"], "root_leanness"]".
-Supported inner models for classification include "naive_bayes", "svm" (support vector machine), and "logistic".
+- **dataset.** The name of the dataset to be used for k-fold cross-validation.
+Valid options include...
+- **mvmo_algorithm**. The name of the main algorithm. Select "classic_ga" for NSGA*, ...
+- **objectives**. A string that specifies the objectives and if required also the inner model...
 Survival analysis can be requested by inserting "["c-index", "Cox", "survival"]" in the list, e.g.
-"[["bal_acc", "svm"], "root_leanness", ["c-index", "Cox", "survival"]]".
+"["root_leanness", ["c-index", "Cox", "survival"]]".
 - **use_big_defaults**. Boolean parameter, the default is "false" and some parameters are set for a short test run.
 When true these parameters are set for a long serious run. This must be set to true to reproduce our results.
-- **external_dataset**. The name of the external dataset. The accepted values are the same of the parameter "dataset".
-This parameter is ignored when running k-fold cross-validation.
 - **cross_validation**. If true and if not running an external validation, the k-fold cross-validation is performed, and the
 results saved.
 - **final_optimization**. If true and if not running an external validation, the optimization on the whole dataset is
@@ -65,15 +41,15 @@ The value in the list is the number of generations used by the GA-based algorith
 - **initial_features_strategy**. Strategy to extract the number of features when initializing a solution in GAs.
 We always use "uniform" in our tests, so that the number of features is extracted with a uniform distribution.
 Other two parameters are used to set the minimum and maximum number of features in an initial solution.
-- **initial_features_min** and **initial_features_max**. Two numbers to specify the minimum and maximum number of features in an
-initial solution.
+- **initial_features_min** and **initial_features_max**. Two numbers to specify the minimum and
+maximum number of features in an initial solution.
 - **sorting_strategy**. The sorting strategy to use before selection and tournament. It can be "crowding_distance_full"
 for NSGA2 implied sorting, "crowding_distance_clone_index" to use the clone index as primary sorting criteria [3],
 "nsga3" for NSGA3 implied sorting, or
 "nsga3_clone_index" to use NSGA3 implied sorting with clone index as primary sorting criteria.
 - **use_clone_repurposing**. A Boolean. Defaults to false. If true clone repurposing [3] is used.
-- **bitlist_mutation_operator**. With the default of "flip" a bit-flip operator is used. With "symm" the symmetric mutation
-is used instead.
+- **bitlist_mutation_operator**. With the default of "flip" a bit-flip operator is used.
+With "symm" the symmetric mutation is used instead.
 - **feature_importance_categorical**. The strategy used to take classification into account for computing the feature
 importance [3] for the GA-based algorithms. With the default of "none" a uniform feature importance is used.
 With "lasso" the LASSO feature importance is used.
@@ -118,17 +94,11 @@ seed = 67445
 adjuster_regressor = SVR
 ```
 
-The Python script py/biodai_cv.py is used to run the k-fold cross-validation and the final optimization
+The Python script ___ is used to run the k-fold cross-validation and the final optimization
 (optimization on the whole dataset). It gets in input an INI setup file. An example of run from command line
 (from inside the working directory "work") is
 ```
-python ../py/biodai_cv.py setups/kidney_ihc_det/bal_acc/adj_svr_nsga3_chs_short.ini
-```
-
-The Python script py/biodai_external.py runs an external validation. It gets in input an INI setup file
-and works in an analogous way as run_with_setups.py. An example follows.
-```
-python ../py/biodai_external.py setups/brca/adj_svr_nsga3_chs_short.ini
+python ...
 ```
 
 By launching
@@ -139,25 +109,15 @@ from inside the "work" directory it is possible to produce all the summary table
 runs by datasets and objectives. It automatically searches the work directory for the necessary test results and creates
 the plots/tables.
 
-To run the program with a custom dataset, place in the directory work/custom/input a csv file with independent variables
-"mrna.csv" and a file with the outcomes "outcome.csv". Each row in the files is a sample, and the order must be
-consistent between the two files. The first row is for the header. Each column in the independent variables file is
-named with the feature name. The outcomes file can have a column "type" if there is a classification outcome (classes
-can be any string), and two columns "Event" and "Time" if there is a survival outcome. Event is 0 (alive) or 1 (dead).
-Time is numeric. It is allowed but not necessary to have both a classification and a survival outcome.
-A small example dataset is already present in the work/custom/input directory, and an example setup file for running it
-is "work/setups/custom_example.ini".
-
 The suggested list of package requirements is in the file requirements.txt.
 
-The R script load_tcga_brca.R creates the mrna.csv and outcome.csv related to the breast TCGA dataset.
-Similarly, the script load_tcga_kir.R creates the csv files for the kidney.
+The R script ...
 In order to work the R scripts require an internet connection. These data files are already present in the work
 directory, still the scripts are included for reproducibility.
 
 ## Program results
 
-The results for a k-fold cross-validation or an external validation are saved in a subdirectory of "work". The path is
+The results for a k-fold cross-validation are saved in a subdirectory of "work". The path is
 composed by the name of the dataset, then the type of data ("mrna"), the objectives, the type of validation, the
 random seed, and finally the type and parameters of the optimizer.
 
@@ -288,46 +248,6 @@ fitness. The fitness used is the one estimated by the optimizer.
 If the setup includes a classification objective, this directory is filled with a csv file for each fold, representing
 the confusion matrix of each solution. Order of the solutions in these files is consistent.
 
-The directory of an external validation contains the following items.
-- **log_final.txt**
-Textual log.
-- **config.ini**
-A copy of the configuration file that was used to set up the program.
-- **workers_log.txt**
-The program uses a number of workers (by default the number of cores detected in the system) to evaluate individuals
-in parallel. This is the log for the workers. It is usually empty and serves mainly for debugging.
-- **objective_pairs/**
-This directory contains plots of solution fitnesses by considering the objectives 2 at a time. There are plots for each
-considered hall of fame (Pareto, last population, top 50/100 by sum of fitnesses).
-- **hofs/**
-This directory contains subdirectories with results for the considered halls of fame (Pareto, last population,
-top 50/100 by sum of fitnesses). The result files for the halls of fame are described below.
-- **hofs/*/balanced_accuracy_by_class.png**
-For each classification class the feature set size and balanced accuracy of the solutions. Plotted only if there is a
-classification objective.
-- **hofs/*/precision_by_class.png**
-For each classification class the feature set size and precision of the solutions. Plotted only if there is a
-classification objective.
-- **hofs/*/recall_by_class.png**
-For each classification class the feature set size and recall of the solutions. Plotted only if there is a
-classification objective.
-- **hofs/*/solution_ci_*.csv**
-csv files containing information about the 95% confidence intervals of the fitnesses.
-Order of the solutions in these files is consistent.
-- **hofs/*/solution_features.csv**
-The features selected by the solutions, a solution for each row. Order of the solutions in these files is consistent.
-- **hofs/*/solution_fitnesses.csv**
-The fitnesses of the solutions, a solution for each row. Order of the solutions in these files is consistent.
-- **hofs/*/solution_std_devs.csv**
-The fitness standard deviations of the solutions, a solution for each row. Order of the solutions in these files is
-consistent.
-- **hofs/*/validation_registry.json**
-A JSON file with the numerical values of summary statistics like the cross hypervolume [2] and the Pareto delta [1].
-Statistics are saved in this file in order to compute them only once.
-- **hofs/*/confusion_matrix/**
-If the setup includes a classification objective, this directory is filled with a csv file representing
-the confusion matrix of each solution. Order of the solutions in these files is consistent.
-
 ## Summary results
 
 Starting from the "work" directory, it is possible to find also analyses that take into account multiple
@@ -337,19 +257,14 @@ dataset, objectives and validation type (k-fold CV or external).
 For each battery, barplots that compare the algorithms according to different metrics. E.g. Cross hypervolume
 or Pareto delta.
 - **work/summary_stats/*/baseline_best_comparison.png**
-A comparison of performance between the best solutions found without DOSA-MO
-and the best solutions found with DOSA-MO (according to CHV).
-When k-fold CV is used all the folds are shown together.
-This file is not present for setups with 3+ objectives since the plot would be difficult to read.
+A comparison of performance between the best solutions found with just clinic
+and the best solutions found considering all the combinations of views and Sweeping* configuration (according to CHV).
+All the folds are shown together.
 - **work/summary_stats/cv/*/best_hof.txt**
 This file is present when the battery is evaluated with k-fold CV.
 It is a list of the biomarkers found by the best algorithm.
 The best algorithm is chosen according to the CHV measured with k-fold CV.
 The biomarkers are then computed running the best algorithm on the whole dataset.
-- **work/summary_stats/external/*/best_solutions.txt**
-This file is present when the battery is evaluated with external validation.
-It is a list of the best biomarkers found by all the algorithms combined.
-The best biomarkers are chosen according to the performance measured on the external dataset.
 
 ## Bibliography
 
@@ -372,23 +287,9 @@ URL https://doi.org/10.1093/bioinformatics/btac463
 [4] Carolyn Hutter, Jean Claude Zenklusen. The cancer genome atlas: creating lasting value beyond
 its data. Cell, 173(2):283–285, 2018.
 
-[5] Christian Brueffer, Johan Vallon-Christersson, Dorthe Grabau, Anna Ehinger, Jari Hakkinen, Cecilia
-Hegardt, Janne Malina, Yilun Chen, Par-Ola Bendahl, Jonas Manjer, Martin Malmberg,
-Christer Larsson, Niklas Loman, Lisa Rydén, Ake Borg, Lao H. Saal. Clinical value of rna
-sequencing–based classifiers for prediction of the five conventional breast cancer biomarkers: a report
-from the population-based multicenter sweden cancerome analysis network—breast initiative.
-JCO precision oncology, 2:1–18, Mar 2018. doi:10.1200/PO.17.00135. URL https://doi.org/10.1200/PO.17.00135.
-PMID: 32913985.
+[5] Luca Cattelani, Vittorio Fortino. Genetic algorithms for multi-omic feature selection:
+a comparative study in cancer survival analysis. To be published.
 
 [6] Marcel Ramos, Ludwig Geistlinger, Sehyun Oh, Lucas Schiffer, Rimsha Azhar, Hanish Kodali, Ino
 de Bruijn, Jianjiong Gao, Vincent J Carey, Martin Morgan, et al. Multiomic integration of public
 oncology databases in bioconductor. JCO Clinical Cancer Informatics, 1:958–971, 2020.
-
-[7] Christopher J Ricketts, Aguirre A De Cubas, Huihui Fan, Christof C Smith, Martin Lang, Ed Reznik, Reanne
-Bowlby, Ewan A Gibb, Rehan Akbani, Rameen Beroukhim, et al. The cancer genome atlas comprehensive
-molecular characterization of renal cell carcinoma. Cell reports, 23(1):313–326, 2018.
-
-[8] Jianfang Liu, Tara Lichtenberg, Katherine A Hoadley, Laila M Poisson, Alexander J Lazar, Andrew
-D Cherniack, Albert J Kovatich, Christopher C Benz, Douglas A Levine, Adrian V Lee,
-et al. An integrated tcga pan-cancer clinical data resource to drive high-quality survival outcome analytics.
-Cell, 173(2):400–416, 2018.
