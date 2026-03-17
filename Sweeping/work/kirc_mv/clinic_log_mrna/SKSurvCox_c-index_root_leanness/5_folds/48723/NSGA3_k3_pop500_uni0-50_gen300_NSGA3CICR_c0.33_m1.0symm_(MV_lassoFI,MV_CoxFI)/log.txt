@@ -1,0 +1,331 @@
+
+RUNNING NSGA-III MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER (MO-3-FOLDS CREATOR, POP 500, UNIFORM(0, 50), GEN 300, SORT NSGA3CICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP) WITH (MULTI-VIEW LASSO FI, MULTI-VIEW COX FI)
+Date = 2024-03-27
+Machine = sampo1
+CPUs detected in the system = 80
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)
+Feature selector:
+Multi-objective feature selector with inner composite feature selector with
+categorical: feature selector any na and anova
+survival: feature selector Cox
+Inner optimizer:
+Name = NSGA-III multi-view multi-objective optimizer (MO-3-folds creator, pop 500, uniform(0, 50), gen 300, sort NSGA3CICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm
+Population size = 500
+Number of features in initial individuals = uniform(0, 50)
+Number of generations = 300
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA-III multi-view multi-objective optimizer with Clone Index elitist and clone repurposing
+Objectives = [survival SKSurv Cox model concordance index, root leanness]
+Hall of fame factories = [Pareto front factory, Last population factory, best sums with size 50 factory, best sums with size 100 factory]
+Folds creator = MO-3-folds creator
+Multi-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance Cox
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-10:43:53
+
+APPLYING EVALUATORS
+Starting fresh validation registry files.
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME PARETO FRONT
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME LAST POPULATION
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME PARETO FRONT
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME LAST POPULATION
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for hall of fames = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/confusion_matrix/
+
+APPLYING FOLD SAVER TO HALL OF FAME PARETO FRONT
+
+APPLYING FOLD SAVER TO HALL OF FAME LAST POPULATION
+
+APPLYING FOLD SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING FOLD SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME PARETO FRONT
+Mean Jaccard all vs others for each fold
+[0.33849580263348683, 0.2831390691052138, 0.2740817282293139, 0.33729817502168136, 0.3414695946816214]
+Mean of folds = 0.31489687393426347
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME LAST POPULATION
+Mean Jaccard all vs others for each fold
+[0.3681331067987613, 0.30286717649787476, 0.2921876410177721, 0.35354098642986403, 0.349751560375981]
+Mean of folds = 0.33329609422405065
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 50
+Mean Jaccard all vs others for each fold
+[0.0, 0.0, 0.0008163265306122449, 0.0, 0.0008163265306122449]
+Mean of folds = 0.00032653061224489796
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 100
+Mean Jaccard all vs others for each fold
+[0.00020202020202020202, 0.00020202020202020202, 0.0008080808080808081, 0.00020202020202020202, 0.0008080808080808081]
+Mean of folds = 0.00044444444444444447
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME PARETO FRONT
+Stability of features by weights: 0.09913919205046395
+Stability of features by unions: 0.05765455474757797
+Stability of features by Spearman: 0.06589450106009649
+Stability of features by top 50: 0.1519999999999999
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME LAST POPULATION
+Stability of features by weights: 0.09828981952291183
+Stability of features by unions: 0.04525505248119566
+Stability of features by Spearman: 0.0376265777032967
+Stability of features by top 50: 0.07599999999999996
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 50
+Stability of features by weights: 0.11885714285714288
+Stability of features by unions: 0.11658163265306132
+Stability of features by Spearman: 0.11525729823300408
+Stability of features by top 50: 0.1359999999999999
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 100
+Stability of features by weights: 0.11650980392156851
+Stability of features by unions: 0.109375
+Stability of features by Spearman: 0.10589794746005612
+Stability of features by top 50: 0.11599999999999999
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME PARETO FRONT
+Prevalence of features selected in each view
+clinic = 0.07019588591457894
+log_mrna = 0.929804114085421
+Distribution of views in each fold
+[[0.0, 1.0], [0.09051724137931035, 0.9094827586206896], [0.026604068857589983, 0.97339593114241], [0.15207373271889402, 0.847926267281106], [0.08178438661710037, 0.9182156133828996]]
+Stability of views = 0.9263878724080983
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME LAST POPULATION
+Prevalence of features selected in each view
+clinic = 0.06440588316551336
+log_mrna = 0.9355941168344867
+Distribution of views in each fold
+[[0.0, 1.0], [0.07759472817133443, 0.9224052718286656], [0.02912621359223301, 0.970873786407767], [0.13455362877328195, 0.8654463712267181], [0.08075484529071744, 0.9192451547092826]]
+Stability of views = 0.9358528221509903
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME BEST SUMS WITH SIZE 50
+Prevalence of features selected in each view
+clinic = 0.020081632653061225
+log_mrna = 0.9799183673469388
+Distribution of views in each fold
+[[0.0, 1.0], [0.0, 1.0], [0.04, 0.96], [0.02040816326530612, 0.9795918367346939], [0.04, 0.96]]
+Stability of views = 0.976
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME BEST SUMS WITH SIZE 100
+Prevalence of features selected in each view
+clinic = 0.02768627450980392
+log_mrna = 0.972313725490196
+Distribution of views in each fold
+[[0.01, 0.99], [0.02, 0.98], [0.0392156862745098, 0.9607843137254902], [0.03, 0.97], [0.0392156862745098, 0.9607843137254902]]
+Stability of views = 0.9844705882352941
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME PARETO FRONT
+Path for plots = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME LAST POPULATION
+Path for plots = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for plots = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for plots = ./kirc_mv/clinic_log_mrna/SKSurvCox_c-index_root_leanness/5_folds/48723/NSGA3_k3_pop500_uni0-50_gen300_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Creating plot for union of folds
+Creating plot of confidence intervals
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME PARETO FRONT
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.7541712858092695
+Train hypervolume: 0.7548769235526526
+Test hypervolume: 0.5889814867544892
+Cross hypervolume: 0.6323410565542439
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7519322858390842
+Train hypervolume: 0.7493656016977978
+Test hypervolume: 0.6383655328433046
+Cross hypervolume: 0.6259312349758922
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7476813703020011
+Train hypervolume: 0.7493337227098122
+Test hypervolume: 0.7069708610238816
+Cross hypervolume: 0.697578585642488
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7440464343133161
+Train hypervolume: 0.7421698938538275
+Test hypervolume: 0.7223118024359465
+Cross hypervolume: 0.7141849347297398
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7577671661828193
+Train hypervolume: 0.7554007724532996
+Test hypervolume: 0.6546765998969097
+Cross hypervolume: 0.6880276012756118
+
+Computation of hypervolumes finished in 00-00:00:06
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7511197084892981
+Train hypervolume: 0.750229382853478
+Test hypervolume: 0.6622612565909064
+Cross hypervolume: 0.6716126826355951
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME LAST POPULATION
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.7541712858092695
+Train hypervolume: 0.756554609157084
+Test hypervolume: 0.6570161583601548
+Cross hypervolume: 0.6323410565542439
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7519322858390842
+Train hypervolume: 0.751970172816078
+Test hypervolume: 0.7205570456565518
+Cross hypervolume: 0.6259312349758922
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7476813703020011
+Train hypervolume: 0.7516919053903743
+Test hypervolume: 0.7215953219075367
+Cross hypervolume: 0.697578585642488
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7440464343133161
+Train hypervolume: 0.7435605634711161
+Test hypervolume: 0.7583533058150611
+Cross hypervolume: 0.7141849347297398
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7577671661828193
+Train hypervolume: 0.7589300156006049
+Test hypervolume: 0.7043276494655277
+Cross hypervolume: 0.6880276012756118
+
+Computation of hypervolumes finished in 00-00:01:59
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7511197084892981
+Train hypervolume: 0.7525414532870515
+Test hypervolume: 0.7123698962409664
+Cross hypervolume: 0.6716126826355951
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME BEST SUMS WITH SIZE 50
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.65210476073631
+Train hypervolume: 0.6519831871880717
+Test hypervolume: 0.6986735064965224
+Cross hypervolume: 0.5823536170182666
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.6686138277440121
+Train hypervolume: 0.6636095999632357
+Test hypervolume: 0.6574417442485672
+Cross hypervolume: 0.5585448619081643
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.6917020569246104
+Train hypervolume: 0.6919369419990594
+Test hypervolume: 0.7229094561983067
+Cross hypervolume: 0.6957480179887277
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.6415138073359172
+Train hypervolume: 0.6420291461408514
+Test hypervolume: 0.7009611291808673
+Cross hypervolume: 0.626053702608309
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7161401963677847
+Train hypervolume: 0.7145275440447538
+Test hypervolume: 0.6679252155607538
+Cross hypervolume: 0.6644352091701914
+
+Computation of hypervolumes finished in 00-00:00:11
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.6740149298217268
+Train hypervolume: 0.6728172838671944
+Test hypervolume: 0.6895822103370035
+Cross hypervolume: 0.6254270817387317
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME BEST SUMS WITH SIZE 100
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.6882892415385639
+Train hypervolume: 0.6857413403990347
+Test hypervolume: 0.7018779178916277
+Cross hypervolume: 0.6119521833202801
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.70361200182471
+Train hypervolume: 0.6996112926466607
+Test hypervolume: 0.6574417442485672
+Cross hypervolume: 0.619060675721115
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.6917020569246104
+Train hypervolume: 0.6931714170590961
+Test hypervolume: 0.7239311610171801
+Cross hypervolume: 0.6957480179887277
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.6866287857947213
+Train hypervolume: 0.6865015315686533
+Test hypervolume: 0.73763321468314
+Cross hypervolume: 0.7030463440475736
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7161401963677847
+Train hypervolume: 0.7145275440447538
+Test hypervolume: 0.6755121981915106
+Cross hypervolume: 0.6644352091701914
+
+Computation of hypervolumes finished in 00-00:00:23
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.6972744564900781
+Train hypervolume: 0.6959106251436398
+Test hypervolume: 0.6992792472064051
+Cross hypervolume: 0.6588484860495776
+
