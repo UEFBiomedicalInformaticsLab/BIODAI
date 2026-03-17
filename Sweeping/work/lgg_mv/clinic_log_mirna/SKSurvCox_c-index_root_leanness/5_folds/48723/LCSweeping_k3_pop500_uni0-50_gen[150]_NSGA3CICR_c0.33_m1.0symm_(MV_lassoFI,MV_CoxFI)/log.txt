@@ -1,0 +1,395 @@
+
+RUNNING SWEEPING GENETIC ALGORITHM MULTI-VIEW MULTI-OBJECTIVE OPTIMIZER WITH LEAN CONCATENATED MASTER (MO-3-FOLDS CREATOR, POP 500, UNIFORM(0, 50), GEN [150], SORT NSGA3CICR, CROSSOVER 0.33, MUTATION 1.0 SYMMETRIC FLIP) WITH (MULTI-VIEW LASSO FI, MULTI-VIEW COX FI)
+Date = 2024-07-26
+Machine = kudos7
+CPUs detected in the system = 96
+Number of outer folds = 5
+
+OPTIMIZER DETAILS
+Multi-objective optimizer by fold
+Nick = LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)
+Feature selector:
+Multi-objective feature selector with inner composite feature selector with
+categorical: feature selector any na and anova
+survival: feature selector Cox
+Inner optimizer:
+Name = Sweeping genetic algorithm multi-view multi-objective optimizer with lean concatenated master (MO-3-folds creator, pop 500, uniform(0, 50), gen [150], sort NSGA3CICR, crossover 0.33, mutation 1.0 symmetric flip)
+Nick = LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm
+Population size = 500
+Number of features in initial individuals = uniform(0, 50)
+Number of generations per sweep = [150]
+Crossover probability = 0.33
+Mutation frequency = 1.0
+Mutation operator = symmetric flip
+Sorting strategy = NSGA-III multi-view multi-objective optimizer with Clone Index elitist and clone repurposing
+Objectives = [survival SKSurv Cox model concordance index, root leanness]
+Hall of fame factories = [Pareto front factory, Last population factory, best sums with size 50 factory, best sums with size 100 factory]
+Folds creator = MO-3-folds creator
+Multi-view feature importance strategy by fold:
+multi-objective feature importance
+Feature importance for classification: multi-view feature importance lasso
+Feature importance for survival: multi-view feature importance Cox
+
+
+
+STARTING MULTI-OBJECTIVE OPTIMIZATION ON DIFFERENT FOLDS
+Computation on different folds finished in 00-02:22:40
+
+APPLYING EVALUATORS
+Starting fresh validation registry files.
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME PARETO FRONT
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME LAST POPULATION
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/
+
+APPLYING HALL OF FAMES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME PARETO FRONT
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/Pareto/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME LAST POPULATION
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/last_pop/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum50/confusion_matrix/
+
+APPLYING CONFUSION MATRICES SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for hall of fames = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/hofs/sum100/confusion_matrix/
+
+APPLYING FOLD SAVER TO HALL OF FAME PARETO FRONT
+
+APPLYING FOLD SAVER TO HALL OF FAME LAST POPULATION
+
+APPLYING FOLD SAVER TO HALL OF FAME BEST SUMS WITH SIZE 50
+
+APPLYING FOLD SAVER TO HALL OF FAME BEST SUMS WITH SIZE 100
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME PARETO FRONT
+Mean Jaccard all vs others for each fold
+[0.3396098625494766, 0.2847813513280519, 0.3115003047766605, 0.3235148226006305, 0.3120388110633385]
+Mean of folds = 0.3142890304636316
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME LAST POPULATION
+Mean Jaccard all vs others for each fold
+[0.3405251292773918, 0.32624240119757764, 0.3455183471600992, 0.3307993459241941, 0.34161723798724525]
+Mean of folds = 0.3369404923093016
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 50
+Mean Jaccard all vs others for each fold
+[0.004897959183673469, 0.001904761904761905, 0.004353741496598639, 0.001904761904761905, 0.001904761904761905]
+Mean of folds = 0.002993197278911565
+
+APPLYING MULTI-OBJECTIVE FEATURE VARIETY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 100
+Mean Jaccard all vs others for each fold
+[0.03468013468013468, 0.021515151515151515, 0.029393939393939392, 0.03427609427609427, 0.01791245791245791]
+Mean of folds = 0.027555555555555555
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME PARETO FRONT
+Stability of features by weights: 0.3608744156989153
+Stability of features by unions: 0.23497305549641323
+Stability of features by Spearman: 0.2271358963408283
+Stability of features by top 50: 0.30999999999999994
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME LAST POPULATION
+Stability of features by weights: 0.36880931131787353
+Stability of features by unions: 0.47979886762656476
+Stability of features by Spearman: 0.3547216618232002
+Stability of features by top 50: 0.258
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 50
+Stability of features by weights: 0.6818349981502034
+Stability of features by unions: 0.7202364066193854
+Stability of features by Spearman: 0.7141137772925855
+Stability of features by top 50: 0.738
+
+APPLYING MULTI-OBJECTIVE FEATURE STABILITY CROSS-EVALUATOR TO HALL OF FAME BEST SUMS WITH SIZE 100
+Stability of features by weights: 0.6297134824102999
+Stability of features by unions: 0.6804766081871345
+Stability of features by Spearman: 0.6699418453137709
+Stability of features by top 50: 0.6699999999999999
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME PARETO FRONT
+Prevalence of features selected in each view
+clinic = 0.07628575519651197
+log_mirna = 0.9237142448034881
+Distribution of views in each fold
+[[0.09047619047619047, 0.9095238095238095], [0.09826589595375723, 0.9017341040462428], [0.06451612903225806, 0.9354838709677419], [0.03812316715542522, 0.9618768328445748], [0.09004739336492891, 0.909952606635071]]
+Stability of views = 0.9707508961918807
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME LAST POPULATION
+Prevalence of features selected in each view
+clinic = 0.06813934635268411
+log_mirna = 0.9318606536473159
+Distribution of views in each fold
+[[0.08128209668850717, 0.9187179033114928], [0.08386392577769693, 0.916136074222303], [0.0635475878151873, 0.9364524121848127], [0.030865812189380067, 0.9691341878106199], [0.0811373092926491, 0.9188626907073509]]
+Stability of views = 0.9752538527900093
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME BEST SUMS WITH SIZE 50
+Prevalence of features selected in each view
+clinic = 0.04617092119866815
+log_mirna = 0.9538290788013318
+Distribution of views in each fold
+[[0.09433962264150944, 0.9056603773584906], [0.0392156862745098, 0.9607843137254902], [0.018867924528301886, 0.9811320754716981], [0.0196078431372549, 0.9803921568627451], [0.058823529411764705, 0.9411764705882353]]
+Stability of views = 0.961968183499815
+
+APPLYING USAGE OF VIEWS TO HALL OF FAME BEST SUMS WITH SIZE 100
+Prevalence of features selected in each view
+clinic = 0.06750199335130783
+log_mirna = 0.9324980066486923
+Distribution of views in each fold
+[[0.07407407407407407, 0.9259259259259259], [0.08527131782945736, 0.9147286821705426], [0.015151515151515152, 0.9848484848484849], [0.022388059701492536, 0.9776119402985075], [0.140625, 0.859375]]
+Stability of views = 0.9372339544350131
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME PARETO FRONT
+Path for plots = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Evaluation of pair of objectives failed with the following exception.
+'Legend' object has no attribute 'legendHandles'
+Objectives: root leanness and survival SKSurv Cox model concordance index
+Traceback:
+Traceback (most recent call last):
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 229, in evaluate
+    self.__evaluate_pair(
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 166, in __evaluate_pair
+    save_multiclass_scatter(
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 381, in save_multiclass_scatter
+    plot_multiclass_scatter(x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 366, in plot_multiclass_scatter
+    generic_multiclass_scatter_to_ax(ax=ax, x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 313, in generic_multiclass_scatter_to_ax
+    for i, lh in enumerate(leg.legendHandles):
+AttributeError: 'Legend' object has no attribute 'legendHandles'
+
+The evaluator two-objectives cross-plotter will try to continue.
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME LAST POPULATION
+Path for plots = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Evaluation of pair of objectives failed with the following exception.
+'Legend' object has no attribute 'legendHandles'
+Objectives: root leanness and survival SKSurv Cox model concordance index
+Traceback:
+Traceback (most recent call last):
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 229, in evaluate
+    self.__evaluate_pair(
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 166, in __evaluate_pair
+    save_multiclass_scatter(
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 381, in save_multiclass_scatter
+    plot_multiclass_scatter(x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 366, in plot_multiclass_scatter
+    generic_multiclass_scatter_to_ax(ax=ax, x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 313, in generic_multiclass_scatter_to_ax
+    for i, lh in enumerate(leg.legendHandles):
+AttributeError: 'Legend' object has no attribute 'legendHandles'
+
+The evaluator two-objectives cross-plotter will try to continue.
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME BEST SUMS WITH SIZE 50
+Path for plots = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Evaluation of pair of objectives failed with the following exception.
+'Legend' object has no attribute 'legendHandles'
+Objectives: root leanness and survival SKSurv Cox model concordance index
+Traceback:
+Traceback (most recent call last):
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 229, in evaluate
+    self.__evaluate_pair(
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 166, in __evaluate_pair
+    save_multiclass_scatter(
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 381, in save_multiclass_scatter
+    plot_multiclass_scatter(x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 366, in plot_multiclass_scatter
+    generic_multiclass_scatter_to_ax(ax=ax, x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 313, in generic_multiclass_scatter_to_ax
+    for i, lh in enumerate(leg.legendHandles):
+AttributeError: 'Legend' object has no attribute 'legendHandles'
+
+The evaluator two-objectives cross-plotter will try to continue.
+
+APPLYING TWO-OBJECTIVES CROSS-PLOTTER TO HALL OF FAME BEST SUMS WITH SIZE 100
+Path for plots = ./lgg_mv/clinic_log_mirna/SKSurvCox_c-index_root_leanness/5_folds/48723/LCSweeping_k3_pop500_uni0-50_gen[150]_NSGA3CICR_c0.33_m1.0symm_(MV_lassoFI,MV_CoxFI)/objective_pairs/
+Creating plots for root leanness vs survival SKSurv Cox model concordance index
+Creating plots for each fold
+Evaluation of pair of objectives failed with the following exception.
+'Legend' object has no attribute 'legendHandles'
+Objectives: root leanness and survival SKSurv Cox model concordance index
+Traceback:
+Traceback (most recent call last):
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 229, in evaluate
+    self.__evaluate_pair(
+  File "/research/users/lucacat/MVMOO/py/cross_validation/multi_objective/cross_evaluator/two_objectives_cross_plot.py", line 166, in __evaluate_pair
+    save_multiclass_scatter(
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 381, in save_multiclass_scatter
+    plot_multiclass_scatter(x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 366, in plot_multiclass_scatter
+    generic_multiclass_scatter_to_ax(ax=ax, x=x, y=y, x_label=x_label, y_label=y_label,
+  File "/research/users/lucacat/MVMOO/py/util/plot_results.py", line 313, in generic_multiclass_scatter_to_ax
+    for i, lh in enumerate(leg.legendHandles):
+AttributeError: 'Legend' object has no attribute 'legendHandles'
+
+The evaluator two-objectives cross-plotter will try to continue.
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME PARETO FRONT
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.7761503028332404
+Train hypervolume: 0.7769059154931779
+Test hypervolume: 0.7052194066655335
+Cross hypervolume: 0.7199932741370847
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7618060112687663
+Train hypervolume: 0.7625632080520576
+Test hypervolume: 0.7407572900497424
+Cross hypervolume: 0.7377358613548353
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7663843694795665
+Train hypervolume: 0.7658157356021114
+Test hypervolume: 0.7448906395967383
+Cross hypervolume: 0.7452850702405158
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7600126567661016
+Train hypervolume: 0.7643003945691758
+Test hypervolume: 0.7616233555633682
+Cross hypervolume: 0.7436704904565894
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7604682323229567
+Train hypervolume: 0.7626495606600482
+Test hypervolume: 0.7624373192912346
+Cross hypervolume: 0.7538520285913175
+
+Computation of hypervolumes finished in 00-00:00:03
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7649643145341263
+Train hypervolume: 0.7664469628753141
+Test hypervolume: 0.7429856022333234
+Cross hypervolume: 0.7401073449560686
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME LAST POPULATION
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.7761503028332404
+Train hypervolume: 0.7787454464218513
+Test hypervolume: 0.7194807123990525
+Cross hypervolume: 0.7199932741370847
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7618060112687663
+Train hypervolume: 0.7640057733669474
+Test hypervolume: 0.7592086660299214
+Cross hypervolume: 0.7377358613548353
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7663843694795665
+Train hypervolume: 0.7691103051821252
+Test hypervolume: 0.768769818832807
+Cross hypervolume: 0.7452850702405158
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7600126567661016
+Train hypervolume: 0.7665969229601435
+Test hypervolume: 0.7815126778535268
+Cross hypervolume: 0.7436704904565894
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7604682323229568
+Train hypervolume: 0.7656040390467285
+Test hypervolume: 0.7704182972636234
+Cross hypervolume: 0.7538520285913175
+
+Computation of hypervolumes finished in 00-00:01:19
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7649643145341264
+Train hypervolume: 0.7688124973955592
+Test hypervolume: 0.7598780344757863
+Cross hypervolume: 0.7401073449560686
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME BEST SUMS WITH SIZE 50
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.742390685523947
+Train hypervolume: 0.744690194552698
+Test hypervolume: 0.70509596761205
+Cross hypervolume: 0.7134496672406458
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7313574663363107
+Train hypervolume: 0.732846802329045
+Test hypervolume: 0.740130193033004
+Cross hypervolume: 0.7337844455621558
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7283229028775182
+Train hypervolume: 0.7246326518867956
+Test hypervolume: 0.7321253091594817
+Cross hypervolume: 0.7085869331755354
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7258062775887975
+Train hypervolume: 0.7268812926682384
+Test hypervolume: 0.7307776454448891
+Cross hypervolume: 0.729627134604296
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7251292811270628
+Train hypervolume: 0.7337793998098384
+Test hypervolume: 0.746308862113314
+Cross hypervolume: 0.6934588095368237
+
+Computation of hypervolumes finished in 00-00:00:02
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7306013226907273
+Train hypervolume: 0.7325660682493231
+Test hypervolume: 0.7308875954725478
+Cross hypervolume: 0.7157813980238913
+
+
+APPLYING CROSS HYPERVOLUME TO HALL OF FAME BEST SUMS WITH SIZE 100
+Hypervolumes for fold 0
+Inner cross-validation hypervolume: 0.742390685523947
+Train hypervolume: 0.744690194552698
+Test hypervolume: 0.7079123103885847
+Cross hypervolume: 0.7134496672406458
+
+Hypervolumes for fold 1
+Inner cross-validation hypervolume: 0.7313574663363107
+Train hypervolume: 0.732846802329045
+Test hypervolume: 0.7484734050155128
+Cross hypervolume: 0.7337844455621558
+
+Hypervolumes for fold 2
+Inner cross-validation hypervolume: 0.7283229028775182
+Train hypervolume: 0.7301312258790777
+Test hypervolume: 0.7537990013734692
+Cross hypervolume: 0.7085869331755354
+
+Hypervolumes for fold 3
+Inner cross-validation hypervolume: 0.7258062775887975
+Train hypervolume: 0.7268812926682384
+Test hypervolume: 0.7777809454581656
+Cross hypervolume: 0.729627134604296
+
+Hypervolumes for fold 4
+Inner cross-validation hypervolume: 0.7251292811270628
+Train hypervolume: 0.7337793998098384
+Test hypervolume: 0.7559313665998079
+Cross hypervolume: 0.6934588095368237
+
+Computation of hypervolumes finished in 00-00:00:05
+Mean hypervolumes
+Inner cross-validation hypervolume: 0.7306013226907273
+Train hypervolume: 0.7336657830477795
+Test hypervolume: 0.748779405767108
+Cross hypervolume: 0.7157813980238913
+
