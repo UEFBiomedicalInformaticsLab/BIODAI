@@ -1,0 +1,1 @@
+PARETO_NICK = "Pareto"

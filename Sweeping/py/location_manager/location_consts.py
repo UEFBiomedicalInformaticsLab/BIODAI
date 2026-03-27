@@ -1,0 +1,1 @@
+HOFS_STR = "hofs"
