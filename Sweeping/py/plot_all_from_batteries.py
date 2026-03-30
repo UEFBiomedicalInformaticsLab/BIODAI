@@ -9,7 +9,6 @@ from hall_of_fame.hof_by_sum import HofBySum
 from hall_of_fame.hof_names import PARETO_NICK
 from manu.mv_manu.mv_manu_commands import MV_MANU_COMMANDS
 from plots.plot_command.plot_command import PlotCommand
-from plots.archives.test_batteries_archive import TCGA_KID_IHC_DET_OS_ACC_SEP_BATTERY
 from plots.archives.test_battery import TestBattery
 from plots.archives.test_battery_cv import TestBatteryCV
 from plots.archives.test_battery_external import TestBatteryExternal
@@ -28,29 +27,7 @@ from survival_plots.survival_summary_statistics_subplotter import SUMMARY_STAT_D
 from validation_registry.registry_property import RegistryProperty
 
 
-TCGA_KID_IHC_DET_OS_ACC_SEP_COMMAND = PlotCommand(
-    batteries=[TCGA_KID_IHC_DET_OS_ACC_SEP_BATTERY],
-    run_postprocessing=False,
-    run_detailed_plots=False,
-    create_summary_feature_tables=False,
-    max_table_cells=None,
-    properties=DEFAULT_REGISTRY_PROPERTIES)
-
-
-# COMMANDS = [TCGA_KID_IHC_DET_OS_ACC_SEP_COMMAND]
-# COMMANDS = [LGG_MV_COMMAND]
-# COMMANDS = [SARC_MV_COMMAND]
-# COMMANDS = [KIRC_MV_COMMAND]
-# COMMANDS = [COAD_MV_COMMAND]
-# COMMANDS = MV_COMMANDS
 COMMANDS = MV_MANU_COMMANDS
-# COMMANDS = VINTAGE_ALL_COMMANDS
-# COMMANDS = [BRCA_ADJ_COMMAND]
-# COMMANDS = [TCGA_KID_IHC_DET_ADJ_COMMAND]
-# COMMANDS = [ADJ_OPT_MANU_COMMAND]
-# COMMANDS = [TCGA_BRCA_MRNA_SURV_COMMAND]
-# COMMANDS = [TCGA_KID_IHC_DET_OS_ACC_SEP_COMMAND, BRCA_ADJ_COMMAND, TCGA_KID_IHC_DET_ADJ_COMMAND, ADJ_OPT_MANU_COMMAND, TCGA_BRCA_MRNA_SURV_COMMAND] + MV_COMMANDS + VINTAGE_ALL_COMMANDS
-# COMMANDS = [UKBB_CLINIC_TEST_FS_COMMAND]
 
 BEST_HOF_STR = "best_hof.txt"
 

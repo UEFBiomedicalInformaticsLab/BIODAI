@@ -6,7 +6,11 @@ The project is described in Cattelani and Fortino [5], soon to be published as a
 
 The main program is in Python (version 2.9+), we include also R scripts that were used to prepare the TCGA datasets.
 
-All the data files needed to run the tests are included in this repository. All the results, including plots, are
+All the data files needed to run the tests are included in this repository.
+To save space, "work/kirc_mv/input/log_mrna.csv" is zipped in "work/kirc_mv/input/log_mrna.zip"
+and must be unzipped before running the program on the TCGA-kirc dataset. Analogously, the same
+applies for "work/lgg_mv/input/log_mrna.csv" and "work/sarc_mv/input/log_mrna.csv".
+All the results, including plots, are
 included in this repository, but can also be generated again by a user launching the Python programs.
 Information on the datasets is in Cattelani and Fortino [5].
 
@@ -24,20 +28,28 @@ A configuration file starts with "[MVMOO_SETUP]".
 
 The most important parameters, including all the parameters needed to replicate our results, are the following.
 - **dataset.** The name of the dataset to be used for k-fold cross-validation.
-Valid options include...
-- **mvmo_algorithm**. The name of the main algorithm. Select "classic_ga" for NSGA*, ...
-- **objectives**. A string that specifies the objectives and if required also the inner model...
-Survival analysis can be requested by inserting "["c-index", "Cox", "survival"]" in the list, e.g.
-"["root_leanness", ["c-index", "Cox", "survival"]]".
+Valid options include "kirc_mv", "lgg_mv", and "sarc_mv".
+- **mvmo_algorithm**. The name of the main algorithm. Select "classic_ga" for NSGA* (NSGA3-CHS is
+a declination of NSGA* [1], it uses the concatenated method when presented with multi-view data),
+"sweeping_ga" for resampled sweeping or resampled sweeping with tuning,
+"csweeping_ga" for concatenated sweeping, or "lcsweeping_ga" for lean concatenated sweeping.
+- **objectives**. A string that specifies the objectives and if required also the inner model.
+"root_leanness" adds the root-leanness to the objectives.
+Survival analysis can be requested by inserting "["c-index", "Cox", "survival"]" in the list.
+The tests described in Cattelani and Fortino [5] use the following string to define the objectives:
+"[["c-index", "Cox", "survival"], "root_leanness"]".
 - **use_big_defaults**. Boolean parameter, the default is "false" and some parameters are set for a short test run.
 When true these parameters are set for a long serious run. This must be set to true to reproduce our results.
-- **cross_validation**. If true and if not running an external validation, the k-fold cross-validation is performed, and the
-results saved.
+- **cross_validation**. If true and if not running an external validation, the k-fold cross-validation is performed,
+and the results saved.
 - **final_optimization**. If true and if not running an external validation, the optimization on the whole dataset is
 performed, and the results saved.
 - **pop**. The size of the population for GA based algorithms.
-- **generations**. A list of integers to support future extensions, we use lists of only one integer in these tests.
-The value in the list is the number of generations used by the GA-based algorithms.
+- **sweeping_generations**. A list of integers, e.g. "[50,50,50]".
+The values in the list are the number of generations used for each sweep of the Sweeping* algorithm.
+Defaults to the empty list.
+- **concatenated_generations**. The number of concatenated generations to be executed after the sweeps in the
+tuning phase. Set this to 0 to remove the tuning phase.
 - **initial_features_strategy**. Strategy to extract the number of features when initializing a solution in GAs.
 We always use "uniform" in our tests, so that the number of features is extracted with a uniform distribution.
 Other two parameters are used to set the minimum and maximum number of features in an initial solution.
@@ -64,41 +76,38 @@ does not use internal cross-validation. Defaults to 3.
 It is suggested to disable this parallelism when running survival analysis because its parallel execution is not
 supported on every system configuration.
 - **seed**. Integer value used to initialize the pseudo-random number generation. Defaults to 48723.
-- **logistic_max_iter**. The maximum number of iterations used by the logistic regression inner model. Ignored when using
-another inner model.
 
 The following is an example of setup file.
 ```
 [MVMOO_SETUP]
-dataset = kidney_ihc_det_os
-mvmo_algorithm = adjusted
-objectives = [["bal_acc", "naive_bayes"], "root_leanness", ["c-index", "Cox", "survival"]]
-pop = 500
-generations = [500]
+dataset = lgg_mv
+mvmo_algorithm = sweeping_ga
+objectives = [["c-index", "Cox", "survival"], "root_leanness"]
+views_to_use = ["log_mirna", "log_mrna", "clinic"]
+feature_importance_categorical = lasso
+feature_importance_survival = cox
+cross_validation = true
+final_optimization = true
 use_big_defaults = true
 fold_parallelism = false
+pop = 500
+sweeping_generations = [50,50]
+concatenated_generations = 100
 initial_features_strategy = uniform
 initial_features_min = 0
 initial_features_max = 50
-cross_validation = true
-final_optimization = true
-feature_importance_categorical = lasso
-feature_importance_survival = cox
 sorting_strategy = nsga3_clone_index
 use_clone_repurposing = true
 bitlist_mutation_operator = symm
-outer_n_folds = 3
-logistic_max_iter = 100
-cv_repeats = 3
-seed = 67445
-adjuster_regressor = SVR
+outer_n_folds = 5
+inner_n_folds = 3
 ```
 
-The Python script ___ is used to run the k-fold cross-validation and the final optimization
+The Python script py/biodai_cv.py is used to run the k-fold cross-validation and the final optimization
 (optimization on the whole dataset). It gets in input an INI setup file. An example of run from command line
 (from inside the working directory "work") is
 ```
-python ...
+python ../py/biodai_cv.py setups/kirc_mv/survival_test.ini
 ```
 
 By launching
@@ -109,12 +118,6 @@ from inside the "work" directory it is possible to produce all the summary table
 runs by datasets and objectives. It automatically searches the work directory for the necessary test results and creates
 the plots/tables.
 
-The suggested list of package requirements is in the file requirements.txt.
-
-The R script ...
-In order to work the R scripts require an internet connection. These data files are already present in the work
-directory, still the scripts are included for reproducibility.
-
 ## Program results
 
 The results for a k-fold cross-validation are saved in a subdirectory of "work". The path is
@@ -122,55 +125,16 @@ composed by the name of the dataset, then the type of data ("mrna"), the objecti
 random seed, and finally the type and parameters of the optimizer.
 
 The directory of a k-fold cross-validation and/or final optimization contains the following items.
-- **common_features_between_folds_top_k.png**
-Average number of features in common between the folds when considering in each fold the top k more frequent features.
-k increases from left to right. From top to bottom there is the passing of the generations. This plot is drawn only for
-the GA based optimizers.
 - **config.ini**
 A copy of the configuration file that was used to set up the program.
-- **feature_counts_*.csv**
-A table for each fold, it reports every 100 generations the number of occurrences of each feature in the population.
-Only for GA based optimizers.
 - **folds.json**
 The subdivision of the samples into folds.
-- **log.png**
-The max, min, and average fitness for each objective along the generations. Averages across the folds.
-Only for GA based optimizers.
 - **log.txt**
 Textual log for the k-fold cross validation.
-- **log_features.png**
-For each generation, the number of features included in its population, and the number of features explored so far by
-all present and past individuals. The values are averaged across the folds.
-- **log_fold_*_features.png**
-A plot for each fold. For each generation, the number of features included in its population, and the number of features
-explored so far by all present and past individuals.
 - **log_final.txt**
 Textual log for the final optimization (optimization on the whole dataset).
-- **log_fold_*.csv**
-A csv table for each fold with the evolution of the fitnesses along the generations. For each objective, The max, min,
-and average fitness. Only for GA based optimizers.
-- **log_fold_*.png**
-A file for each fold, listing the max, min, and average fitness for each objective along the generations.
-Only for GA based optimizers.
 - **log_fold_*.txt**
 A textual log for each of the folds.
-- **stability_between_folds.png**
-Average pairwise stability between the folds of the selected features, across the generations.
-Stability is measured by "weight overlap": the weight is the frequency of the gene in the population, scaled so that
-the total sum of the weights is equal to 1. The overlap between two folds is computed by summing the elementwise min
-weights [3]. Only for GA based optimizers.
-- **stability_in_time.png**
-Stability between populations 100 generations apart. Averaged across the folds. Only for GA based optimizers.
-- **stability_in_time_fold_*.png**
-Stability between populations 100 generations apart measured on each fold separately. Only for GA based optimizers.
-- **stability_of_weights_between_folds_top_k.png**
-Stability of features, measured by weight overlap [3], between the folds when considering in each fold the top k more
-frequent features. k increases from left to right. From top to bottom there is the passing of the generations. This plot
-is drawn only for the GA based optimizers.
-- **stability_of_unions_between_folds_top_k.png**
-Stability of features, measured by Dice score, between the folds when considering in each fold the top k
-more frequent features. k increases from left to right. From top to bottom there is the passing of the generations.
-This plot is drawn only for the GA based optimizers.
 - **workers_log.txt**
 The program uses a number of workers (by default the number of cores detected in the system) to evaluate individuals
 in parallel. This is the log for the workers related to the final optimization. It is usually empty and serves mainly
@@ -185,9 +149,6 @@ where available.
 - **hofs/**
 This directory contains subdirectories with results for the considered halls of fame (Pareto, last population,
 top 50/100 by sum of fitnesses). The result files for the halls of fame are described below.
-- **hofs/*/balanced_accuracy_by_class.png**
-For each classification class the feature set size and balanced accuracy of the solutions. Plotted only if there is a
-classification objective.
 - **hofs/*/common_features.png**
 Average number of features in common between the folds considering in each of them the k most frequent features.
 k increases from left to right.
@@ -200,14 +161,6 @@ k increases from left to right.
 - **hofs/*/jaccard.png**
 Average Jaccard index between the folds considering in each of them the k most frequent features.
 k increases from left to right.
-- **Best trade-off plots**
-There is a best trade-off plot [3] for each hall of fame and pair of objectives.
-- **hofs/*/precision_by_class.png**
-For each classification class the feature set size and precision of the solutions. Plotted only if there is a
-classification objective.
-- **hofs/*/recall_by_class.png**
-For each classification class the feature set size and recall of the solutions. Plotted only if there is a
-classification objective.
 - **hofs/*/solution_ci_max_final.csv**
 Higher endpoints of confidence intervals for the fitnesses of the solutions obtained from the final optimization.
 Order of the solutions in these files is consistent.
@@ -244,9 +197,6 @@ Statistics are saved in this file in order to compute them only once.
 - **hofs/*/view_counts_*.png**
 For each objective there is a plot showing the average number of features of the solutions for each value of the
 fitness. The fitness used is the one estimated by the optimizer.
-- **hofs/*/confusion_matrix/**
-If the setup includes a classification objective, this directory is filled with a csv file for each fold, representing
-the confusion matrix of each solution. Order of the solutions in these files is consistent.
 
 ## Summary results
 
