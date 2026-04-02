@@ -2,7 +2,7 @@
 
 Publicly available source code and data for the project Sweeping*.
 
-The project is described in Cattelani and Fortino [5], soon to be published as a preprint.
+The project is described in Cattelani and Fortino [5].
 
 The main program is in Python (version 2.9+), we include also R scripts that were used to prepare the TCGA datasets.
 
@@ -237,8 +237,9 @@ URL https://doi.org/10.1093/bioinformatics/btac463
 [4] Carolyn Hutter, Jean Claude Zenklusen. The cancer genome atlas: creating lasting value beyond
 its data. Cell, 173(2):283–285, 2018.
 
-[5] Luca Cattelani, Vittorio Fortino. Genetic algorithms for multi-omic feature selection:
-a comparative study in cancer survival analysis. To be published.
+[5] Luca Cattelani, Vittorio Fortino.
+“Genetic algorithms for multi-omic feature selection: A comparative study in cancer survival analysis,”
+arXiv preprint, arXiv:2604.00065, 2026. doi: 10.48550/arXiv.2604.00065.
 
 [6] Marcel Ramos, Ludwig Geistlinger, Sehyun Oh, Lucas Schiffer, Rimsha Azhar, Hanish Kodali, Ino
 de Bruijn, Jianjiong Gao, Vincent J Carey, Martin Morgan, et al. Multiomic integration of public
