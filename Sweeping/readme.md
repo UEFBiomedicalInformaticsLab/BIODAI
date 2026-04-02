@@ -240,6 +240,7 @@ its data. Cell, 173(2):283–285, 2018.
 [5] Luca Cattelani, Vittorio Fortino.
 “Genetic algorithms for multi-omic feature selection: A comparative study in cancer survival analysis,”
 arXiv preprint, arXiv:2604.00065, 2026. doi: 10.48550/arXiv.2604.00065.
+URL https://arxiv.org/abs/2604.00065
 
 [6] Marcel Ramos, Ludwig Geistlinger, Sehyun Oh, Lucas Schiffer, Rimsha Azhar, Hanish Kodali, Ino
 de Bruijn, Jianjiong Gao, Vincent J Carey, Martin Morgan, et al. Multiomic integration of public
