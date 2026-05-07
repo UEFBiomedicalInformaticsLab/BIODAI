@@ -41,6 +41,8 @@ Each subdirectory represents an independent project. To understand a specific pr
 - Improved selection of models during optimization
 - DOSA-MO algorithm for adjusting fitness estimates [4]
 
+## Bibliography
+
 [1] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery. Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26. URL https://doi.org/10.1093/bioinformatics/btac463
 
 [2] Luca Cattelani, Arindam Ghosh, Teemu Rintala, Vittorio Fortino. A Comprehensive Evaluation Framework for Benchmarking Multi-Objective Feature Selection in Omics-Based Biomarker Discovery. In IEEE/ACM Transactions on Computational Biology and Bioinformatics, vol. 21, no. 6, pp. 2432-2446, Nov.-Dec. 2024. URL https://doi.org/10.1109/TCBB.2024.3480150
