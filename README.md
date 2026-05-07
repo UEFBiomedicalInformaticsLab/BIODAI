@@ -54,6 +54,14 @@ Provides benchmarking methods and evaluation metrics for multi-objective optimiz
 ### Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis
 Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5]
 
+## Code and Data
+
+Code is organized per project.
+Please refer to the individual project documentation for setup and usage instructions.
+
+Experiments rely on publicly available datasets, such as The Cancer Genome Atlas (TCGA).
+Preprocessed datasets or scripts may be included in subprojects.
+
 ## Bibliography
 
 [1] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery. Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26. URL https://doi.org/10.1093/bioinformatics/btac463
