@@ -41,6 +41,19 @@ Each subdirectory represents an independent project. To understand a specific pr
 - Improved selection of models during optimization
 - DOSA-MO algorithm for adjusting fitness estimates [4]
 
+## Related Publications
+
+The repository contains implementations supporting the experimental results of several works, including:
+
+### Dual-stage optimizer for systematic overestimation adjustment applied to multi-objective genetic algorithms for biomarker selection
+Introduces DOSA-MO, a framework to reduce overestimation during optimization [4]
+
+### A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based biomarker discovery
+Provides benchmarking methods and evaluation metrics for multi-objective optimization such as Cross Hypervolume (CHV) [2]
+
+### Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis
+Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5]
+
 ## Bibliography
 
 [1] Luca Cattelani, Vittorio Fortino. Improved NSGA-II algorithms for multi-objective biomarker discovery. Bioinformatics, Volume 38, Issue Supplement_2, September 2022, Pages ii20–ii26. URL https://doi.org/10.1093/bioinformatics/btac463
