@@ -1,6 +1,6 @@
 # BIODAI – BIOmarker Discovery through Artificial Intelligence
 
-This repository contains a collection of research projects developed within the University of Eastern Finland Biomedical Informatics Research Group (FortinoLab).
+This repository contains a collection of research projects developed within the University of Eastern Finland (UEF) Biomedical Informatics Research Group (FortinoLab).
 Each subdirectory corresponds to a standalone research project, including source code used for the experimental parts of published or ongoing scientific works.
 
 ## Overview
@@ -45,22 +45,46 @@ Each subdirectory represents an independent project. To understand a specific pr
 
 The repository contains implementations supporting the experimental results of several works, including:
 
-### Dual-stage optimizer for systematic overestimation adjustment applied to multi-objective genetic algorithms for biomarker selection
-Introduces DOSA-MO, a framework to reduce overestimation during optimization [4]
+- *A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based biomarker discovery.*
+  Provides benchmarking methods and evaluation metrics for multi-objective optimization such as Cross Hypervolume (CHV) [2].
 
-### A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based biomarker discovery
-Provides benchmarking methods and evaluation metrics for multi-objective optimization such as Cross Hypervolume (CHV) [2]
+- *Dual-stage optimizer for systematic overestimation adjustment applied to multi-objective genetic algorithms for biomarker selection.*
+  Introduces DOSA-MO, a framework to reduce overestimation during optimization [4].
 
-### Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis
-Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5]
+- *Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis.*
+  Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5].
 
 ## Code and Data
 
-Code is organized per project.
+This repository is research-oriented. Code is organized per project.
 Please refer to the individual project documentation for setup and usage instructions.
 
 Experiments rely on publicly available datasets, such as The Cancer Genome Atlas (TCGA).
 Preprocessed datasets or scripts may be included in subprojects.
+
+## Key Concepts
+
+- Multi-objective optimization (MO):
+Simultaneous optimization of multiple conflicting objectives (e.g. accuracy vs. feature count)
+
+- Pareto front:
+Set of optimal trade-offs between objectives
+
+- Wrapper feature selection:
+Evaluating feature subsets using machine learning models during optimization
+
+- Overestimation:
+Performance inflation due to selecting the best models among many candidates [4]
+
+## Authors
+Developed by members of the UEF Biomedical Informatics Research Group:
+- Luca Cattelani
+- Vittorio Fortino
+- Collaborators and contributors (see individual projects)
+
+## License
+
+These projects are licensed under the terms of the MIT license.
 
 ## Bibliography
 
