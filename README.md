@@ -45,14 +45,22 @@ Each subdirectory represents an independent project. To understand a specific pr
 
 The repository contains implementations supporting the experimental results of several works, including:
 
+- *Improved NSGA-II algorithms for multi-objective biomarker discovery.*
+  Introduces enhanced variants of the NSGA-II genetic algorithm specifically tailored for biomarker selection in high-dimensional omics data [1].
+  Directory `MOO`.
+
 - *A comprehensive evaluation framework for benchmarking multi-objective feature selection in omics-based biomarker discovery.*
-  Provides benchmarking methods and evaluation metrics for multi-objective optimization such as Cross Hypervolume (CHV) [2].
+  Provides benchmarking methods and evaluation metrics for multi-objective optimization such as Cross Hypervolume (CHV) [2]. Directory `MONOMER`.
+
+- *Triple and quadruple optimization for feature selection in cancer biomarker discovery.*
+  Simultaneously optimizes multiple objectives: predictive accuracy (classification), survival prediction, feature set size, fold-change / biological separation [3].
+  Directory `MOOCAB`.
 
 - *Dual-stage optimizer for systematic overestimation adjustment applied to multi-objective genetic algorithms for biomarker selection.*
-  Introduces DOSA-MO, a framework to reduce overestimation during optimization [4].
+  Introduces DOSA-MO, an algorithm to reduce overestimation during optimization [4]. Directory `DOSA_MO`.
 
 - *Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis.*
-  Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5].
+  Introduces multi-view and multi-objective optimization strategies (algorithm Sweeping*) [5]. Directory `Sweeping`.
 
 ## Code and Data
 
